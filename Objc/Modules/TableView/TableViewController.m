@@ -18,6 +18,7 @@
 #import "PBVc.h"
 #import "CoreAnimationViewController.h"
 #import "UIViewController+YPopup.h"
+#import "MasonryLayoutTableViewController.h"
 
 @interface TableViewController ()
 
@@ -36,19 +37,37 @@
 
 - (NSArray *)titles {
     if (!_titles) {
-        _titles = @[@"GCD",
-                    @"Runtime",
-                    @"Transitions1",
-                    @"Presentation",
-                    @"Popover",
-                    @"点击图片转场",
-                    @"商品详情转场",
-                    @"图片浏览",
-                    @"Core Animation",
-                    @"",
-                    @"",
-                    @"",
-                    @"",];
+        _titles = @[@{@"title" : @"GCD",
+                      @"class" : NSStringFromClass([UIViewController class])
+                      },
+                    @{@"title" : @"Runtime",
+                      @"class" : NSStringFromClass([RuntimeViewController class])
+                      },
+                    @{@"title" : @"Transitions1",
+                      @"class" : NSStringFromClass([TransitionsViewController class])
+                      },
+                    @{@"title" : @"Presentation",
+                      @"class" : NSStringFromClass([PresentationViewController class])
+                      },
+                    @{@"title" : @"Popover",
+                      @"class" : NSStringFromClass([PopoverViewController class])
+                      },
+                    @{@"title" : @"点击图片转场",
+                      @"class" : NSStringFromClass([WechatNavAnimationTransitionViewController class])
+                      },
+                    @{@"title" : @"商品详情转场",
+                      @"class" : NSStringFromClass([TaobaoViewController class])
+                      },
+                    @{@"title" : @"图片浏览",
+                      @"class" : NSStringFromClass([PBVc class])
+                      },
+                    @{@"title" : @"Core Animation",
+                      @"class" : NSStringFromClass([CoreAnimationViewController class])
+                      },
+                    @{@"title" : @"MasnoryLayout",
+                      @"class" : NSStringFromClass([MasonryLayoutTableViewController class])
+                      },
+                    ];
     }
     return _titles;
 }
@@ -69,74 +88,35 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TableViewCell class]) forIndexPath:indexPath];
-    cell.titleLb.text = self.titles[indexPath.row];
+    cell.titleLb.text = self.titles[indexPath.row][@"title"];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    BaseViewController *vc = [[BaseViewController alloc] init];
-    [self.tabBarController presentPopupViewController:vc animated:YES completion:^{
-        
-    }];
-    return;
-    switch (indexPath.row) {
-        case 0:
-            {
-                
-            }
-            break;
-        case 1:
-        {
-            RuntimeViewController *vc = [[RuntimeViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 2:
-        {
-            TransitionsViewController *transitionVc = [[TransitionsViewController alloc] init];
-            transitionVc.modalPresentationStyle = UIModalPresentationFullScreen;
-            [self presentViewController:transitionVc animated:YES completion:nil];
-        }
-            break;
-        case 3:
-        {
-            PresentationViewController *presentVc = [[PresentationViewController alloc] init];
-            UIPresentationControllers *presentationController NS_VALID_UNTIL_END_OF_SCOPE;
-            presentationController = [[UIPresentationControllers alloc] initWithPresentedViewController:presentVc
-                                                                               presentingViewController:self];
-            presentVc.transitioningDelegate = presentationController;
-            [self presentViewController:presentVc animated:YES completion:NULL];
-        }
-            break;
-        case 4:
-        {
-            PopoverViewController *popVc = [[PopoverViewController alloc] init];
-            [self.navigationController pushViewController:popVc animated:YES];
-        }
-            break;
-        case 5:{
-            WechatNavAnimationTransitionViewController *vc = [[WechatNavAnimationTransitionViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 6:{
-            TaobaoViewController *vc = [[TaobaoViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 7:{
-            PBVc *vc = [[PBVc alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 8: {
-            CoreAnimationViewController *vc = [[CoreAnimationViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        default:
-            break;
+//    BaseViewController *vc = [[BaseViewController alloc] init];
+//    [self.tabBarController presentPopupViewController:vc animated:YES completion:^{
+//
+//    }];
+//    return;
+    
+    NSString *classString = self.titles[indexPath.row][@"class"];
+    UIViewController *ctrl = [[NSClassFromString(classString) alloc] init];
+  
+    if ([classString isEqualToString:NSStringFromClass([TransitionsViewController class])]) {
+        ctrl.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self presentViewController:ctrl animated:YES completion:nil];
     }
+    else if ([classString isEqualToString:NSStringFromClass([PresentationViewController class])]) {
+        UIPresentationControllers *presentationController NS_VALID_UNTIL_END_OF_SCOPE;
+        presentationController = [[UIPresentationControllers alloc] initWithPresentedViewController:ctrl
+                                                                           presentingViewController:self];
+        ctrl.transitioningDelegate = presentationController;
+        [self presentViewController:ctrl animated:YES completion:NULL];
+    }
+    else {
+        [self.navigationController pushViewController:ctrl animated:YES];
+    }
+
 }
 
 

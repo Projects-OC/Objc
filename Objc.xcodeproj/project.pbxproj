@@ -80,6 +80,10 @@
 		04526C9D21008F64003C0D31 /* PictureBrowserPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04526C9021008F64003C0D31 /* PictureBrowserPopAnimator.m */; };
 		04526C9E21008F64003C0D31 /* PictureBrowserPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04526C9221008F64003C0D31 /* PictureBrowserPushAnimator.m */; };
 		04526C9F21008F64003C0D31 /* PictureBrowserTransitionParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04526C9421008F64003C0D31 /* PictureBrowserTransitionParameter.m */; };
+		049DCE1621084BB200861249 /* MasonryLayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DCE1521084BB200861249 /* MasonryLayoutTableViewController.m */; };
+		049DCE1821084BD500861249 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 049DCE1721084BD500861249 /* data.json */; };
+		049DCE1B21084C0C00861249 /* MasonryLayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DCE1A21084C0C00861249 /* MasonryLayoutTableViewCell.m */; };
+		049DCE1E21084CEC00861249 /* MasonryLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DCE1D21084CEC00861249 /* MasonryLayoutModel.m */; };
 		3CCB3ED549858744FEA5EA03 /* libPods-Objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8185755919BB5FF374B41071 /* libPods-Objc.a */; };
 /* End PBXBuildFile section */
 
@@ -219,7 +223,14 @@
 		04526C9221008F64003C0D31 /* PictureBrowserPushAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureBrowserPushAnimator.m; sourceTree = "<group>"; };
 		04526C9321008F64003C0D31 /* PictureBrowserTransitionParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureBrowserTransitionParameter.h; sourceTree = "<group>"; };
 		04526C9421008F64003C0D31 /* PictureBrowserTransitionParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureBrowserTransitionParameter.m; sourceTree = "<group>"; };
-		04526CA021008FD6003C0D31 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		049DCE1421084BB200861249 /* MasonryLayoutTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryLayoutTableViewController.h; sourceTree = "<group>"; };
+		049DCE1521084BB200861249 /* MasonryLayoutTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryLayoutTableViewController.m; sourceTree = "<group>"; };
+		049DCE1721084BD500861249 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		049DCE1921084C0C00861249 /* MasonryLayoutTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryLayoutTableViewCell.h; sourceTree = "<group>"; };
+		049DCE1A21084C0C00861249 /* MasonryLayoutTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryLayoutTableViewCell.m; sourceTree = "<group>"; };
+		049DCE1C21084CEC00861249 /* MasonryLayoutModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryLayoutModel.h; sourceTree = "<group>"; };
+		049DCE1D21084CEC00861249 /* MasonryLayoutModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryLayoutModel.m; sourceTree = "<group>"; };
+		049DCE1F2108548D00861249 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8185755919BB5FF374B41071 /* libPods-Objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		990DDB9A9BBA8AB0ADF5117B /* Pods-Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objc/Pods-Objc.debug.xcconfig"; sourceTree = "<group>"; };
 		D5E643EF92F2474F8A62B336 /* Pods-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objc/Pods-Objc.release.xcconfig"; sourceTree = "<group>"; };
@@ -265,8 +276,9 @@
 				04526B9B21008B28003C0D31 /* Assets.xcassets */,
 				04526B9D21008B28003C0D31 /* LaunchScreen.storyboard */,
 				04526BA021008B28003C0D31 /* Info.plist */,
+				049DCE1721084BD500861249 /* data.json */,
 				04526BA121008B28003C0D31 /* main.m */,
-				04526CA021008FD6003C0D31 /* PrefixHeader.pch */,
+				049DCE1F2108548D00861249 /* PrefixHeader.pch */,
 			);
 			path = Objc;
 			sourceTree = "<group>";
@@ -278,6 +290,8 @@
 				04526BDE21008E68003C0D31 /* BaseObject.m */,
 				04526C3E21008E69003C0D31 /* BaseViewController.h */,
 				04526BDD21008E68003C0D31 /* BaseViewController.m */,
+				04526BD221008E68003C0D31 /* TableView */,
+				049DCE1321084B5800861249 /* MasonryLayout */,
 				04526C0521008E69003C0D31 /* Core Animation */,
 				04526BE321008E69003C0D31 /* Expression */,
 				04526C0B21008E69003C0D31 /* GCD */,
@@ -287,7 +301,6 @@
 				04526C3F21008E69003C0D31 /* RAC */,
 				04526BEF21008E69003C0D31 /* Runtime */,
 				04526C1B21008E69003C0D31 /* SDWebImage */,
-				04526BD221008E68003C0D31 /* TableView */,
 				04526C0E21008E69003C0D31 /* Transition1 */,
 				04526BFA21008E69003C0D31 /* Transition2 */,
 				04526C3921008E69003C0D31 /* Transition3 */,
@@ -541,6 +554,19 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
+		049DCE1321084B5800861249 /* MasonryLayout */ = {
+			isa = PBXGroup;
+			children = (
+				049DCE1421084BB200861249 /* MasonryLayoutTableViewController.h */,
+				049DCE1521084BB200861249 /* MasonryLayoutTableViewController.m */,
+				049DCE1921084C0C00861249 /* MasonryLayoutTableViewCell.h */,
+				049DCE1A21084C0C00861249 /* MasonryLayoutTableViewCell.m */,
+				049DCE1C21084CEC00861249 /* MasonryLayoutModel.h */,
+				049DCE1D21084CEC00861249 /* MasonryLayoutModel.m */,
+			);
+			path = MasonryLayout;
+			sourceTree = "<group>";
+		};
 		232CFC02B03947B317BD9CBA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +655,7 @@
 				04526C4E21008E69003C0D31 /* Expression03.jpeg in Resources */,
 				04526C5421008E69003C0D31 /* Expression09.jpeg in Resources */,
 				04526C5521008E69003C0D31 /* Expression10.jpeg in Resources */,
+				049DCE1821084BD500861249 /* data.json in Resources */,
 				04526B9A21008B23003C0D31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,6 +713,7 @@
 				04526C5821008E69003C0D31 /* Object.m in Sources */,
 				04526C7A21008E69003C0D31 /* RACViewController.m in Sources */,
 				04526C6E21008E69003C0D31 /* SDWebImageDownloader.m in Sources */,
+				049DCE1E21084CEC00861249 /* MasonryLayoutModel.m in Sources */,
 				04526C6C21008E69003C0D31 /* SDWebImageCompat.m in Sources */,
 				04526C4621008E69003C0D31 /* PresentationViewController.m in Sources */,
 				04526C6621008E69003C0D31 /* TaobaoPushAnimator.m in Sources */,
@@ -713,6 +741,7 @@
 				04526C7221008E69003C0D31 /* UIButton+WebCache.m in Sources */,
 				04526C4521008E69003C0D31 /* TableViewController.m in Sources */,
 				04526C4721008E69003C0D31 /* UIPresentationControllers.m in Sources */,
+				049DCE1B21084C0C00861249 /* MasonryLayoutTableViewCell.m in Sources */,
 				04526C6021008E69003C0D31 /* WechatNavAnimationTransitionViewController.m in Sources */,
 				04526C6B21008E69003C0D31 /* SDImageCache.m in Sources */,
 				04526C5B21008E69003C0D31 /* UIButton+Block.m in Sources */,
@@ -720,6 +749,7 @@
 				04526B9421008B23003C0D31 /* AppDelegate.m in Sources */,
 				04526C9D21008F64003C0D31 /* PictureBrowserPopAnimator.m in Sources */,
 				04526C5E21008E69003C0D31 /* WeChatNavAnimationTransition.m in Sources */,
+				049DCE1621084BB200861249 /* MasonryLayoutTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

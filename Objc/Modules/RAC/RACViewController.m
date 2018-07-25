@@ -8,7 +8,6 @@
 //
 
 #import "RACViewController.h"
-#import <ReactiveObjC/ReactiveObjC.h>
 
 //连接状态
 typedef enum {
@@ -109,6 +108,18 @@ typedef enum {
     }] array];
 }
 
+- (void)racMap {
+    [[[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@"send"];
+        [subscriber sendCompleted];
+        return [RACDisposable disposableWithBlock:^{}];
+    }] map:^id _Nullable(id  _Nullable value) {
+        return [NSString stringWithFormat:@"racAppendingString + %@",value];
+    }] subscribeNext:^(id  _Nullable x) {
+        
+    }];
+}
+
 - (void)racFlattenMap {
     [[[RACObserve(self, datas) ignore:nil] flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
         return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
@@ -122,15 +133,32 @@ typedef enum {
 }
 
 /**
- 两种监听textField/textView变化
+ 监听textField/textView
  */
 - (void)racTextField {
+    //1
     RAC(self,textString) = self.textField.rac_textSignal;
+    
+    //2
     @weakify(self)
     [self.textField.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
         @strongify(self)
         self.textString = x;
     }];
+    
+    //3：当textfield.length大于4时，打印
+    [[[self.textField.rac_textSignal
+       map:^id _Nullable(NSString * _Nullable value) {
+           return @(value.length);
+       }]
+      filter:^BOOL(id  _Nullable value) {
+          return [value integerValue] > 4;
+      }] subscribeNext:^(id  _Nullable x) {
+          NSLog(@"打印%@",x);
+      }];
+    
+    //4：
+ 
 }
 
 /**

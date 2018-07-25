@@ -24,5 +24,6 @@
 
 
 #import <Masonry/Masonry.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #endif /* PrefixHeader_pch */
