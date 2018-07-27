@@ -17,14 +17,13 @@
 #import "TaobaoViewController.h"
 #import "PBVc.h"
 #import "CoreAnimationViewController.h"
-#import "UIViewController+YPopup.h"
+#import "UIViewController+Popup.h"
 #import "MasonryLayoutTableViewController.h"
+#import <MFWebKit/MFWebKitViewController.h>
 
 @interface TableViewController ()
 
 @property (nonatomic,copy) NSArray *titles;
-@property (nonatomic,copy) NSArray *array;
-@property (nonatomic,strong) NSMutableArray *mutableArray;
 
 @end
 
@@ -67,18 +66,12 @@
                     @{@"title" : @"MasnoryLayout",
                       @"class" : NSStringFromClass([MasonryLayoutTableViewController class])
                       },
+                    @{@"title" : @"WebView",
+                      @"class" : NSStringFromClass([MFWebKitViewController class])
+                      },
                     ];
     }
     return _titles;
-}
-
-- (void)properyCopy{
-    self.array = [NSArray array];
-    self.mutableArray = [NSMutableArray arrayWithObject:@"1"];
-    self.array = self.mutableArray;
-    NSLog(@"%@",self.array);//1
-    [self.mutableArray addObject:@"2"];
-    NSLog(@"%@",self.array);//1
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -112,6 +105,11 @@
                                                                            presentingViewController:self];
         ctrl.transitioningDelegate = presentationController;
         [self presentViewController:ctrl animated:YES completion:NULL];
+    }
+    else if ([classString isEqualToString:NSStringFromClass([MFWebKitViewController class])]) {
+        MFWebKitViewController *ctrl = [[MFWebKitViewController alloc] init];
+        ctrl.url = [NSURL URLWithString:@"https://www.baidu.com"];
+        [self.navigationController pushViewController:ctrl animated:YES];
     }
     else {
         [self.navigationController pushViewController:ctrl animated:YES];

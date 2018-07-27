@@ -1,12 +1,9 @@
 //
-//  UIViewController+YPopup.m
-//  eim
+//  UIViewController+Popup.m
 //
-//  Created by yanghui on 14-5-6.
-//  Copyright (c) 2014年 Forever Open-source Software Inc. All rights reserved.
 //
 
-#import "UIViewController+YPopup.h"
+#import "UIViewController+Popup.h"
 
 #import <objc/runtime.h>
 #import <QuartzCore/QuartzCore.h>
@@ -153,7 +150,7 @@ NSString const *CWPopupViewOffset = @"CWPopupViewOffset";
 
 NSString const *CWDissMissSingal = @"CWDissMissSingal";
 
-@implementation UIViewController (YPopup)
+@implementation UIViewController (Popup)
 
 @dynamic popupViewController, useBlurForPopup, popupViewOffset;
 

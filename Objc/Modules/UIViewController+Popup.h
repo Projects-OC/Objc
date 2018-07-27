@@ -1,14 +1,11 @@
 //
-//  UIViewController+YPopup.h
-//  eim
+//  UIViewController+Popup.h
 //
-//  Created by yanghui on 14-5-6.
-//  Copyright (c) 2014年 Forever Open-source Software Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (YPopup)
+@interface UIViewController (Popup)
 @property (nonatomic, readwrite) UIViewController *popupViewController;
 @property (nonatomic, readwrite) BOOL useBlurForPopup;
 @property (nonatomic, readwrite) CGPoint popupViewOffset;
