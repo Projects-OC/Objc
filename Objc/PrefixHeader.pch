@@ -13,8 +13,19 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 // 屏幕宽与高
-#define kScreenWidth  ([UIScreen mainScreen].bounds.size.width)
+#define LCScreenWidth  ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+
+#define LCLog(FORMAT, ...) fprintf(stderr,"%s:[Line %d]\t%s\n",[[NSString stringWithUTF8String:__PRETTY_FUNCTION__] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+// iPhone X
+#define LCIPhoneX                   ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define LCStatusBarHeight           (LCIPhoneX ? 44.f : 20.f)
+#define LCNavigationBarHeight        44.f
+#define LCStatusBarAndNavigationBarHeight  (LCIPhoneX ? 88.f : 64.f)
+#define LCTabbarHeight               (LCIPhoneX ? (49.f+34.f) : 49.f)
+#define LCTabbarSafeBottomMargin     (LCIPhoneX ? 34.f : 0.f)
+#define LCViewSafeAreInsets(view)     ({UIEdgeInsets insets; if(@available(iOS 11.0, *)) {insets = view.safeAreaInsets;} else {insets = UIEdgeInsetsZero;} insets;})
 
 //// 颜色
 #define color(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
@@ -25,5 +36,6 @@
 
 #import <Masonry/Masonry.h>
 #import <ReactiveObjC/ReactiveObjC.h>
+#import <YYKit/YYKit.h>
 
 #endif /* PrefixHeader_pch */

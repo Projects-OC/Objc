@@ -32,7 +32,7 @@
 - (CGSize)backImageSize:(UIImage *)image{
     CGSize size = image.size;
     CGSize newSize;
-    newSize.width = kScreenWidth;
+    newSize.width = LCScreenWidth;
     newSize.height = newSize.width / size.width * size.height;    
     return newSize;
 }

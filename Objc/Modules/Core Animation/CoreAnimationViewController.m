@@ -8,6 +8,7 @@
 
 #import "CoreAnimationViewController.h"
 #import "ClockView.h"
+#import "ActionSheetView.h"
 
 @interface CoreAnimationViewController ()<CALayerDelegate>
 
@@ -34,6 +35,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIButton *_btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_btn setTitle:@"弹出框，actionSheetView" forState:UIControlStateNormal];
+    [_btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_btn setFrame:CGRectMake(0, 0, 300, 50)];
+    [self.view addSubview:_btn];
+    @weakify(self)
+    [_btn addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
+        @strongify(self)
+        ActionSheetView *sheetView = [[ActionSheetView alloc] initWithFrame:self.view.bounds];
+        [self.view addSubview:sheetView];
+    }];
+    
     [self emitterLayer];
 //    [self textlayer];
 //    [self rectCorner];

@@ -92,7 +92,7 @@
 #pragma mark - Setter - Getter
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, LCScreenWidth, kScreenHeight - 64) style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor colorWithRed:0.1 green:0.7 blue:0.4 alpha:1];
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -116,11 +116,11 @@
 - (CGRect)backScreenImageViewRectWithImage:(UIImage *)image{
     CGSize size = image.size;
     CGSize newSize;
-    newSize.height = kScreenWidth * 0.6;
+    newSize.height = LCScreenWidth * 0.6;
     newSize.width = newSize.height / size.height * size.width;
     
     CGFloat imageY = 64;
-    CGFloat imageX = (kScreenWidth - newSize.width) * 0.5;
+    CGFloat imageX = (LCScreenWidth - newSize.width) * 0.5;
     
     CGRect rect =  CGRectMake(imageX, imageY, newSize.width, newSize.height);
     return rect;

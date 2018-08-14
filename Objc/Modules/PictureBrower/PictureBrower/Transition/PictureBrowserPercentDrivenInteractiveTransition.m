@@ -76,7 +76,7 @@
 
 - (CGFloat)percentForGesture:(UIPanGestureRecognizer *)gesture{
     CGPoint translation = [gesture translationInView:gesture.view];
-    CGFloat scale = 1 - (translation.y / kScreenWidth);
+    CGFloat scale = 1 - (translation.y / LCScreenWidth);
     scale = scale < 0 ? 0 : scale;
     scale = scale > 1 ? 1 : scale;
     return scale;

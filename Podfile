@@ -10,6 +10,7 @@ pod 'Masonry'
 pod 'ReactiveObjC'
 pod 'UITableView+FDTemplateLayoutCell'
 pod 'MFWebKit'
+pod 'YYKit'
 
 end
 

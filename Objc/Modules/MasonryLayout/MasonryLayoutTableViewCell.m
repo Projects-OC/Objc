@@ -29,6 +29,7 @@
         _titleLb = ({
             UILabel *_lb = [[UILabel alloc] init];
             _lb.font = [UIFont boldSystemFontOfSize:18];
+            _lb.numberOfLines = 0;
             _lb.textColor = [UIColor blueColor];
             [self.contentView addSubview:_lb];
             [_lb mas_makeConstraints:^(MASConstraintMaker *make) {

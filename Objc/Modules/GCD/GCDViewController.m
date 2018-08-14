@@ -39,6 +39,32 @@
     //dispatch_get_global_queue
 }
 
+- (void)dispath_semaphore {
+    NSInteger totalCount = 3;
+    NSInteger requestCount = 0;
+    
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);
+    //请求1
+    {
+        if (totalCount == ++requestCount) {
+            dispatch_semaphore_signal(sem);
+        }
+    }
+    //请求2
+    {
+        if (totalCount == ++requestCount) {
+            dispatch_semaphore_signal(sem);
+        }
+    }
+    //请求3
+    {
+        if (totalCount == ++requestCount) {
+            dispatch_semaphore_signal(sem);
+        }
+    }
+    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+}
+
 /**
  串行队列 顺序执行
  DISPATCH_QUEUE_SERIAL 串行

@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "TableViewController.h"
-#import "BaseObject.h"
+#import "TabBarViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -18,58 +18,30 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[TableViewController alloc] init]];
-    
-    UITabBarController *tabBar = [[UITabBarController alloc] init];
-    tabBar.viewControllers = @[nav];
-    self.window.rootViewController = tabBar;
+  
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forBarMetrics:UIBarMetricsDefault];
+
+    //禁止程序运行时自动锁屏
+//    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     
     //    NSTimer *_timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
     //    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     
-    [self terminationTitles:@"1",@"2",@"3", nil];
-    [self arrayValueForKey];
+    self.window.rootViewController = [[TabBarViewController alloc] init];
     
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
 
 
-//多参数传递
-- (void)terminationTitles:(NSString *)titles, ...NS_REQUIRES_NIL_TERMINATION{
-    NSMutableArray* arrays = [NSMutableArray array];
-    NSLog(@"title = %@",titles);
-    if (titles){
-        [arrays addObject:titles];
-        NSString* subTitle;
-        va_list argumentList;
-        va_start(argumentList, titles);
-        while((subTitle = va_arg(argumentList, id))){
-            [arrays addObject:subTitle];
-            NSLog(@"%@",subTitle);
-        }
-        va_end(argumentList);
-    }
-}
 
 //
 - (void)timerTick:(NSTimer *)timer{
     NSLog(@"定时器--------");
 }
 
-//筛选model中某一属性组成新数组
-- (void)arrayValueForKey{
-    NSInteger cot = 20;
-    NSMutableArray *datas = [NSMutableArray arrayWithCapacity:cot];
-    for (int i=0; i<cot; i++) {
-        BaseObject *obj = [BaseObject new];
-        obj.name = @(i).stringValue;
-        obj.sex = [@"man-" stringByAppendingString:@(i).stringValue];
-        [datas addObject:obj];
-    }
-    NSArray *objs = [datas valueForKey:NSStringFromSelector(@selector(sex))];
-    NSLog(@"%@",objs);
-}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
