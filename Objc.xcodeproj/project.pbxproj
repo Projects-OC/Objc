@@ -98,6 +98,7 @@
 		04E5F4882110522600FE29FC /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E5F4872110522600FE29FC /* OneViewController.m */; };
 		3CCB3ED549858744FEA5EA03 /* libPods-Objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8185755919BB5FF374B41071 /* libPods-Objc.a */; };
 		6447050D21A5091900336D02 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6447050C21A5091900336D02 /* KVOViewController.m */; };
+		6447051021A5340200336D02 /* AttributeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6447050F21A5340200336D02 /* AttributeObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -270,6 +271,8 @@
 		04E5F4872110522600FE29FC /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		6447050B21A5091900336D02 /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
 		6447050C21A5091900336D02 /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
+		6447050E21A5340200336D02 /* AttributeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeObject.h; sourceTree = "<group>"; };
+		6447050F21A5340200336D02 /* AttributeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributeObject.m; sourceTree = "<group>"; };
 		8185755919BB5FF374B41071 /* libPods-Objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		990DDB9A9BBA8AB0ADF5117B /* Pods-Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objc/Pods-Objc.debug.xcconfig"; sourceTree = "<group>"; };
 		D5E643EF92F2474F8A62B336 /* Pods-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objc/Pods-Objc.release.xcconfig"; sourceTree = "<group>"; };
@@ -668,6 +671,8 @@
 			children = (
 				04526BCC21008E68003C0D31 /* BaseObject.h */,
 				04526BDE21008E68003C0D31 /* BaseObject.m */,
+				6447050E21A5340200336D02 /* AttributeObject.h */,
+				6447050F21A5340200336D02 /* AttributeObject.m */,
 				04526C3E21008E69003C0D31 /* BaseViewController.h */,
 				04526BDD21008E68003C0D31 /* BaseViewController.m */,
 				04B5BB952112AEA6001A4616 /* MoreViewController.h */,
@@ -812,6 +817,7 @@
 				04526C6721008E69003C0D31 /* TaobaoSecondViewController.m in Sources */,
 				04526C5A21008E69003C0D31 /* RuntimeViewController.m in Sources */,
 				04526C5D21008E69003C0D31 /* NavWechatPushAnimator.m in Sources */,
+				6447051021A5340200336D02 /* AttributeObject.m in Sources */,
 				04B5BB9E2112AFCD001A4616 /* PushViewControllerB.m in Sources */,
 				04B5BB932112A08F001A4616 /* DecimalNumberViewController.m in Sources */,
 				04B5BBAD2112E13B001A4616 /* NavigatonViewController.m in Sources */,
