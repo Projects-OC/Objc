@@ -97,6 +97,7 @@
 		04B5BBB02112F98F001A4616 /* ActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5BBAF2112F98F001A4616 /* ActionSheetView.m */; };
 		04E5F4882110522600FE29FC /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E5F4872110522600FE29FC /* OneViewController.m */; };
 		3CCB3ED549858744FEA5EA03 /* libPods-Objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8185755919BB5FF374B41071 /* libPods-Objc.a */; };
+		6447050D21A5091900336D02 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6447050C21A5091900336D02 /* KVOViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -267,6 +268,8 @@
 		04B5BBAF2112F98F001A4616 /* ActionSheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetView.m; sourceTree = "<group>"; };
 		04E5F4862110522600FE29FC /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		04E5F4872110522600FE29FC /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		6447050B21A5091900336D02 /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
+		6447050C21A5091900336D02 /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		8185755919BB5FF374B41071 /* libPods-Objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		990DDB9A9BBA8AB0ADF5117B /* Pods-Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objc/Pods-Objc.debug.xcconfig"; sourceTree = "<group>"; };
 		D5E643EF92F2474F8A62B336 /* Pods-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objc/Pods-Objc.release.xcconfig"; sourceTree = "<group>"; };
@@ -669,6 +672,8 @@
 				04526BDD21008E68003C0D31 /* BaseViewController.m */,
 				04B5BB952112AEA6001A4616 /* MoreViewController.h */,
 				04B5BB962112AEA6001A4616 /* MoreViewController.m */,
+				6447050B21A5091900336D02 /* KVOViewController.h */,
+				6447050C21A5091900336D02 /* KVOViewController.m */,
 				04E5F4862110522600FE29FC /* OneViewController.h */,
 				04E5F4872110522600FE29FC /* OneViewController.m */,
 			);
@@ -840,6 +845,7 @@
 				04526C9921008F64003C0D31 /* PictureBrowserViewController.m in Sources */,
 				04526C4A21008E69003C0D31 /* UIViewController+Popup.m in Sources */,
 				04526C5F21008E69003C0D31 /* WechatNavAnimationTransitionSecondViewController.m in Sources */,
+				6447050D21A5091900336D02 /* KVOViewController.m in Sources */,
 				04526BA221008B28003C0D31 /* main.m in Sources */,
 				04526C6F21008E69003C0D31 /* SDWebImageDownloaderOperation.m in Sources */,
 				04526C6521008E69003C0D31 /* TaobaoPopAnimator.m in Sources */,
