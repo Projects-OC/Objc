@@ -24,6 +24,7 @@
 #import "DecimalNumberViewController.h"
 #import "MoreViewController.h"
 #import "PushViewControllerA.h"
+#import "KVOViewController.h"
 
 @interface MainTableViewController ()
 
@@ -89,6 +90,9 @@
                       },
                     @{@"title" : @"多页面跳转",
                       @"class" : NSStringFromClass([PushViewControllerA class])
+                      },
+                    @{@"title" : @"KVO",
+                      @"class" : NSStringFromClass([KVOViewController class])
                       },
                     ];
     }
