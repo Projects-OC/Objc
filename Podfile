@@ -1,7 +1,4 @@
-platform :ios, '9.0'
-
-
-target 'Objc' do
+target 'Objcs' do
 
 inhibit_all_warnings!
 
@@ -13,6 +10,4 @@ pod 'MFWebKit'
 pod 'YYKit'
 pod 'LFLiveKit'
 
-
 end
-

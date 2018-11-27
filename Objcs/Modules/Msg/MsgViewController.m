@@ -9,6 +9,7 @@
 #import "MsgViewController.h"
 #import "HFPhotoAssetViewController.h"
 #import "LFLiveViewController.h"
+#import "FloatingViewController.h"
 
 @interface MsgViewController ()
 
@@ -25,6 +26,9 @@
                       },
                     @{@"title" : @"Live",
                       @"class" : NSStringFromClass([LFLiveViewController class])
+                      },
+                    @{@"title" : @"Floating",
+                      @"class" : NSStringFromClass([FloatingViewController class])
                       },
                     ];
     }
