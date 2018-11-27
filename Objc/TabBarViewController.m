@@ -32,6 +32,7 @@
     msgNav.tabBarItem = msgTabBar;
     
     self.viewControllers = @[mainNav,msgNav];
+    self.selectedIndex = 1;
 }
 
 @end

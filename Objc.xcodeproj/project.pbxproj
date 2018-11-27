@@ -113,6 +113,9 @@
 		646C791621ACE12300974970 /* UIImage+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C791521ACE12300974970 /* UIImage+HF.m */; };
 		646C791921ACE17200974970 /* UIView+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C791821ACE17200974970 /* UIView+HF.m */; };
 		646C791D21ACF09500974970 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C791C21ACF09500974970 /* UIScrollView+EmptyDataSet.m */; };
+		646C792221AD2D4000974970 /* LFLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C792121AD2D4000974970 /* LFLiveViewController.m */; };
+		646C792521AD2F8000974970 /* LFLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C792421AD2F8000974970 /* LFLivePreview.m */; };
+		646C792921AD33EB00974970 /* HFToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C792721AD33EB00974970 /* HFToolBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -315,6 +318,12 @@
 		646C791821ACE17200974970 /* UIView+HF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HF.m"; sourceTree = "<group>"; };
 		646C791B21ACF09500974970 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		646C791C21ACF09500974970 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		646C792021AD2D4000974970 /* LFLiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFLiveViewController.h; sourceTree = "<group>"; };
+		646C792121AD2D4000974970 /* LFLiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFLiveViewController.m; sourceTree = "<group>"; };
+		646C792321AD2F8000974970 /* LFLivePreview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFLivePreview.h; sourceTree = "<group>"; };
+		646C792421AD2F8000974970 /* LFLivePreview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFLivePreview.m; sourceTree = "<group>"; };
+		646C792721AD33EB00974970 /* HFToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFToolBarView.m; sourceTree = "<group>"; };
+		646C792821AD33EB00974970 /* HFToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFToolBarView.h; sourceTree = "<group>"; };
 		8185755919BB5FF374B41071 /* libPods-Objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		990DDB9A9BBA8AB0ADF5117B /* Pods-Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objc/Pods-Objc.debug.xcconfig"; sourceTree = "<group>"; };
 		D5E643EF92F2474F8A62B336 /* Pods-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objc/Pods-Objc.release.xcconfig"; sourceTree = "<group>"; };
@@ -697,6 +706,7 @@
 			children = (
 				04B5BBA52112D6CE001A4616 /* MsgViewController.h */,
 				04B5BBA62112D6CE001A4616 /* MsgViewController.m */,
+				646C791E21AD2C9E00974970 /* Live */,
 				646C78E421ACD42100974970 /* Photos */,
 			);
 			path = Msg;
@@ -788,6 +798,8 @@
 			children = (
 				646C791021ACDB9800974970 /* HFTitleView.h */,
 				646C791121ACDB9800974970 /* HFTitleView.m */,
+				646C792821AD33EB00974970 /* HFToolBarView.h */,
+				646C792721AD33EB00974970 /* HFToolBarView.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -810,6 +822,17 @@
 			children = (
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		646C791E21AD2C9E00974970 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				646C792021AD2D4000974970 /* LFLiveViewController.h */,
+				646C792121AD2D4000974970 /* LFLiveViewController.m */,
+				646C792321AD2F8000974970 /* LFLivePreview.h */,
+				646C792421AD2F8000974970 /* LFLivePreview.m */,
+			);
+			path = Live;
 			sourceTree = "<group>";
 		};
 		AA101FE8B11D83C960E1B434 /* Frameworks */ = {
@@ -927,6 +950,7 @@
 				04526C6421008E69003C0D31 /* TaobaoAnimationTrasition.m in Sources */,
 				04526C7121008E69003C0D31 /* SDWebImagePrefetcher.m in Sources */,
 				04526C5C21008E69003C0D31 /* NavWechatPopAnimator.m in Sources */,
+				646C792921AD33EB00974970 /* HFToolBarView.m in Sources */,
 				646C78FD21ACD48600974970 /* HFPhotoAssetManager.m in Sources */,
 				04526C9721008F64003C0D31 /* PictureBrowserCell.m in Sources */,
 				04526C9B21008F64003C0D31 /* PictureBrowserInteractiveAnimatedTransition.m in Sources */,
@@ -994,6 +1018,7 @@
 				04526C5921008E69003C0D31 /* RuntimeViewController+Addtion.m in Sources */,
 				646C791221ACDB9800974970 /* HFTitleView.m in Sources */,
 				04526C7821008E69003C0D31 /* CrossDissolveAnimatedTransition.m in Sources */,
+				646C792521AD2F8000974970 /* LFLivePreview.m in Sources */,
 				04526C6221008E69003C0D31 /* ClockView.m in Sources */,
 				04526C6121008E69003C0D31 /* CoreAnimationViewController.m in Sources */,
 				04526C9C21008F64003C0D31 /* PictureBrowserPercentDrivenInteractiveTransition.m in Sources */,
@@ -1014,6 +1039,7 @@
 				04B5BBB02112F98F001A4616 /* ActionSheetView.m in Sources */,
 				646C790C21ACDACC00974970 /* HFBaseTableViewController.m in Sources */,
 				049DCE1621084BB200861249 /* MasonryLayoutTableViewController.m in Sources */,
+				646C792221AD2D4000974970 /* LFLiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

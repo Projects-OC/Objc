@@ -42,12 +42,13 @@
         HFWeak(self)
         _titleView = [[HFTitleView alloc] initWithTitle:@"最近添加"];
         _titleView.intrinsicContentSize = CGSizeMake(kScreenWidth/2, 40);
-//        [_titleView bk_whenTapped:^{
-//            [weakself titleBtnClick:weakself.titleView.titleBtn];
-//        }];
 //        [_titleView addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
 //            [weakself titleBtnClick:weakself.titleView.titleBtn];
 //        }];
+        UITapGestureRecognizer *ges = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
+            [weakself titleBtnClick:weakself.titleView.titleBtn];
+        }];
+        [_titleView addGestureRecognizer:ges];
     }
     return _titleView;
 }
@@ -199,7 +200,7 @@
     PHAsset *asset = self.assetManager.albumAssets[index - 1];
     HFPhotoAssetPreviewViewController *info = [HFPhotoAssetPreviewViewController new];
     info.asset = asset;
-    [self.navigationController pushViewController:asset animated:YES];
+    [self.navigationController pushViewController:info animated:YES];
 }
 
 /**

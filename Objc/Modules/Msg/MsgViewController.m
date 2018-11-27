@@ -8,6 +8,7 @@
 
 #import "MsgViewController.h"
 #import "HFPhotoAssetViewController.h"
+#import "LFLiveViewController.h"
 
 @interface MsgViewController ()
 
@@ -22,7 +23,9 @@
         _titles = @[@{@"title" : @"Photos",
                       @"class" : NSStringFromClass([HFPhotoAssetViewController class])
                       },
-                    
+                    @{@"title" : @"Live",
+                      @"class" : NSStringFromClass([LFLiveViewController class])
+                      },
                     ];
     }
     return _titles;

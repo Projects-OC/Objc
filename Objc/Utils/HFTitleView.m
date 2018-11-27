@@ -27,7 +27,6 @@
         _titleBtn = ({
             UIButton *_btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [_btn setTitle:title forState:UIControlStateNormal];
-            [_btn setImage:[UIImage imageNamed:@"rj_arrowLeft"] forState:UIControlStateNormal];
             [_btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 //            _btn.titleLabel.font = [UIFont systemFontOfSize:18];
             [_backView addSubview:_btn];
@@ -38,7 +37,7 @@
             make.centerY.equalTo(_backView);
         }];
         
-        UIImageView *_img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"标题选项下拉"]];
+        UIImageView *_img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"展开"]];
         [_backView addSubview:_img];
         [_img mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(_titleBtn.mas_right).offset(4);

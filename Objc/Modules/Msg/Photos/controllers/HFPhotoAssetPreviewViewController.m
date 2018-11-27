@@ -10,6 +10,7 @@
 #import "HFPhotoAssetManager.h"
 #import "HFPhotoAssetViewController.h"
 #import "UIImage+HF.h"
+#import "HFToolBarView.h"
 
 @interface HFPhotoAssetPreviewViewController ()
 
@@ -35,6 +36,20 @@
              [weakself updateImageViewWithImage:photo];
          }
      }];
+    
+    HFToolBarView *_toolBar = [[HFToolBarView alloc] initWithTitles:@[@"编辑照片",@"上屏"]
+                                                         textColors:@[[UIColor greenColor],[UIColor whiteColor]]
+                                                         backColors:@[[UIColor whiteColor],[UIColor greenColor]]
+                                                           isBorder:YES
+                                                           tapBlock:^(NSInteger tag) {
+
+                                                           }];
+    [self.view addSubview:_toolBar];
+    [_toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.height.mas_equalTo(82);
+        make.bottom.mas_equalTo(-LCSafeBottomMargin);
+    }];
 }
 
 - (UIImageView *)imageView {

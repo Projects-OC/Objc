@@ -11,6 +11,8 @@ pod 'ReactiveObjC'
 pod 'UITableView+FDTemplateLayoutCell'
 pod 'MFWebKit'
 pod 'YYKit'
+pod 'LFLiveKit'
+
 
 end
 
