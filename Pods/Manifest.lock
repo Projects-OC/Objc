@@ -1,3 +1,38 @@
-PODFILE CHECKSUM: 4a6066b36232cf7414a83d736be70a236df6a2e0
+PODS:
+  - LFLiveKit (2.6)
+  - Masonry (1.1.0)
+  - MFWebKit (0.1.2)
+  - ReactiveObjC (3.1.0)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - LFLiveKit
+  - Masonry
+  - MFWebKit
+  - ReactiveObjC
+  - "UITableView+FDTemplateLayoutCell"
+  - YYKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - LFLiveKit
+    - Masonry
+    - MFWebKit
+    - ReactiveObjC
+    - "UITableView+FDTemplateLayoutCell"
+    - YYKit
+
+SPEC CHECKSUMS:
+  LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MFWebKit: 41c3358bc2cb0ec459b7667847d0101087091fac
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 086fae4ce8228004d1c5dba40ff44cba45475365
 
 COCOAPODS: 1.5.3

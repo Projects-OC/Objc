@@ -81,7 +81,6 @@
 		04526C9D21008F64003C0D31 /* PictureBrowserPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04526C9021008F64003C0D31 /* PictureBrowserPopAnimator.m */; };
 		04526C9E21008F64003C0D31 /* PictureBrowserPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04526C9221008F64003C0D31 /* PictureBrowserPushAnimator.m */; };
 		04526C9F21008F64003C0D31 /* PictureBrowserTransitionParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04526C9421008F64003C0D31 /* PictureBrowserTransitionParameter.m */; };
-		048FFFEB210AB14200AD83FD /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048FFFEA210AB14200AD83FD /* WebViewController.m */; };
 		049DCE1621084BB200861249 /* MasonryLayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DCE1521084BB200861249 /* MasonryLayoutTableViewController.m */; };
 		049DCE1821084BD500861249 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 049DCE1721084BD500861249 /* data.json */; };
 		049DCE1B21084C0C00861249 /* MasonryLayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DCE1A21084C0C00861249 /* MasonryLayoutTableViewCell.m */; };
@@ -99,6 +98,24 @@
 		3CCB3ED549858744FEA5EA03 /* libPods-Objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8185755919BB5FF374B41071 /* libPods-Objc.a */; };
 		6447050D21A5091900336D02 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6447050C21A5091900336D02 /* KVOViewController.m */; };
 		6447051021A5340200336D02 /* AttributeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6447050F21A5340200336D02 /* AttributeObject.m */; };
+		646C78FA21ACD48600974970 /* HFPhotoAssetPopoverPrensentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C78E721ACD48600974970 /* HFPhotoAssetPopoverPrensentController.m */; };
+		646C78FB21ACD48600974970 /* HFPhotoAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C78E821ACD48600974970 /* HFPhotoAssetViewController.m */; };
+		646C78FC21ACD48600974970 /* HFPhotoAssetPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C78E921ACD48600974970 /* HFPhotoAssetPreviewViewController.m */; };
+		646C78FD21ACD48600974970 /* HFPhotoAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C78ED21ACD48600974970 /* HFPhotoAssetManager.m */; };
+		646C78FE21ACD48600974970 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C78EE21ACD48600974970 /* UIView+Layout.m */; };
+		646C790021ACD48600974970 /* HFPhotoAssetProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C78F421ACD48600974970 /* HFPhotoAssetProgressView.m */; };
+		646C790121ACD48600974970 /* HFPhotoAssetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C78F521ACD48600974970 /* HFPhotoAssetCollectionViewCell.m */; };
+		646C790B21ACDACC00974970 /* HFBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C790321ACDACC00974970 /* HFBaseCollectionViewController.m */; };
+		646C790C21ACDACC00974970 /* HFBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C790421ACDACC00974970 /* HFBaseTableViewController.m */; };
+		646C790D21ACDACC00974970 /* HFBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C790821ACDACC00974970 /* HFBaseTableView.m */; };
+		646C790E21ACDACC00974970 /* HFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C790921ACDACC00974970 /* HFBaseViewController.m */; };
+		646C791221ACDB9800974970 /* HFTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C791121ACDB9800974970 /* HFTitleView.m */; };
+		646C791621ACE12300974970 /* UIImage+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C791521ACE12300974970 /* UIImage+HF.m */; };
+		646C791921ACE17200974970 /* UIView+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C791821ACE17200974970 /* UIView+HF.m */; };
+		646C791D21ACF09500974970 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C791C21ACF09500974970 /* UIScrollView+EmptyDataSet.m */; };
+		646C792221AD2D4000974970 /* LFLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C792121AD2D4000974970 /* LFLiveViewController.m */; };
+		646C792521AD2F8000974970 /* LFLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C792421AD2F8000974970 /* LFLivePreview.m */; };
+		646C792921AD33EB00974970 /* HFToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 646C792721AD33EB00974970 /* HFToolBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -239,8 +256,6 @@
 		04526C9221008F64003C0D31 /* PictureBrowserPushAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureBrowserPushAnimator.m; sourceTree = "<group>"; };
 		04526C9321008F64003C0D31 /* PictureBrowserTransitionParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureBrowserTransitionParameter.h; sourceTree = "<group>"; };
 		04526C9421008F64003C0D31 /* PictureBrowserTransitionParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureBrowserTransitionParameter.m; sourceTree = "<group>"; };
-		048FFFE9210AB14200AD83FD /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		048FFFEA210AB14200AD83FD /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		049DCE1421084BB200861249 /* MasonryLayoutTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryLayoutTableViewController.h; sourceTree = "<group>"; };
 		049DCE1521084BB200861249 /* MasonryLayoutTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryLayoutTableViewController.m; sourceTree = "<group>"; };
 		049DCE1721084BD500861249 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -273,6 +288,42 @@
 		6447050C21A5091900336D02 /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		6447050E21A5340200336D02 /* AttributeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeObject.h; sourceTree = "<group>"; };
 		6447050F21A5340200336D02 /* AttributeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributeObject.m; sourceTree = "<group>"; };
+		646C78E621ACD48600974970 /* HFPhotoAssetPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFPhotoAssetPreviewViewController.h; sourceTree = "<group>"; };
+		646C78E721ACD48600974970 /* HFPhotoAssetPopoverPrensentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFPhotoAssetPopoverPrensentController.m; sourceTree = "<group>"; };
+		646C78E821ACD48600974970 /* HFPhotoAssetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFPhotoAssetViewController.m; sourceTree = "<group>"; };
+		646C78E921ACD48600974970 /* HFPhotoAssetPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFPhotoAssetPreviewViewController.m; sourceTree = "<group>"; };
+		646C78EA21ACD48600974970 /* HFPhotoAssetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFPhotoAssetViewController.h; sourceTree = "<group>"; };
+		646C78EB21ACD48600974970 /* HFPhotoAssetPopoverPrensentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFPhotoAssetPopoverPrensentController.h; sourceTree = "<group>"; };
+		646C78ED21ACD48600974970 /* HFPhotoAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFPhotoAssetManager.m; sourceTree = "<group>"; };
+		646C78EE21ACD48600974970 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		646C78F021ACD48600974970 /* HFPhotoAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFPhotoAssetManager.h; sourceTree = "<group>"; };
+		646C78F121ACD48600974970 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		646C78F421ACD48600974970 /* HFPhotoAssetProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFPhotoAssetProgressView.m; sourceTree = "<group>"; };
+		646C78F521ACD48600974970 /* HFPhotoAssetCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFPhotoAssetCollectionViewCell.m; sourceTree = "<group>"; };
+		646C78F721ACD48600974970 /* HFPhotoAssetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFPhotoAssetCollectionViewCell.h; sourceTree = "<group>"; };
+		646C78F821ACD48600974970 /* HFPhotoAssetProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFPhotoAssetProgressView.h; sourceTree = "<group>"; };
+		646C790321ACDACC00974970 /* HFBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBaseCollectionViewController.m; sourceTree = "<group>"; };
+		646C790421ACDACC00974970 /* HFBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBaseTableViewController.m; sourceTree = "<group>"; };
+		646C790521ACDACC00974970 /* HFBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBaseTableViewController.h; sourceTree = "<group>"; };
+		646C790621ACDACC00974970 /* HFBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBaseViewController.h; sourceTree = "<group>"; };
+		646C790721ACDACC00974970 /* HFBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBaseTableView.h; sourceTree = "<group>"; };
+		646C790821ACDACC00974970 /* HFBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBaseTableView.m; sourceTree = "<group>"; };
+		646C790921ACDACC00974970 /* HFBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBaseViewController.m; sourceTree = "<group>"; };
+		646C790A21ACDACC00974970 /* HFBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBaseCollectionViewController.h; sourceTree = "<group>"; };
+		646C791021ACDB9800974970 /* HFTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFTitleView.h; sourceTree = "<group>"; };
+		646C791121ACDB9800974970 /* HFTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFTitleView.m; sourceTree = "<group>"; };
+		646C791421ACE12300974970 /* UIImage+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HF.h"; sourceTree = "<group>"; };
+		646C791521ACE12300974970 /* UIImage+HF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HF.m"; sourceTree = "<group>"; };
+		646C791721ACE17200974970 /* UIView+HF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HF.h"; sourceTree = "<group>"; };
+		646C791821ACE17200974970 /* UIView+HF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HF.m"; sourceTree = "<group>"; };
+		646C791B21ACF09500974970 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		646C791C21ACF09500974970 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		646C792021AD2D4000974970 /* LFLiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFLiveViewController.h; sourceTree = "<group>"; };
+		646C792121AD2D4000974970 /* LFLiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFLiveViewController.m; sourceTree = "<group>"; };
+		646C792321AD2F8000974970 /* LFLivePreview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFLivePreview.h; sourceTree = "<group>"; };
+		646C792421AD2F8000974970 /* LFLivePreview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFLivePreview.m; sourceTree = "<group>"; };
+		646C792721AD33EB00974970 /* HFToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFToolBarView.m; sourceTree = "<group>"; };
+		646C792821AD33EB00974970 /* HFToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFToolBarView.h; sourceTree = "<group>"; };
 		8185755919BB5FF374B41071 /* libPods-Objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		990DDB9A9BBA8AB0ADF5117B /* Pods-Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objc/Pods-Objc.debug.xcconfig"; sourceTree = "<group>"; };
 		D5E643EF92F2474F8A62B336 /* Pods-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objc/Pods-Objc.release.xcconfig"; sourceTree = "<group>"; };
@@ -326,6 +377,9 @@
 				04B5BBA92112DF31001A4616 /* TabBarViewController.m */,
 				04B5BBAB2112E13B001A4616 /* NavigatonViewController.h */,
 				04B5BBAC2112E13B001A4616 /* NavigatonViewController.m */,
+				646C791A21ACF02400974970 /* Vendor */,
+				646C791321ACE10400974970 /* Category */,
+				646C790F21ACDB8700974970 /* Utils */,
 				04526BA821008D1D003C0D31 /* Modules */,
 				04526B9821008B23003C0D31 /* Main.storyboard */,
 				04526B9B21008B28003C0D31 /* Assets.xcassets */,
@@ -342,28 +396,8 @@
 			isa = PBXGroup;
 			children = (
 				04B5BB982112AFA7001A4616 /* Msg */,
-				04B5BB942112ADD4001A4616 /* PushViewController */,
-				04B5BB902112A07C001A4616 /* NSDecimalNumber */,
-				04496BCD2111A2630067022B /* Bezier */,
 				04E5F485211051EA00FE29FC /* Base */,
 				04526BD221008E68003C0D31 /* Main */,
-				048FFFE8210AB12900AD83FD /* WebView */,
-				049DCE1321084B5800861249 /* MasonryLayout */,
-				04526C0521008E69003C0D31 /* Core Animation */,
-				04526BE321008E69003C0D31 /* Expression */,
-				04526C0B21008E69003C0D31 /* GCD */,
-				04526C7B21008F64003C0D31 /* PictureBrower */,
-				04526BCD21008E68003C0D31 /* Popover */,
-				04526BD721008E68003C0D31 /* Presentaion */,
-				04526C3F21008E69003C0D31 /* RAC */,
-				04526BEF21008E69003C0D31 /* Runtime */,
-				04526C1B21008E69003C0D31 /* SDWebImage */,
-				04526C0E21008E69003C0D31 /* Transition1 */,
-				04526BFA21008E69003C0D31 /* Transition2 */,
-				04526C3921008E69003C0D31 /* Transition3 */,
-				04526BDC21008E68003C0D31 /* UIViewController+Popup.h */,
-				04526BDF21008E68003C0D31 /* UIViewController+Popup.m */,
-				04526BE021008E68003C0D31 /* ViewAnimation */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -386,6 +420,25 @@
 				04526BD421008E68003C0D31 /* TableViewCell.m */,
 				04526BD521008E68003C0D31 /* MainTableViewController.h */,
 				04526BD621008E68003C0D31 /* MainTableViewController.m */,
+				04B5BB942112ADD4001A4616 /* PushViewController */,
+				04B5BB902112A07C001A4616 /* NSDecimalNumber */,
+				04496BCD2111A2630067022B /* Bezier */,
+				049DCE1321084B5800861249 /* MasonryLayout */,
+				04526C0521008E69003C0D31 /* Core Animation */,
+				04526BE321008E69003C0D31 /* Expression */,
+				04526C0B21008E69003C0D31 /* GCD */,
+				04526C7B21008F64003C0D31 /* PictureBrower */,
+				04526BCD21008E68003C0D31 /* Popover */,
+				04526BD721008E68003C0D31 /* Presentaion */,
+				04526C3F21008E69003C0D31 /* RAC */,
+				04526BEF21008E69003C0D31 /* Runtime */,
+				04526C1B21008E69003C0D31 /* SDWebImage */,
+				04526C0E21008E69003C0D31 /* Transition1 */,
+				04526BFA21008E69003C0D31 /* Transition2 */,
+				04526C3921008E69003C0D31 /* Transition3 */,
+				04526BDC21008E68003C0D31 /* UIViewController+Popup.h */,
+				04526BDF21008E68003C0D31 /* UIViewController+Popup.m */,
+				04526BE021008E68003C0D31 /* ViewAnimation */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -613,15 +666,6 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
-		048FFFE8210AB12900AD83FD /* WebView */ = {
-			isa = PBXGroup;
-			children = (
-				048FFFE9210AB14200AD83FD /* WebViewController.h */,
-				048FFFEA210AB14200AD83FD /* WebViewController.m */,
-			);
-			path = WebView;
-			sourceTree = "<group>";
-		};
 		049DCE1321084B5800861249 /* MasonryLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,6 +706,8 @@
 			children = (
 				04B5BBA52112D6CE001A4616 /* MsgViewController.h */,
 				04B5BBA62112D6CE001A4616 /* MsgViewController.m */,
+				646C791E21AD2C9E00974970 /* Live */,
+				646C78E421ACD42100974970 /* Photos */,
 			);
 			path = Msg;
 			sourceTree = "<group>";
@@ -669,6 +715,14 @@
 		04E5F485211051EA00FE29FC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				646C790A21ACDACC00974970 /* HFBaseCollectionViewController.h */,
+				646C790321ACDACC00974970 /* HFBaseCollectionViewController.m */,
+				646C790721ACDACC00974970 /* HFBaseTableView.h */,
+				646C790821ACDACC00974970 /* HFBaseTableView.m */,
+				646C790521ACDACC00974970 /* HFBaseTableViewController.h */,
+				646C790421ACDACC00974970 /* HFBaseTableViewController.m */,
+				646C790621ACDACC00974970 /* HFBaseViewController.h */,
+				646C790921ACDACC00974970 /* HFBaseViewController.m */,
 				04526BCC21008E68003C0D31 /* BaseObject.h */,
 				04526BDE21008E68003C0D31 /* BaseObject.m */,
 				6447050E21A5340200336D02 /* AttributeObject.h */,
@@ -692,6 +746,93 @@
 				D5E643EF92F2474F8A62B336 /* Pods-Objc.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		646C78E421ACD42100974970 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				646C78E521ACD48600974970 /* controllers */,
+				646C78EC21ACD48600974970 /* manager */,
+				646C78F321ACD48600974970 /* views */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		646C78E521ACD48600974970 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				646C78EA21ACD48600974970 /* HFPhotoAssetViewController.h */,
+				646C78E821ACD48600974970 /* HFPhotoAssetViewController.m */,
+				646C78E621ACD48600974970 /* HFPhotoAssetPreviewViewController.h */,
+				646C78E921ACD48600974970 /* HFPhotoAssetPreviewViewController.m */,
+				646C78EB21ACD48600974970 /* HFPhotoAssetPopoverPrensentController.h */,
+				646C78E721ACD48600974970 /* HFPhotoAssetPopoverPrensentController.m */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		646C78EC21ACD48600974970 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				646C78ED21ACD48600974970 /* HFPhotoAssetManager.m */,
+				646C78EE21ACD48600974970 /* UIView+Layout.m */,
+				646C78F021ACD48600974970 /* HFPhotoAssetManager.h */,
+				646C78F121ACD48600974970 /* UIView+Layout.h */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		646C78F321ACD48600974970 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				646C78F421ACD48600974970 /* HFPhotoAssetProgressView.m */,
+				646C78F821ACD48600974970 /* HFPhotoAssetProgressView.h */,
+				646C78F721ACD48600974970 /* HFPhotoAssetCollectionViewCell.h */,
+				646C78F521ACD48600974970 /* HFPhotoAssetCollectionViewCell.m */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		646C790F21ACDB8700974970 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				646C791021ACDB9800974970 /* HFTitleView.h */,
+				646C791121ACDB9800974970 /* HFTitleView.m */,
+				646C792821AD33EB00974970 /* HFToolBarView.h */,
+				646C792721AD33EB00974970 /* HFToolBarView.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		646C791321ACE10400974970 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				646C791B21ACF09500974970 /* UIScrollView+EmptyDataSet.h */,
+				646C791C21ACF09500974970 /* UIScrollView+EmptyDataSet.m */,
+				646C791421ACE12300974970 /* UIImage+HF.h */,
+				646C791521ACE12300974970 /* UIImage+HF.m */,
+				646C791721ACE17200974970 /* UIView+HF.h */,
+				646C791821ACE17200974970 /* UIView+HF.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		646C791A21ACF02400974970 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		646C791E21AD2C9E00974970 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				646C792021AD2D4000974970 /* LFLiveViewController.h */,
+				646C792121AD2D4000974970 /* LFLiveViewController.m */,
+				646C792321AD2F8000974970 /* LFLivePreview.h */,
+				646C792421AD2F8000974970 /* LFLivePreview.m */,
+			);
+			path = Live;
 			sourceTree = "<group>";
 		};
 		AA101FE8B11D83C960E1B434 /* Frameworks */ = {
@@ -809,16 +950,20 @@
 				04526C6421008E69003C0D31 /* TaobaoAnimationTrasition.m in Sources */,
 				04526C7121008E69003C0D31 /* SDWebImagePrefetcher.m in Sources */,
 				04526C5C21008E69003C0D31 /* NavWechatPopAnimator.m in Sources */,
+				646C792921AD33EB00974970 /* HFToolBarView.m in Sources */,
+				646C78FD21ACD48600974970 /* HFPhotoAssetManager.m in Sources */,
 				04526C9721008F64003C0D31 /* PictureBrowserCell.m in Sources */,
 				04526C9B21008F64003C0D31 /* PictureBrowserInteractiveAnimatedTransition.m in Sources */,
 				04526C7921008E69003C0D31 /* TransitionsViewController.m in Sources */,
 				04526C9F21008F64003C0D31 /* PictureBrowserTransitionParameter.m in Sources */,
 				04526C9521008F64003C0D31 /* BCell.m in Sources */,
+				646C790B21ACDACC00974970 /* HFBaseCollectionViewController.m in Sources */,
 				04526C6721008E69003C0D31 /* TaobaoSecondViewController.m in Sources */,
 				04526C5A21008E69003C0D31 /* RuntimeViewController.m in Sources */,
 				04526C5D21008E69003C0D31 /* NavWechatPushAnimator.m in Sources */,
 				6447051021A5340200336D02 /* AttributeObject.m in Sources */,
 				04B5BB9E2112AFCD001A4616 /* PushViewControllerB.m in Sources */,
+				646C78FE21ACD48600974970 /* UIView+Layout.m in Sources */,
 				04B5BB932112A08F001A4616 /* DecimalNumberViewController.m in Sources */,
 				04B5BBAD2112E13B001A4616 /* NavigatonViewController.m in Sources */,
 				04526C7521008E69003C0D31 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -828,6 +973,7 @@
 				04E5F4882110522600FE29FC /* OneViewController.m in Sources */,
 				04B5BBA72112D6CE001A4616 /* MsgViewController.m in Sources */,
 				04526C6921008E69003C0D31 /* TaobaoViewController.m in Sources */,
+				646C790021ACD48600974970 /* HFPhotoAssetProgressView.m in Sources */,
 				04526C4821008E69003C0D31 /* BaseViewController.m in Sources */,
 				04526C9821008F64003C0D31 /* PictureBrowserSouceModel.m in Sources */,
 				04526C6821008E69003C0D31 /* TaobaoTableViewCell.m in Sources */,
@@ -835,12 +981,13 @@
 				04526C4421008E69003C0D31 /* TableViewCell.m in Sources */,
 				04526C6A21008E69003C0D31 /* NSData+ImageContentType.m in Sources */,
 				04526C7321008E69003C0D31 /* UIImage+GIF.m in Sources */,
-				048FFFEB210AB14200AD83FD /* WebViewController.m in Sources */,
 				04526C5821008E69003C0D31 /* Object.m in Sources */,
+				646C791D21ACF09500974970 /* UIScrollView+EmptyDataSet.m in Sources */,
 				04526C7A21008E69003C0D31 /* RACViewController.m in Sources */,
 				04526C6E21008E69003C0D31 /* SDWebImageDownloader.m in Sources */,
 				049DCE1E21084CEC00861249 /* MasonryLayoutModel.m in Sources */,
 				04526C6C21008E69003C0D31 /* SDWebImageCompat.m in Sources */,
+				646C790D21ACDACC00974970 /* HFBaseTableView.m in Sources */,
 				04526C4621008E69003C0D31 /* PresentationViewController.m in Sources */,
 				04526C6621008E69003C0D31 /* TaobaoPushAnimator.m in Sources */,
 				04526C4221008E69003C0D31 /* PopoverPresentationController.m in Sources */,
@@ -851,20 +998,27 @@
 				04526C9921008F64003C0D31 /* PictureBrowserViewController.m in Sources */,
 				04526C4A21008E69003C0D31 /* UIViewController+Popup.m in Sources */,
 				04526C5F21008E69003C0D31 /* WechatNavAnimationTransitionSecondViewController.m in Sources */,
+				646C791621ACE12300974970 /* UIImage+HF.m in Sources */,
 				6447050D21A5091900336D02 /* KVOViewController.m in Sources */,
+				646C78FA21ACD48600974970 /* HFPhotoAssetPopoverPrensentController.m in Sources */,
 				04526BA221008B28003C0D31 /* main.m in Sources */,
 				04526C6F21008E69003C0D31 /* SDWebImageDownloaderOperation.m in Sources */,
 				04526C6521008E69003C0D31 /* TaobaoPopAnimator.m in Sources */,
 				04526C4321008E69003C0D31 /* PopoverViewController.m in Sources */,
 				04B5BB972112AEA6001A4616 /* MoreViewController.m in Sources */,
+				646C78FB21ACD48600974970 /* HFPhotoAssetViewController.m in Sources */,
 				04526C7721008E69003C0D31 /* UIView+WebCacheOperation.m in Sources */,
+				646C78FC21ACD48600974970 /* HFPhotoAssetPreviewViewController.m in Sources */,
 				04526C4921008E69003C0D31 /* BaseObject.m in Sources */,
 				04526C9A21008F64003C0D31 /* PictureBrowserZoomScrollView.m in Sources */,
 				04526C5721008E69003C0D31 /* NSObject+Category.m in Sources */,
 				04B5BBAA2112DF31001A4616 /* TabBarViewController.m in Sources */,
 				04526C7621008E69003C0D31 /* UIImageView+WebCache.m in Sources */,
+				646C790121ACD48600974970 /* HFPhotoAssetCollectionViewCell.m in Sources */,
 				04526C5921008E69003C0D31 /* RuntimeViewController+Addtion.m in Sources */,
+				646C791221ACDB9800974970 /* HFTitleView.m in Sources */,
 				04526C7821008E69003C0D31 /* CrossDissolveAnimatedTransition.m in Sources */,
+				646C792521AD2F8000974970 /* LFLivePreview.m in Sources */,
 				04526C6221008E69003C0D31 /* ClockView.m in Sources */,
 				04526C6121008E69003C0D31 /* CoreAnimationViewController.m in Sources */,
 				04526C9C21008F64003C0D31 /* PictureBrowserPercentDrivenInteractiveTransition.m in Sources */,
@@ -877,11 +1031,15 @@
 				04526C6B21008E69003C0D31 /* SDImageCache.m in Sources */,
 				04526C5B21008E69003C0D31 /* UIButton+Block.m in Sources */,
 				04526C4B21008E69003C0D31 /* UIView+Animation.m in Sources */,
+				646C790E21ACDACC00974970 /* HFBaseViewController.m in Sources */,
 				04526B9421008B23003C0D31 /* AppDelegate.m in Sources */,
+				646C791921ACE17200974970 /* UIView+HF.m in Sources */,
 				04526C9D21008F64003C0D31 /* PictureBrowserPopAnimator.m in Sources */,
 				04526C5E21008E69003C0D31 /* WeChatNavAnimationTransition.m in Sources */,
 				04B5BBB02112F98F001A4616 /* ActionSheetView.m in Sources */,
+				646C790C21ACDACC00974970 /* HFBaseTableViewController.m in Sources */,
 				049DCE1621084BB200861249 /* MasonryLayoutTableViewController.m in Sources */,
+				646C792221AD2D4000974970 /* LFLiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 mf. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface MsgViewController : BaseViewController
+@interface MsgViewController : UITableViewController
 
 @end
