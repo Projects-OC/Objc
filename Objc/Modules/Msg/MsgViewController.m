@@ -7,31 +7,49 @@
 //
 
 #import "MsgViewController.h"
+#import "HFPhotoAssetViewController.h"
 
 @interface MsgViewController ()
+
+@property (nonatomic,copy) NSArray *titles;
 
 @end
 
 @implementation MsgViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (NSArray *)titles {
+    if (!_titles) {
+        _titles = @[@{@"title" : @"Photos",
+                      @"class" : NSStringFromClass([HFPhotoAssetViewController class])
+                      },
+                    
+                    ];
+    }
+    return _titles;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *MyIdentifier = @"MyIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
+    }
+    cell.textLabel.text = self.titles[indexPath.row][@"title"];
+
+    return cell;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.titles.count;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *classString = self.titles[indexPath.row][@"class"];
+    UIViewController *ctrl = [[NSClassFromString(classString) alloc] init];
+    [self.navigationController pushViewController:ctrl animated:YES];
+    
+}
 
 @end

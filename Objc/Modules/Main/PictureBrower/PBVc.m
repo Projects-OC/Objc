@@ -10,7 +10,7 @@
 #import "BCell.h"
 #import "PictureBrowser.h"
 
-#define CellImageSize (LCScreenWidth - 2 * 5)/ 3.0
+#define CellImageSize (kScreenWidth - 2 * 5)/ 3.0
 
 @interface PBVc ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate, UINavigationControllerDelegate>
 
@@ -49,7 +49,7 @@
         flowLayout.minimumLineSpacing = 5;
         flowLayout.minimumInteritemSpacing = 5;
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, LCScreenWidth, kScreenHeight - 64) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64) collectionViewLayout:flowLayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.alwaysBounceVertical = YES;

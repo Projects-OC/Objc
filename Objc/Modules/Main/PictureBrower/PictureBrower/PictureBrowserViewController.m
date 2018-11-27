@@ -67,7 +67,7 @@
         // 每行内部cell item的间距
         flowLayout.minimumInteritemSpacing = 0;
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, LCScreenWidth + kBrowseSpace, kScreenHeight)
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth + kBrowseSpace, kScreenHeight)
                                              collectionViewLayout:flowLayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -112,7 +112,7 @@
 #pragma mark - System Delegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     CGFloat offset = _collectionView.contentOffset.x;
-    NSInteger cellIndex = offset/(LCScreenWidth + kBrowseSpace);
+    NSInteger cellIndex = offset/(kScreenWidth + kBrowseSpace);
     [self setupBaseViewControllerProperty:cellIndex];
 }
 
@@ -126,7 +126,7 @@
 {
     CGPoint translation = [gestureRecognizer translationInView:gestureRecognizer.view];
     
-    CGFloat scale = 1 - (translation.y / LCScreenWidth);
+    CGFloat scale = 1 - (translation.y / kScreenWidth);
     scale = scale < 0 ? 0 : scale;
     scale = scale > 1 ? 1 : scale;
     NSLog(@"%f",scale);

@@ -89,7 +89,7 @@
     
     CGSize size = image.size;
     CGSize newSize;
-    newSize.width = LCScreenWidth;
+    newSize.width = kScreenWidth;
     newSize.height = newSize.width / size.width * size.height;
     
     CGFloat imageY = (kScreenHeight - newSize.height) * 0.5;

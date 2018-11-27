@@ -34,7 +34,7 @@
 #pragma mark - Setter and getter
 - (PictureBrowserZoomScrollView *)pictureImageScrollView {
     if (!_pictureImageScrollView) {
-        _pictureImageScrollView = [[PictureBrowserZoomScrollView alloc]initWithFrame:CGRectMake(0, 0, LCScreenWidth, kScreenHeight)];
+        _pictureImageScrollView = [[PictureBrowserZoomScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
         _pictureImageScrollView.backgroundColor = [UIColor blackColor];
         _pictureImageScrollView.zoomScale = 1.0f;
         
@@ -96,7 +96,7 @@
     
     CGSize size = image.size;
     CGSize newSize;
-    newSize.width = LCScreenWidth;
+    newSize.width = kScreenWidth;
     newSize.height = newSize.width / size.width * size.height;
     
     return newSize;

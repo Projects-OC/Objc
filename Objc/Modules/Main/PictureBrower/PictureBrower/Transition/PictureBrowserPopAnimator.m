@@ -58,7 +58,7 @@
                          CGRect imageFrame = toFrame;
                          if (imageFrame.size.width == 0 && imageFrame.size.height == 0) {
                              CGFloat defaultWidth = 5;
-                             imageFrame = CGRectMake((LCScreenWidth - defaultWidth) * 0.5, (kScreenHeight - defaultWidth) * 0.5, defaultWidth, defaultWidth);
+                             imageFrame = CGRectMake((kScreenWidth - defaultWidth) * 0.5, (kScreenHeight - defaultWidth) * 0.5, defaultWidth, defaultWidth);
                          }
                          
                          transitionImgView.frame = imageFrame;
