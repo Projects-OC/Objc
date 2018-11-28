@@ -8,8 +8,10 @@
 
 #import "FloatingViewBtn.h"
 #import "SemiCircleView.h"
+#import "FloatingViewController.h"
+#import "FloatingAnimator.h"
 
-@interface FloatingViewBtn ()
+@interface FloatingViewBtn ()<UINavigationControllerDelegate>
 
 @property (nonatomic,assign) CGPoint lastPoint;
 @property (nonatomic,assign) CGPoint pointInSelf;
@@ -20,7 +22,6 @@
 
 static CGFloat floatingW = 60;
 static CGFloat circleW = 160;
-static CGRect  circleNormalRect;
 
 static FloatingViewBtn *floatingView;
 static SemiCircleView *circleView;
@@ -29,8 +30,7 @@ static SemiCircleView *circleView;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         floatingView = [[FloatingViewBtn alloc] initWithFrame:CGRectMake(10, 200, floatingW, floatingW)];
-        circleNormalRect = CGRectMake(kScreenWidth, kScreenHeight, circleW, circleW);
-        circleView = [[SemiCircleView alloc] initWithFrame:circleNormalRect];
+        circleView = [[SemiCircleView alloc] initWithFrame:CGRectMake(kScreenWidth, kScreenHeight, circleW, circleW)];
     });
     
     //添加半圆
@@ -57,40 +57,22 @@ static SemiCircleView *circleView;
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     _lastPoint = [touch locationInView:self.superview];
+    _pointInSelf = [touch locationInView:self];
     
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    CGPoint currentPoint = [touch locationInView:self.superview];
-   
-    if (CGPointEqualToPoint(_lastPoint, currentPoint)) {
-    
-        return;
-    }
-    
-    [UIView animateWithDuration:0.2 animations:^{
-        circleView.frame = circleNormalRect;
-    }];
-    
-    CGFloat leftMargin = self.center.x;
-    CGFloat rightMargin = kScreenWidth - leftMargin;
-    if (leftMargin < rightMargin) {
-        [UIView animateWithDuration:0.2 animations:^{
-            self.center = CGPointMake(floatingW/2 + 10, self.center.y);
-        }];
-    } else {
-        [UIView animateWithDuration:0.2 animations:^{
-            self.center = CGPointMake(kScreenWidth-floatingW/2 + 10, self.center.y);
-        }];
-    }
+//    [UIView animateWithDuration:0.2 animations:^{
+//        circleView.frame = CGRectMake(kScreenWidth-circleW, kScreenHeight-circleW, circleW, circleW);
+//    }];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint currentPoint = [touch locationInView:self.superview];
     
-    
+    if (CGRectEqualToRect(circleView.frame, CGRectMake(kScreenWidth, kScreenHeight, circleW, circleW))) {
+        [UIView animateWithDuration:0.2 animations:^{
+            circleView.frame = CGRectMake(kScreenWidth-circleW, kScreenHeight-circleW, circleW, circleW);
+        }];
+    }
     
     //计算出floatingBtn的center坐标
     CGFloat centerx = currentPoint.x + (self.width/2 - _pointInSelf.x);
@@ -101,6 +83,59 @@ static SemiCircleView *circleView;
     CGFloat y = MAX(floatingW/2, MIN(kScreenHeight-floatingW/2, centery));
     self.center = CGPointMake(x, y);
 }
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint currentPoint = [touch locationInView:self.superview];
+   
+    //点击浮窗
+    if (CGPointEqualToPoint(_lastPoint, currentPoint)) {
+        AppDelegate *del = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        UITabBarController *tab = (UITabBarController *)del.window.rootViewController;
+        UINavigationController *ctrl = tab.selectedViewController;
+        ctrl.delegate = self;
+        FloatingViewController *fctrl = [FloatingViewController new];
+        [ctrl pushViewController:fctrl animated:YES];
+        
+        return;
+    }
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        circleView.frame = CGRectMake(kScreenWidth, kScreenHeight, circleW, circleW);
+        
+        CGFloat distance = sqrt(pow(kScreenWidth - self.centerX, 2) + pow(kScreenHeight - self.centerY, 2));
+        if (distance <= circleW-30) {
+            [self removeFromSuperview];
+        }
+    }];
+    
+    //左右两边距离
+    CGFloat leftMargin = self.center.x;
+    CGFloat rightMargin = kScreenWidth - leftMargin;
+    if (leftMargin < rightMargin) {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.center = CGPointMake(floatingW/2 + 10, self.center.y);
+        }];
+    } else {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.center = CGPointMake(kScreenWidth-floatingW/2 - 10, self.center.y);
+        }];
+    }
+}
+
+#pragma mark navigationDelegate
+- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                            animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                         fromViewController:(UIViewController *)fromVC
+                                                           toViewController:(UIViewController *)toVC  NS_AVAILABLE_IOS(7_0) {
+    if (operation == UINavigationControllerOperationPush) {
+        FloatingAnimator *animator = [FloatingAnimator new];
+        animator.curFrame = self.frame;
+        return animator;
+    }
+    return nil;
+}
+
 
 @end
 

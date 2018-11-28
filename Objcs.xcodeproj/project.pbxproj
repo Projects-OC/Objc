@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		453EE1D321AD826200125AC8 /* SemiCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 453EE1D221AD826200125AC8 /* SemiCircleView.m */; };
+		454BE80E21AEC80B004A0376 /* FloatingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 454BE80D21AEC80B004A0376 /* FloatingAnimator.m */; };
+		454BE81421AED014004A0376 /* FloatingAnimatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 454BE81321AED014004A0376 /* FloatingAnimatorView.m */; };
 		45EC000021AD79D5007BB8BD /* PictureBrowserPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5A21AD79D5007BB8BD /* PictureBrowserPopAnimator.m */; };
 		45EC000121AD79D5007BB8BD /* PictureBrowserInteractiveAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5D21AD79D5007BB8BD /* PictureBrowserInteractiveAnimatedTransition.m */; };
 		45EC000221AD79D5007BB8BD /* PictureBrowserTransitionParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5E21AD79D5007BB8BD /* PictureBrowserTransitionParameter.m */; };
@@ -124,6 +126,10 @@
 		077457077BCF708D1A93ACF3 /* Pods-Objcs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.release.xcconfig"; sourceTree = "<group>"; };
 		453EE1D121AD826200125AC8 /* SemiCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemiCircleView.h; sourceTree = "<group>"; };
 		453EE1D221AD826200125AC8 /* SemiCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemiCircleView.m; sourceTree = "<group>"; };
+		454BE80C21AEC80B004A0376 /* FloatingAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingAnimator.h; sourceTree = "<group>"; };
+		454BE80D21AEC80B004A0376 /* FloatingAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingAnimator.m; sourceTree = "<group>"; };
+		454BE81221AED014004A0376 /* FloatingAnimatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingAnimatorView.h; sourceTree = "<group>"; };
+		454BE81321AED014004A0376 /* FloatingAnimatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingAnimatorView.m; sourceTree = "<group>"; };
 		45EC004021AD7C5F007BB8BD /* FloatingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingViewController.h; sourceTree = "<group>"; };
 		45EC004121AD7C5F007BB8BD /* FloatingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingViewController.m; sourceTree = "<group>"; };
 		45EC004321AD7D57007BB8BD /* FloatingViewBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingViewBtn.h; sourceTree = "<group>"; };
@@ -353,6 +359,10 @@
 			children = (
 				45EC004021AD7C5F007BB8BD /* FloatingViewController.h */,
 				45EC004121AD7C5F007BB8BD /* FloatingViewController.m */,
+				454BE80C21AEC80B004A0376 /* FloatingAnimator.h */,
+				454BE80D21AEC80B004A0376 /* FloatingAnimator.m */,
+				454BE81221AED014004A0376 /* FloatingAnimatorView.h */,
+				454BE81321AED014004A0376 /* FloatingAnimatorView.m */,
 				45EC004321AD7D57007BB8BD /* FloatingViewBtn.h */,
 				45EC004421AD7D57007BB8BD /* FloatingViewBtn.m */,
 				453EE1D121AD826200125AC8 /* SemiCircleView.h */,
@@ -425,8 +435,8 @@
 		45ECFF0021AD79D5007BB8BD /* Msg */ = {
 			isa = PBXGroup;
 			children = (
-				45ECFF0121AD79D5007BB8BD /* MsgViewController.m */,
 				45ECFF0221AD79D5007BB8BD /* MsgViewController.h */,
+				45ECFF0121AD79D5007BB8BD /* MsgViewController.m */,
 				45EC003F21AD7C2B007BB8BD /* Floating */,
 				45ECFF0321AD79D5007BB8BD /* Live */,
 				45ECFF0821AD79D5007BB8BD /* Photos */,
@@ -996,6 +1006,7 @@
 				45ECFFE021AD79D5007BB8BD /* HFPhotoAssetManager.m in Sources */,
 				45EC001E21AD79D5007BB8BD /* MainTableViewController.m in Sources */,
 				45EC002921AD79D6007BB8BD /* NSData+ImageContentType.m in Sources */,
+				454BE81421AED014004A0376 /* FloatingAnimatorView.m in Sources */,
 				45EC003D21AD79D6007BB8BD /* UIView+HF.m in Sources */,
 				45EC003721AD79D6007BB8BD /* BaseViewController.m in Sources */,
 				45ECFFF821AD79D5007BB8BD /* UIButton+Block.m in Sources */,
@@ -1006,6 +1017,7 @@
 				45ECFFEB21AD79D5007BB8BD /* MasonryLayoutTableViewCell.m in Sources */,
 				45ECFFF521AD79D5007BB8BD /* ClockView.m in Sources */,
 				45ECFFDD21AD79D5007BB8BD /* MsgViewController.m in Sources */,
+				454BE80E21AEC80B004A0376 /* FloatingAnimator.m in Sources */,
 				45EC002B21AD79D6007BB8BD /* UIView+WebCacheOperation.m in Sources */,
 				45EC000221AD79D5007BB8BD /* PictureBrowserTransitionParameter.m in Sources */,
 				45EC002721AD79D6007BB8BD /* SDImageCache.m in Sources */,

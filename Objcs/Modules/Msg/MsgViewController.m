@@ -9,7 +9,7 @@
 #import "MsgViewController.h"
 #import "HFPhotoAssetViewController.h"
 #import "LFLiveViewController.h"
-#import "FloatingViewController.h"
+#import "FloatingViewBtn.h"
 
 @interface MsgViewController ()
 
@@ -19,6 +19,15 @@
 
 @implementation MsgViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加浮窗" style:UIBarButtonItemStylePlain target:self action:@selector(addFloating)];
+}
+
+- (void)addFloating {
+    [FloatingViewBtn showFloating];
+}
+
 - (NSArray *)titles {
     if (!_titles) {
         _titles = @[@{@"title" : @"Photos",
@@ -26,9 +35,6 @@
                       },
                     @{@"title" : @"Live",
                       @"class" : NSStringFromClass([LFLiveViewController class])
-                      },
-                    @{@"title" : @"Floating",
-                      @"class" : NSStringFromClass([FloatingViewController class])
                       },
                     ];
     }

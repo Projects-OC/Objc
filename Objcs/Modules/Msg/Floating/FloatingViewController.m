@@ -7,7 +7,6 @@
 //
 
 #import "FloatingViewController.h"
-#import "FloatingViewBtn.h"
 
 @interface FloatingViewController ()
 
@@ -17,11 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加浮窗" style:UIBarButtonItemStylePlain target:self action:@selector(addFloating)];
+    self.view.backgroundColor = [UIColor grayColor];
 }
 
-- (void)addFloating {
-    [FloatingViewBtn showFloating];
-}
 @end
