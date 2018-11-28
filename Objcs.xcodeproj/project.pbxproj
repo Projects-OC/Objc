@@ -117,6 +117,8 @@
 		45ECFFFD21AD79D5007BB8BD /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5121AD79D5007BB8BD /* GCDViewController.m */; };
 		45ECFFFE21AD79D5007BB8BD /* BCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5421AD79D5007BB8BD /* BCell.m */; };
 		45ECFFFF21AD79D5007BB8BD /* PictureBrowserPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5921AD79D5007BB8BD /* PictureBrowserPercentDrivenInteractiveTransition.m */; };
+		64F9919621AE85E7003BC0A6 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F9919521AE85E7003BC0A6 /* IJKMediaFramework.framework */; };
+		64F9919A21AE8720003BC0A6 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F9919921AE8720003BC0A6 /* PlayerViewController.m */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
 
@@ -333,6 +335,9 @@
 		45ECFFD721AD79D5007BB8BD /* UIView+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HF.h"; sourceTree = "<group>"; };
 		45ECFFD821AD79D5007BB8BD /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Objcs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64F9919521AE85E7003BC0A6 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		64F9919821AE8720003BC0A6 /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		64F9919921AE8720003BC0A6 /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -342,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */,
+				64F9919621AE85E7003BC0A6 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +433,7 @@
 			children = (
 				45ECFF0121AD79D5007BB8BD /* MsgViewController.m */,
 				45ECFF0221AD79D5007BB8BD /* MsgViewController.h */,
+				64F9919721AE8713003BC0A6 /* Player */,
 				45EC003F21AD7C2B007BB8BD /* Floating */,
 				45ECFF0321AD79D5007BB8BD /* Live */,
 				45ECFF0821AD79D5007BB8BD /* Photos */,
@@ -437,10 +444,10 @@
 		45ECFF0321AD79D5007BB8BD /* Live */ = {
 			isa = PBXGroup;
 			children = (
-				45ECFF0421AD79D5007BB8BD /* LFLiveViewController.h */,
-				45ECFF0521AD79D5007BB8BD /* LFLivePreview.m */,
-				45ECFF0621AD79D5007BB8BD /* LFLiveViewController.m */,
 				45ECFF0721AD79D5007BB8BD /* LFLivePreview.h */,
+				45ECFF0521AD79D5007BB8BD /* LFLivePreview.m */,
+				45ECFF0421AD79D5007BB8BD /* LFLiveViewController.h */,
+				45ECFF0621AD79D5007BB8BD /* LFLiveViewController.m */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -841,9 +848,19 @@
 		625D8FA7CC7A279133CBBF06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				64F9919521AE85E7003BC0A6 /* IJKMediaFramework.framework */,
 				52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64F9919721AE8713003BC0A6 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				64F9919821AE8720003BC0A6 /* PlayerViewController.h */,
+				64F9919921AE8720003BC0A6 /* PlayerViewController.m */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		A02A2E7725ED1ECCD9B4C5F8 /* Pods */ = {
@@ -973,6 +990,7 @@
 				45EC002421AD79D5007BB8BD /* UIImage+MultiFormat.m in Sources */,
 				45ECFFF621AD79D5007BB8BD /* Object.m in Sources */,
 				45ECFFDF21AD79D5007BB8BD /* LFLiveViewController.m in Sources */,
+				64F9919A21AE8720003BC0A6 /* PlayerViewController.m in Sources */,
 				45EC002A21AD79D6007BB8BD /* UIImageView+WebCache.m in Sources */,
 				45EC001821AD79D5007BB8BD /* TaobaoAnimationTrasition.m in Sources */,
 				45ECFFDC21AD79D5007BB8BD /* TabBarViewController.m in Sources */,
@@ -1192,6 +1210,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7DWBZ36H4U;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1209,6 +1231,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7DWBZ36H4U;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
