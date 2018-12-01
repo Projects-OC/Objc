@@ -70,6 +70,14 @@
 - (void)updateImageSize{
     self.imageView.image = _image;
     self.imageView.size = _clipImageSize;
+//    self.imageView.center = self.view.center;
+//    self.imageView.bounds.size = _clipImageSize;
+
+//    self.imageView.bounds = CGRectMake(0, 0, _clipImageSize.width, _clipImageSize.height);
+//    self.imageView.center = self.view.center;
+    
+    CGFloat y = self.view.height/2 - _clipImageSize.height/2;
+    self.imageView.frame = CGRectMake(0, y, _clipImageSize.width, _clipImageSize.height);
     self.imageView.center = self.view.center;
 }
 
