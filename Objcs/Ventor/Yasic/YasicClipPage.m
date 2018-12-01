@@ -33,7 +33,8 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
 @property(strong,nonatomic)UIButton *btnRotate;
 @property(strong,nonatomic)UIButton *btnRestore;
 @property(assign, nonatomic) ACTIVEGESTUREVIEW activeGestureView;
-
+//bottom背景View
+@property(strong,nonatomic) UIView *shadowView;
 // 图片 view 原始 frame
 @property(assign, nonatomic) CGRect originalFrame;
 
@@ -62,14 +63,17 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self setUpCropLayer];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.hasBringSubViewsToTop=false;
     self.edgesForExtendedLayout=UIRectEdgeNone;
     self.view.backgroundColor = [UIColor blackColor];
-//    [self setHideNavigationBar:YES];
-//    self.targetImage = [UIImage imageNamed:@"TARGET_IMG"];
+
     self.orginalImage= self.bigImageView.image = self.targetImage;
     [self initSubViews];
 
@@ -78,6 +82,7 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     //手势
     [self addAllGesture];
 }
+
 -(instancetype)initWithImage:(UIImage*)image{
     self=[super init];
     if(self){
@@ -86,35 +91,25 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     return self;
 }
 
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    NSLog(@"YasicClipPage-----viewDidLayoutSubviews");
-}
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear: animated];
-}
 -(void)initSubViews{
-    //子控件初始化
-    UIView *shadow = [UIView new];
-    //    shadow.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
-    shadow.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:shadow];
-    [shadow mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.mas_equalTo(0);
-        make.height.mas_equalTo(50);
-    }];
-    
     [self.view addSubview:self.bigImageView];
+    [self.view addSubview:self.shadowView];
     [self.view addSubview:self.cropView];
     [self.view addSubview:self.btnOK];
     [self.view addSubview:self.btnCancel];
     [self.view addSubview:self.btnRotate];
     [self.view addSubview:self.btnRestore];
+    
+    [_shadowView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(0);
+        make.height.mas_equalTo(50);
+    }];
+    
     [self.cropView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
         make.bottom.mas_equalTo(-50);
     }];
-    //btnOK
+    
     [self.btnOK mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom).offset(-10);
         make.right.equalTo(self.view.mas_right).offset(-10);
@@ -125,7 +120,6 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     [self.btnOK setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.btnOK addTarget:self action:@selector(btnOKClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    //btnRotate
     [self.btnRotate mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom).offset(-10);
         make.centerX.equalTo(self.view.mas_centerX).offset(-40);
@@ -136,7 +130,6 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     [self.btnRotate setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.btnRotate addTarget:self action:@selector(btnRotateClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    //btnRestore
     [self.btnRestore mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom).offset(-10);
         make.centerX.equalTo(self.view.mas_centerX).offset(40);
@@ -147,8 +140,6 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     [self.btnRestore setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.btnRestore addTarget:self action:@selector(btnRestoreClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    
-    //btnCancel
     [self.btnCancel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom).offset(-10);
         make.left.equalTo(self.view.mas_left).offset(10);
@@ -159,8 +150,8 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     [self.btnCancel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.btnCancel addTarget:self action:@selector(btnCancelClick:) forControlEvents:UIControlEventTouchUpInside];
 }
+
 -(void)initUI{
-    
     self.clipWidth = SCREEN_WIDTH;
     self.clipHeight = self.clipWidth * 9/16;
     
@@ -172,7 +163,8 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     [self updateBigImageViewConstant];
     [self setUpCropLayer];
 }
--(void)updateBigImageViewConstant{
+
+- (CGRect)updateFrame {
     CGFloat tempWidth = 0.0;
     CGFloat tempHeight = 0.0;
     //图片自适应
@@ -183,49 +175,28 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
         tempHeight = self.cropAreaHeight;
         tempWidth = (tempHeight/self.targetImage.size.height) * self.targetImage.size.width;
     }
-    
-    [self.bigImageView mas_updateConstraints:^(MASConstraintMaker *make) {
-        NSLog(@"updateBigImageViewConstant");
-        make.left.mas_equalTo(self.cropAreaX - (tempWidth - self.cropAreaWidth)/2);
-        make.top.mas_equalTo(self.cropAreaY - (tempHeight - self.cropAreaHeight)/2);
-        make.width.mas_equalTo(tempWidth);
-        make.height.mas_equalTo(tempHeight);
-    }];
-    self.originalFrame = CGRectMake(self.cropAreaX - (tempWidth - self.cropAreaWidth)/2, self.cropAreaY - (tempHeight - self.cropAreaHeight)/2, tempWidth, tempHeight);
-}
-#pragma mark 更新限制区域
--(void)updataOriginalFrame{
-    CGFloat tempWidth = 0.0;
-    CGFloat tempHeight = 0.0;
-    //图片控件自适应-保证图片不变型
-    if (self.targetImage.size.width/self.cropAreaWidth <= self.targetImage.size.height/self.cropAreaHeight) {
-        tempWidth = self.cropAreaWidth;
-        tempHeight = (tempWidth/self.targetImage.size.width) * self.targetImage.size.height;
-    } else if (self.targetImage.size.width/self.cropAreaWidth > self.targetImage.size.height/self.cropAreaHeight) {
-        tempHeight = self.cropAreaHeight;
-        tempWidth = (tempHeight/self.targetImage.size.height) * self.targetImage.size.width;
-    }
-    self.originalFrame = CGRectMake(self.cropAreaX - (tempWidth - self.cropAreaWidth)/2, self.cropAreaY - (tempHeight - self.cropAreaHeight)/2, tempWidth, tempHeight);
-}
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self setUpCropLayer];
+    CGRect frame = CGRectMake(self.cropAreaX - (tempWidth - self.cropAreaWidth)/2, self.cropAreaY - (tempHeight - self.cropAreaHeight)/2, tempWidth, tempHeight);
+    return frame;
 }
 
--(void)addAllGesture
-{
+-(void)updateBigImageViewConstant{
+    self.bigImageView.frame = self.originalFrame = [self updateFrame];
+}
+
+-(void)updataOriginalFrame{
+    self.originalFrame = [self updateFrame];
+}
+
+-(void)addAllGesture{
     // 捏合手势
     UIPinchGestureRecognizer *pinGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handleCenterPinGesture:)];
     [self.view addGestureRecognizer:pinGesture];
-    
     // 拖动手势
     YasicPanGestureRecognizer *panGesture = [[YasicPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleDynamicPanGesture:) inview:self.cropView];
     [self.cropView addGestureRecognizer:panGesture];
 }
 #pragma mark 移动手势
--(void)handleDynamicPanGesture:(YasicPanGestureRecognizer *)panGesture
-{
+-(void)handleDynamicPanGesture:(YasicPanGestureRecognizer *)panGesture{
     UIView * view = self.bigImageView;
     CGPoint translation = [panGesture translationInView:view.superview];
     //防止跑到导航栏上
@@ -236,8 +207,6 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     CGPoint movePoint = panGesture.movePoint;
     //四方框额外点击判断
     CGFloat judgeWidth = 20;
-    
-//    self.bigImageViewc.constraints=nil;
     
     // 开始滑动时判断滑动对象是 ImageView 还是 Layer 上的 Line
     if (panGesture.state == UIGestureRecognizerStateBegan) {
@@ -328,7 +297,6 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
                 break;
         }
     }
-    
     // 滑动结束后进行位置修正
     if (panGesture.state == UIGestureRecognizerStateEnded) {
         switch (self.activeGestureView) {
@@ -389,7 +357,6 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
                 
                 if (currentFrame.origin.x >= self.cropAreaX) {
                     currentFrame.origin.x = self.cropAreaX;
-                    
                 }
                 if (currentFrame.origin.y >= self.cropAreaY) {
                     currentFrame.origin.y = self.cropAreaY;
@@ -414,8 +381,7 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     }
 }
 #pragma mark 捏合手势
--(void)handleCenterPinGesture:(UIPinchGestureRecognizer *)pinGesture
-{
+-(void)handleCenterPinGesture:(UIPinchGestureRecognizer *)pinGesture{
     CGFloat scaleRation = 3;
     UIView * view = self.bigImageView;
 //    何景根
@@ -444,8 +410,6 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
             //何景根
 //            CGRect newFrame = CGRectMake(0, 0, self.originalFrame.size.width * scaleRation, self.originalFrame.size.height * scaleRation);
 //            view.frame = newFrame;
-            
-            
             view.frame=self.beforePinchFrame;
         }
         
@@ -483,32 +447,8 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     }
 }
 
-// 裁剪图片并调用返回Block
-- (UIImage *)cropImage
-{
-//    CGFloat imageScale = MIN(self.bigImageView.frame.size.width/self.targetImage.size.width, self.bigImageView.frame.size.height/self.targetImage.size.height);
-//    CGFloat cropX = (self.cropAreaX - self.bigImageView.frame.origin.x)/imageScale;
-//    CGFloat cropY = (self.cropAreaY - self.bigImageView.frame.origin.y)/imageScale;
-//    CGFloat cropWidth = self.cropAreaWidth/imageScale;
-//    CGFloat cropHeight = self.cropAreaHeight/imageScale;
-//    CGRect cropRect = CGRectMake(cropX, cropY, cropWidth, cropHeight);
-    
-    CGRect cropRect = CGRectMake((self.cropAreaX - self.bigImageView.frame.origin.x)*self.targetImage.scale,
-                                 (self.cropAreaY - self.bigImageView.frame.origin.y)*self.targetImage.scale,
-                                 self.cropAreaWidth*self.targetImage.scale,
-                                 self.cropAreaHeight*self.targetImage.scale);
-
-    
-    CGImageRef sourceImageRef = [self.targetImage CGImage];
-    CGImageRef newImageRef = CGImageCreateWithImageInRect(sourceImageRef, cropRect);
-    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
-    if(newImageRef)
-        CFRelease(newImageRef);
-    return newImage;
-}
-//设置裁剪区域
-- (void)setUpCropLayer
-{
+#pragma mark 设置裁剪区域
+- (void)setUpCropLayer{
     self.cropView.layer.sublayers = nil;
     YasicClipAreaLayer * layer = [[YasicClipAreaLayer alloc] init];
     
@@ -528,7 +468,6 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     //将栽剪视图带到前面
     if(!self.hasBringSubViewsToTop)
     {
-
         [self.view bringSubviewToFront:self.cropView];
         [self.view bringSubviewToFront:self.btnOK];
         [self.view bringSubviewToFront:self.btnRotate];
@@ -537,18 +476,15 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
         self.hasBringSubViewsToTop=true;
     }
 }
-#pragma mark 懒加载
-- (UIImageView *)bigImageView
-{
+
+- (UIImageView *)bigImageView{
     if (!_bigImageView) {
         _bigImageView = [[UIImageView alloc] init];
-        _bigImageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return _bigImageView;
 }
 
-- (UIView *)cropView
-{
+- (UIView *)cropView{
     if (!_cropView) {
         _cropView = [[UIView alloc] init];
     }
@@ -578,12 +514,44 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     }
     return _btnRestore;
 }
+-(UIView *)shadowView {
+    if (!_shadowView) {
+        _shadowView = [UIView new];
+        _shadowView.backgroundColor = [UIColor whiteColor];
+    }
+    return _shadowView;
+}
+
+// 裁剪图片并调用返回Block
+- (UIImage *)cropImage{
+    //    CGFloat imageScale = MIN(self.bigImageView.frame.size.width/self.targetImage.size.width, self.bigImageView.frame.size.height/self.targetImage.size.height);
+    //    CGFloat cropX = (self.cropAreaX - self.bigImageView.frame.origin.x)/imageScale;
+    //    CGFloat cropY = (self.cropAreaY - self.bigImageView.frame.origin.y)/imageScale;
+    //    CGFloat cropWidth = self.cropAreaWidth/imageScale;
+    //    CGFloat cropHeight = self.cropAreaHeight/imageScale;
+    //    CGRect cropRect = CGRectMake(cropX, cropY, cropWidth, cropHeight);
+    
+    CGFloat scale = self.bigImageView.image.scale;
+    if (scale == 1) {
+       scale = [UIScreen mainScreen].scale;
+    }
+    CGRect cropRect = CGRectMake((self.cropAreaX - self.bigImageView.frame.origin.x)*scale,
+                                 (self.cropAreaY - self.bigImageView.frame.origin.y)*scale,
+                                 self.cropAreaWidth*scale,
+                                 self.cropAreaHeight*scale);
+    
+    
+    CGImageRef sourceImageRef = [self.targetImage CGImage];
+    CGImageRef newImageRef = CGImageCreateWithImageInRect(sourceImageRef, cropRect);
+    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
+    if(newImageRef)
+        CFRelease(newImageRef);
+    return newImage;
+}
+
 #pragma mark 完成事件
 -(void)btnOKClick:(UIButton*)btn{
     UIImage *img=[self cropImage];
-//    ImageViewController *vc=[ImageViewController new];
-//    vc.image=img;
-//    [self.navigationController pushViewController:vc animated:YES];
     if([self.delegate respondsToSelector:@selector(yasicClipPagedidImageOK:clipImageSize:)]){
         [self.delegate yasicClipPagedidImageOK:img clipImageSize:CGSizeMake(self.cropAreaWidth, self.cropAreaHeight)];
     }
@@ -616,6 +584,7 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     NSLog(@"取消");
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 #pragma mark 还原事件
 -(void)btnRestoreClick:(UIButton*)btn{
     NSLog(@"还原");
@@ -624,4 +593,5 @@ typedef NS_ENUM(NSInteger, ACTIVEGESTUREVIEW) {
     [self.view setNeedsLayout];
     [self.view layoutIfNeeded];
 }
+
 @end

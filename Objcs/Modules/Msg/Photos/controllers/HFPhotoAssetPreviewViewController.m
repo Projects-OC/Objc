@@ -54,7 +54,7 @@
     [_toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         make.height.mas_equalTo(82);
-        make.bottom.mas_equalTo(-LCSafeBottomMargin);
+        make.bottom.mas_equalTo(0);
     }];
 }
 
