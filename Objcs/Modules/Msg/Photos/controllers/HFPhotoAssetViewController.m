@@ -65,14 +65,6 @@
                     });
                 }];
             });
-        } else {
-//            UIAlertView *alert = [UIAlertView bk_showAlertViewWithTitle:@"无法访问相册" message:@"请在iPhone的""设置-隐私-相册""中允许访问相册" cancelButtonTitle:@"取消" otherButtonTitles:@[@"设置"] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
-//                if (buttonIndex == 1) {
-//                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
-//                }
-//            }];
-//            [alert show];
-            NSLog(@"No Permission");
         }
     }];
     self.assetManager.imagePickerFinishBlock = ^{

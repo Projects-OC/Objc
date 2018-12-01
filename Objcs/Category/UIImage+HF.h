@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (CGSize)imageSize;
 
+/**
+ 按给定的方向旋转图片
+ */
+- (UIImage*)rotate:(UIImageOrientation)orient;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

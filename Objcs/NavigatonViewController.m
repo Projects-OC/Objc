@@ -7,6 +7,7 @@
 //
 
 #import "NavigatonViewController.h"
+#import "HFPhotoAssetDrawViewController.h"
 
 @interface NavigatonViewController ()<UINavigationControllerDelegate,UIGestureRecognizerDelegate>
 
@@ -30,6 +31,12 @@
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     }
     [super pushViewController:viewController animated:animated];
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if ([navigationController.topViewController isEqual:HFPhotoAssetDrawViewController.class]) {
+        [navigationController setNavigationBarHidden:YES animated:YES];
+    }
 }
 
 - (void)popclick {

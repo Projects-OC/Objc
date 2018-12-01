@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452B0D3E21B166DA000D3276 /* HFPhotoAssetDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D3D21B166DA000D3276 /* HFPhotoAssetDrawViewController.m */; };
+		452B0D5A21B16D4A000D3276 /* LXFDoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D4121B16D4A000D3276 /* LXFDoManager.m */; };
+		452B0D5B21B16D4A000D3276 /* LXFDrawBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D4221B16D4A000D3276 /* LXFDrawBoard.m */; };
+		452B0D5C21B16D4A000D3276 /* LXFTextBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D4821B16D4A000D3276 /* LXFTextBrush.m */; };
+		452B0D5D21B16D4A000D3276 /* LXFCycleBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D4B21B16D4A000D3276 /* LXFCycleBrush.m */; };
+		452B0D5E21B16D4A000D3276 /* LXFMosaicBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D5021B16D4A000D3276 /* LXFMosaicBrush.m */; };
+		452B0D5F21B16D4A000D3276 /* LXFBaseBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D5221B16D4A000D3276 /* LXFBaseBrush.m */; };
+		452B0D6021B16D4A000D3276 /* LXFArrowBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D5321B16D4A000D3276 /* LXFArrowBrush.m */; };
+		452B0D6121B16D4A000D3276 /* LXFPencilBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D5421B16D4A000D3276 /* LXFPencilBrush.m */; };
+		452B0D6221B16D4A000D3276 /* LXFLineBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D5521B16D4A000D3276 /* LXFLineBrush.m */; };
+		452B0D6321B16D4A000D3276 /* LXFRectangleBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D5621B16D4A000D3276 /* LXFRectangleBrush.m */; };
+		452B0D6421B16D4A000D3276 /* LXFEraserBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D5821B16D4A000D3276 /* LXFEraserBrush.m */; };
+		452B0D6521B16D4A000D3276 /* LXFDrawBoardStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D5921B16D4A000D3276 /* LXFDrawBoardStyle.m */; };
+		452B0D6821B16EDE000D3276 /* HFToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D6721B16EDE000D3276 /* HFToolBarView.m */; };
+		452B0D6D21B1738B000D3276 /* HFHColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D6A21B1738A000D3276 /* HFHColorPicker.m */; };
+		452B0D7021B17D75000D3276 /* HFPhotoAssetClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D6F21B17D75000D3276 /* HFPhotoAssetClipViewController.m */; };
+		452B0D7821B21DEA000D3276 /* YasicClipPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D7421B21DE9000D3276 /* YasicClipPage.m */; };
+		452B0D7921B21DEA000D3276 /* YasicClipAreaLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D7521B21DE9000D3276 /* YasicClipAreaLayer.m */; };
+		452B0D7A21B21DEA000D3276 /* YasicPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D7621B21DE9000D3276 /* YasicPanGestureRecognizer.m */; };
 		453EE1D321AD826200125AC8 /* SemiCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 453EE1D221AD826200125AC8 /* SemiCircleView.m */; };
 		454BE80E21AEC80B004A0376 /* FloatingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 454BE80D21AEC80B004A0376 /* FloatingAnimator.m */; };
 		454BE81421AED014004A0376 /* FloatingAnimatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 454BE81321AED014004A0376 /* FloatingAnimatorView.m */; };
@@ -82,7 +101,7 @@
 		45ECFEF021AD7903007BB8BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFEEF21AD7903007BB8BD /* main.m */; };
 		45ECFFD921AD79D5007BB8BD /* NavigatonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFEF621AD79D4007BB8BD /* NavigatonViewController.m */; };
 		45ECFFDA21AD79D5007BB8BD /* HFTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFEFA21AD79D5007BB8BD /* HFTitleView.m */; };
-		45ECFFDB21AD79D5007BB8BD /* HFToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFEFB21AD79D5007BB8BD /* HFToolBarView.m */; };
+		45ECFFDB21AD79D5007BB8BD /* HFToolBarBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFEFB21AD79D5007BB8BD /* HFToolBarBorderView.m */; };
 		45ECFFDC21AD79D5007BB8BD /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFEFE21AD79D5007BB8BD /* TabBarViewController.m */; };
 		45ECFFDD21AD79D5007BB8BD /* MsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF0121AD79D5007BB8BD /* MsgViewController.m */; };
 		45ECFFDE21AD79D5007BB8BD /* LFLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF0521AD79D5007BB8BD /* LFLivePreview.m */; };
@@ -124,6 +143,45 @@
 
 /* Begin PBXFileReference section */
 		077457077BCF708D1A93ACF3 /* Pods-Objcs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.release.xcconfig"; sourceTree = "<group>"; };
+		452B0D3C21B166DA000D3276 /* HFPhotoAssetDrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFPhotoAssetDrawViewController.h; sourceTree = "<group>"; };
+		452B0D3D21B166DA000D3276 /* HFPhotoAssetDrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFPhotoAssetDrawViewController.m; sourceTree = "<group>"; };
+		452B0D4121B16D4A000D3276 /* LXFDoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFDoManager.m; sourceTree = "<group>"; };
+		452B0D4221B16D4A000D3276 /* LXFDrawBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFDrawBoard.m; sourceTree = "<group>"; };
+		452B0D4321B16D4A000D3276 /* LXFDrawBoardStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFDrawBoardStyle.h; sourceTree = "<group>"; };
+		452B0D4421B16D4A000D3276 /* LXFDrawBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFDrawBoard.h; sourceTree = "<group>"; };
+		452B0D4521B16D4A000D3276 /* LXFDoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFDoManager.h; sourceTree = "<group>"; };
+		452B0D4721B16D4A000D3276 /* LXFBaseBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFBaseBrush.h; sourceTree = "<group>"; };
+		452B0D4821B16D4A000D3276 /* LXFTextBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFTextBrush.m; sourceTree = "<group>"; };
+		452B0D4921B16D4A000D3276 /* LXFMosaicBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFMosaicBrush.h; sourceTree = "<group>"; };
+		452B0D4A21B16D4A000D3276 /* LXFLineBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFLineBrush.h; sourceTree = "<group>"; };
+		452B0D4B21B16D4A000D3276 /* LXFCycleBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFCycleBrush.m; sourceTree = "<group>"; };
+		452B0D4C21B16D4A000D3276 /* LXFRectangleBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFRectangleBrush.h; sourceTree = "<group>"; };
+		452B0D4D21B16D4A000D3276 /* LXFPencilBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFPencilBrush.h; sourceTree = "<group>"; };
+		452B0D4E21B16D4A000D3276 /* LXFArrowBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFArrowBrush.h; sourceTree = "<group>"; };
+		452B0D4F21B16D4A000D3276 /* LXFEraserBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFEraserBrush.h; sourceTree = "<group>"; };
+		452B0D5021B16D4A000D3276 /* LXFMosaicBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFMosaicBrush.m; sourceTree = "<group>"; };
+		452B0D5121B16D4A000D3276 /* LXFTextBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFTextBrush.h; sourceTree = "<group>"; };
+		452B0D5221B16D4A000D3276 /* LXFBaseBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFBaseBrush.m; sourceTree = "<group>"; };
+		452B0D5321B16D4A000D3276 /* LXFArrowBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFArrowBrush.m; sourceTree = "<group>"; };
+		452B0D5421B16D4A000D3276 /* LXFPencilBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFPencilBrush.m; sourceTree = "<group>"; };
+		452B0D5521B16D4A000D3276 /* LXFLineBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFLineBrush.m; sourceTree = "<group>"; };
+		452B0D5621B16D4A000D3276 /* LXFRectangleBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFRectangleBrush.m; sourceTree = "<group>"; };
+		452B0D5721B16D4A000D3276 /* LXFCycleBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFCycleBrush.h; sourceTree = "<group>"; };
+		452B0D5821B16D4A000D3276 /* LXFEraserBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFEraserBrush.m; sourceTree = "<group>"; };
+		452B0D5921B16D4A000D3276 /* LXFDrawBoardStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFDrawBoardStyle.m; sourceTree = "<group>"; };
+		452B0D6621B16EDE000D3276 /* HFToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFToolBarView.h; sourceTree = "<group>"; };
+		452B0D6721B16EDE000D3276 /* HFToolBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFToolBarView.m; sourceTree = "<group>"; };
+		452B0D6A21B1738A000D3276 /* HFHColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFHColorPicker.m; sourceTree = "<group>"; };
+		452B0D6B21B1738B000D3276 /* HFColorPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFColorPickerDelegate.h; sourceTree = "<group>"; };
+		452B0D6C21B1738B000D3276 /* HFHColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFHColorPicker.h; sourceTree = "<group>"; };
+		452B0D6E21B17D75000D3276 /* HFPhotoAssetClipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFPhotoAssetClipViewController.h; sourceTree = "<group>"; };
+		452B0D6F21B17D75000D3276 /* HFPhotoAssetClipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFPhotoAssetClipViewController.m; sourceTree = "<group>"; };
+		452B0D7221B21DE9000D3276 /* YasicClipAreaLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YasicClipAreaLayer.h; sourceTree = "<group>"; };
+		452B0D7321B21DE9000D3276 /* YasicPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YasicPanGestureRecognizer.h; sourceTree = "<group>"; };
+		452B0D7421B21DE9000D3276 /* YasicClipPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YasicClipPage.m; sourceTree = "<group>"; };
+		452B0D7521B21DE9000D3276 /* YasicClipAreaLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YasicClipAreaLayer.m; sourceTree = "<group>"; };
+		452B0D7621B21DE9000D3276 /* YasicPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YasicPanGestureRecognizer.m; sourceTree = "<group>"; };
+		452B0D7721B21DE9000D3276 /* YasicClipPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YasicClipPage.h; sourceTree = "<group>"; };
 		453EE1D121AD826200125AC8 /* SemiCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemiCircleView.h; sourceTree = "<group>"; };
 		453EE1D221AD826200125AC8 /* SemiCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemiCircleView.m; sourceTree = "<group>"; };
 		454BE80C21AEC80B004A0376 /* FloatingAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingAnimator.h; sourceTree = "<group>"; };
@@ -146,8 +204,8 @@
 		45ECFEF721AD79D4007BB8BD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		45ECFEF821AD79D4007BB8BD /* NavigatonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigatonViewController.h; sourceTree = "<group>"; };
 		45ECFEFA21AD79D5007BB8BD /* HFTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFTitleView.m; sourceTree = "<group>"; };
-		45ECFEFB21AD79D5007BB8BD /* HFToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFToolBarView.m; sourceTree = "<group>"; };
-		45ECFEFC21AD79D5007BB8BD /* HFToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFToolBarView.h; sourceTree = "<group>"; };
+		45ECFEFB21AD79D5007BB8BD /* HFToolBarBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFToolBarBorderView.m; sourceTree = "<group>"; };
+		45ECFEFC21AD79D5007BB8BD /* HFToolBarBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFToolBarBorderView.h; sourceTree = "<group>"; };
 		45ECFEFD21AD79D5007BB8BD /* HFTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFTitleView.h; sourceTree = "<group>"; };
 		45ECFEFE21AD79D5007BB8BD /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		45ECFF0121AD79D5007BB8BD /* MsgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgViewController.m; sourceTree = "<group>"; };
@@ -354,6 +412,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452B0D3F21B16D22000D3276 /* Ventor */ = {
+			isa = PBXGroup;
+			children = (
+				452B0D7121B21DE9000D3276 /* Yasic */,
+				452B0D4021B16D4A000D3276 /* LXFDrawBoard */,
+			);
+			path = Ventor;
+			sourceTree = "<group>";
+		};
+		452B0D4021B16D4A000D3276 /* LXFDrawBoard */ = {
+			isa = PBXGroup;
+			children = (
+				452B0D6921B17379000D3276 /* Color */,
+				452B0D4121B16D4A000D3276 /* LXFDoManager.m */,
+				452B0D4221B16D4A000D3276 /* LXFDrawBoard.m */,
+				452B0D4321B16D4A000D3276 /* LXFDrawBoardStyle.h */,
+				452B0D4421B16D4A000D3276 /* LXFDrawBoard.h */,
+				452B0D4521B16D4A000D3276 /* LXFDoManager.h */,
+				452B0D4621B16D4A000D3276 /* LXFBrush */,
+				452B0D5921B16D4A000D3276 /* LXFDrawBoardStyle.m */,
+			);
+			path = LXFDrawBoard;
+			sourceTree = "<group>";
+		};
+		452B0D4621B16D4A000D3276 /* LXFBrush */ = {
+			isa = PBXGroup;
+			children = (
+				452B0D4721B16D4A000D3276 /* LXFBaseBrush.h */,
+				452B0D4821B16D4A000D3276 /* LXFTextBrush.m */,
+				452B0D4921B16D4A000D3276 /* LXFMosaicBrush.h */,
+				452B0D4A21B16D4A000D3276 /* LXFLineBrush.h */,
+				452B0D4B21B16D4A000D3276 /* LXFCycleBrush.m */,
+				452B0D4C21B16D4A000D3276 /* LXFRectangleBrush.h */,
+				452B0D4D21B16D4A000D3276 /* LXFPencilBrush.h */,
+				452B0D4E21B16D4A000D3276 /* LXFArrowBrush.h */,
+				452B0D4F21B16D4A000D3276 /* LXFEraserBrush.h */,
+				452B0D5021B16D4A000D3276 /* LXFMosaicBrush.m */,
+				452B0D5121B16D4A000D3276 /* LXFTextBrush.h */,
+				452B0D5221B16D4A000D3276 /* LXFBaseBrush.m */,
+				452B0D5321B16D4A000D3276 /* LXFArrowBrush.m */,
+				452B0D5421B16D4A000D3276 /* LXFPencilBrush.m */,
+				452B0D5521B16D4A000D3276 /* LXFLineBrush.m */,
+				452B0D5621B16D4A000D3276 /* LXFRectangleBrush.m */,
+				452B0D5721B16D4A000D3276 /* LXFCycleBrush.h */,
+				452B0D5821B16D4A000D3276 /* LXFEraserBrush.m */,
+			);
+			path = LXFBrush;
+			sourceTree = "<group>";
+		};
+		452B0D6921B17379000D3276 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				452B0D6B21B1738B000D3276 /* HFColorPickerDelegate.h */,
+				452B0D6C21B1738B000D3276 /* HFHColorPicker.h */,
+				452B0D6A21B1738A000D3276 /* HFHColorPicker.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		452B0D7121B21DE9000D3276 /* Yasic */ = {
+			isa = PBXGroup;
+			children = (
+				452B0D7221B21DE9000D3276 /* YasicClipAreaLayer.h */,
+				452B0D7521B21DE9000D3276 /* YasicClipAreaLayer.m */,
+				452B0D7321B21DE9000D3276 /* YasicPanGestureRecognizer.h */,
+				452B0D7621B21DE9000D3276 /* YasicPanGestureRecognizer.m */,
+				452B0D7721B21DE9000D3276 /* YasicClipPage.h */,
+				452B0D7421B21DE9000D3276 /* YasicClipPage.m */,
+			);
+			path = Yasic;
+			sourceTree = "<group>";
+		};
 		45EC003F21AD7C2B007BB8BD /* Floating */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +528,7 @@
 				45ECFEF621AD79D4007BB8BD /* NavigatonViewController.m */,
 				45ECFFD121AD79D5007BB8BD /* TabBarViewController.h */,
 				45ECFEFE21AD79D5007BB8BD /* TabBarViewController.m */,
+				452B0D3F21B16D22000D3276 /* Ventor */,
 				45ECFFD221AD79D5007BB8BD /* Category */,
 				45ECFEFF21AD79D5007BB8BD /* Modules */,
 				45ECFEF921AD79D5007BB8BD /* Utils */,
@@ -414,10 +545,12 @@
 		45ECFEF921AD79D5007BB8BD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				45ECFEFA21AD79D5007BB8BD /* HFTitleView.m */,
-				45ECFEFB21AD79D5007BB8BD /* HFToolBarView.m */,
-				45ECFEFC21AD79D5007BB8BD /* HFToolBarView.h */,
 				45ECFEFD21AD79D5007BB8BD /* HFTitleView.h */,
+				45ECFEFA21AD79D5007BB8BD /* HFTitleView.m */,
+				45ECFEFC21AD79D5007BB8BD /* HFToolBarBorderView.h */,
+				45ECFEFB21AD79D5007BB8BD /* HFToolBarBorderView.m */,
+				452B0D6621B16EDE000D3276 /* HFToolBarView.h */,
+				452B0D6721B16EDE000D3276 /* HFToolBarView.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -468,9 +601,9 @@
 		45ECFF0921AD79D5007BB8BD /* manager */ = {
 			isa = PBXGroup;
 			children = (
+				45ECFF0C21AD79D5007BB8BD /* HFPhotoAssetManager.h */,
 				45ECFF0A21AD79D5007BB8BD /* HFPhotoAssetManager.m */,
 				45ECFF0B21AD79D5007BB8BD /* UIView+Layout.m */,
-				45ECFF0C21AD79D5007BB8BD /* HFPhotoAssetManager.h */,
 				45ECFF0D21AD79D5007BB8BD /* UIView+Layout.h */,
 			);
 			path = manager;
@@ -479,12 +612,16 @@
 		45ECFF0E21AD79D5007BB8BD /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				45ECFF0F21AD79D5007BB8BD /* HFPhotoAssetPreviewViewController.h */,
-				45ECFF1021AD79D5007BB8BD /* HFPhotoAssetPopoverPrensentController.m */,
-				45ECFF1121AD79D5007BB8BD /* HFPhotoAssetViewController.m */,
-				45ECFF1221AD79D5007BB8BD /* HFPhotoAssetPreviewViewController.m */,
 				45ECFF1321AD79D5007BB8BD /* HFPhotoAssetViewController.h */,
+				45ECFF1121AD79D5007BB8BD /* HFPhotoAssetViewController.m */,
+				45ECFF0F21AD79D5007BB8BD /* HFPhotoAssetPreviewViewController.h */,
+				45ECFF1221AD79D5007BB8BD /* HFPhotoAssetPreviewViewController.m */,
+				452B0D3C21B166DA000D3276 /* HFPhotoAssetDrawViewController.h */,
+				452B0D3D21B166DA000D3276 /* HFPhotoAssetDrawViewController.m */,
+				452B0D6E21B17D75000D3276 /* HFPhotoAssetClipViewController.h */,
+				452B0D6F21B17D75000D3276 /* HFPhotoAssetClipViewController.m */,
 				45ECFF1421AD79D5007BB8BD /* HFPhotoAssetPopoverPrensentController.h */,
+				45ECFF1021AD79D5007BB8BD /* HFPhotoAssetPopoverPrensentController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -969,9 +1106,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45ECFFDB21AD79D5007BB8BD /* HFToolBarView.m in Sources */,
+				45ECFFDB21AD79D5007BB8BD /* HFToolBarBorderView.m in Sources */,
 				45EC002621AD79D5007BB8BD /* SDWebImagePrefetcher.m in Sources */,
 				45EC000621AD79D5007BB8BD /* PictureBrowserViewController.m in Sources */,
+				452B0D5D21B16D4A000D3276 /* LXFCycleBrush.m in Sources */,
 				45EC000C21AD79D5007BB8BD /* PopoverViewController.m in Sources */,
 				45EC003421AD79D6007BB8BD /* KVOViewController.m in Sources */,
 				45ECFFEF21AD79D5007BB8BD /* NavWechatPopAnimator.m in Sources */,
@@ -987,6 +1125,8 @@
 				45EC001821AD79D5007BB8BD /* TaobaoAnimationTrasition.m in Sources */,
 				45ECFFDC21AD79D5007BB8BD /* TabBarViewController.m in Sources */,
 				45ECFFEA21AD79D5007BB8BD /* MasonryLayoutModel.m in Sources */,
+				452B0D6321B16D4A000D3276 /* LXFRectangleBrush.m in Sources */,
+				452B0D5C21B16D4A000D3276 /* LXFTextBrush.m in Sources */,
 				45ECFFF921AD79D5007BB8BD /* RuntimeViewController+Addtion.m in Sources */,
 				45EC002321AD79D5007BB8BD /* UIImage+GIF.m in Sources */,
 				45EC003E21AD79D6007BB8BD /* UIScrollView+EmptyDataSet.m in Sources */,
@@ -994,10 +1134,15 @@
 				45EC000021AD79D5007BB8BD /* PictureBrowserPopAnimator.m in Sources */,
 				45ECFFEE21AD79D5007BB8BD /* WeChatNavAnimationTransition.m in Sources */,
 				45EC002521AD79D5007BB8BD /* SDWebImageCompat.m in Sources */,
+				452B0D6221B16D4A000D3276 /* LXFLineBrush.m in Sources */,
+				452B0D6D21B1738B000D3276 /* HFHColorPicker.m in Sources */,
+				452B0D7A21B21DEA000D3276 /* YasicPanGestureRecognizer.m in Sources */,
 				45EC002D21AD79D6007BB8BD /* DecimalNumberViewController.m in Sources */,
 				45ECFEF021AD7903007BB8BD /* main.m in Sources */,
+				452B0D5E21B16D4A000D3276 /* LXFMosaicBrush.m in Sources */,
 				45EC004221AD7C5F007BB8BD /* FloatingViewController.m in Sources */,
 				45ECFFFF21AD79D5007BB8BD /* PictureBrowserPercentDrivenInteractiveTransition.m in Sources */,
+				452B0D5F21B16D4A000D3276 /* LXFBaseBrush.m in Sources */,
 				45EC003221AD79D6007BB8BD /* HFBaseCollectionViewController.m in Sources */,
 				45EC004521AD7D57007BB8BD /* FloatingViewBtn.m in Sources */,
 				45ECFFF221AD79D5007BB8BD /* NavWechatPushAnimator.m in Sources */,
@@ -1016,16 +1161,21 @@
 				45ECFFF021AD79D5007BB8BD /* WechatNavAnimationTransitionSecondViewController.m in Sources */,
 				45ECFFEB21AD79D5007BB8BD /* MasonryLayoutTableViewCell.m in Sources */,
 				45ECFFF521AD79D5007BB8BD /* ClockView.m in Sources */,
+				452B0D7921B21DEA000D3276 /* YasicClipAreaLayer.m in Sources */,
 				45ECFFDD21AD79D5007BB8BD /* MsgViewController.m in Sources */,
+				452B0D6821B16EDE000D3276 /* HFToolBarView.m in Sources */,
 				454BE80E21AEC80B004A0376 /* FloatingAnimator.m in Sources */,
 				45EC002B21AD79D6007BB8BD /* UIView+WebCacheOperation.m in Sources */,
 				45EC000221AD79D5007BB8BD /* PictureBrowserTransitionParameter.m in Sources */,
 				45EC002721AD79D6007BB8BD /* SDImageCache.m in Sources */,
+				452B0D5B21B16D4A000D3276 /* LXFDrawBoard.m in Sources */,
 				45ECFFE421AD79D5007BB8BD /* HFPhotoAssetPreviewViewController.m in Sources */,
+				452B0D7821B21DEA000D3276 /* YasicClipPage.m in Sources */,
 				45EC000521AD79D5007BB8BD /* PictureBrowserZoomScrollView.m in Sources */,
 				45EC001B21AD79D5007BB8BD /* TaobaoPopAnimator.m in Sources */,
 				45EC001C21AD79D5007BB8BD /* TaobaoViewController.m in Sources */,
 				45ECFFF721AD79D5007BB8BD /* RuntimeViewController.m in Sources */,
+				452B0D5A21B16D4A000D3276 /* LXFDoManager.m in Sources */,
 				45EC002821AD79D6007BB8BD /* SDWebImageDownloaderOperation.m in Sources */,
 				45EC000A21AD79D5007BB8BD /* UIView+Animation.m in Sources */,
 				45EC003021AD79D6007BB8BD /* PushViewControllerB.m in Sources */,
@@ -1033,7 +1183,9 @@
 				45ECFFD921AD79D5007BB8BD /* NavigatonViewController.m in Sources */,
 				45ECFFE121AD79D5007BB8BD /* UIView+Layout.m in Sources */,
 				45EC003621AD79D6007BB8BD /* HFBaseTableView.m in Sources */,
+				452B0D7021B17D75000D3276 /* HFPhotoAssetClipViewController.m in Sources */,
 				45EC003921AD79D6007BB8BD /* MoreViewController.m in Sources */,
+				452B0D6421B16D4A000D3276 /* LXFEraserBrush.m in Sources */,
 				45ECFFDE21AD79D5007BB8BD /* LFLivePreview.m in Sources */,
 				45ECFFF421AD79D5007BB8BD /* ActionSheetView.m in Sources */,
 				45EC003A21AD79D6007BB8BD /* BaseObject.m in Sources */,
@@ -1054,15 +1206,19 @@
 				45EC003B21AD79D6007BB8BD /* HFBaseTableViewController.m in Sources */,
 				45ECFFE521AD79D5007BB8BD /* HFPhotoAssetProgressView.m in Sources */,
 				45ECFEE221AD7903007BB8BD /* AppDelegate.m in Sources */,
+				452B0D3E21B166DA000D3276 /* HFPhotoAssetDrawViewController.m in Sources */,
 				45ECFFEC21AD79D5007BB8BD /* TransitionsViewController.m in Sources */,
+				452B0D6021B16D4A000D3276 /* LXFArrowBrush.m in Sources */,
 				45EC003121AD79D6007BB8BD /* PushViewControllerA.m in Sources */,
 				45EC002221AD79D5007BB8BD /* SDWebImageDownloader.m in Sources */,
 				45EC003521AD79D6007BB8BD /* OneViewController.m in Sources */,
+				452B0D6121B16D4A000D3276 /* LXFPencilBrush.m in Sources */,
 				45EC001F21AD79D5007BB8BD /* SDWebImageManager.m in Sources */,
 				45EC002C21AD79D6007BB8BD /* UIButton+WebCache.m in Sources */,
 				45EC003821AD79D6007BB8BD /* HFBaseViewController.m in Sources */,
 				45ECFFFA21AD79D5007BB8BD /* NSObject+Category.m in Sources */,
 				45ECFFE221AD79D5007BB8BD /* HFPhotoAssetPopoverPrensentController.m in Sources */,
+				452B0D6521B16D4A000D3276 /* LXFDrawBoardStyle.m in Sources */,
 				45EC002021AD79D5007BB8BD /* SDWebImageDecoder.m in Sources */,
 				45ECFFE621AD79D5007BB8BD /* HFPhotoAssetCollectionViewCell.m in Sources */,
 				45ECFFE921AD79D5007BB8BD /* MasonryLayoutTableViewController.m in Sources */,
