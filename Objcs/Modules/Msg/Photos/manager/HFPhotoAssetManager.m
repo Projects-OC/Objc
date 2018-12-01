@@ -243,8 +243,6 @@ CGFloat TZScreenScale;
     }
     
     __block UIImage *image;
-    // 修复获取图片时出现的瞬间内存过高问题
-    // 下面两行代码，来自hsjcom，他的github是：https://github.com/hsjcom 表示感谢
     PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
     option.resizeMode = PHImageRequestOptionsResizeModeFast;
     int32_t imageRequestID = [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:imageSize contentMode:PHImageContentModeAspectFill options:option resultHandler:^(UIImage *result, NSDictionary *info) {
@@ -286,15 +284,7 @@ CGFloat TZScreenScale;
 
 
 /// Get Original Photo / 获取原图
-- (void)getOriginalPhotoWithAsset:(PHAsset *)asset completion:(void (^)(UIImage *photo,NSDictionary *info))completion {
-    [self getOriginalPhotoWithAsset:asset newCompletion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
-        if (completion) {
-            completion(photo,info);
-        }
-    }];
-}
-
-- (void)getOriginalPhotoWithAsset:(PHAsset *)asset newCompletion:(void (^)(UIImage *photo,NSDictionary *info,BOOL isDegraded))completion {
+- (void)getOriginalPhotoWithAsset:(PHAsset *)asset completion:(void (^)(UIImage *photo,NSDictionary *info,BOOL isDegraded))completion {
     PHImageRequestOptions *option = [[PHImageRequestOptions alloc]init];
     option.networkAccessAllowed = YES;
     option.resizeMode = PHImageRequestOptionsResizeModeFast;
@@ -338,7 +328,7 @@ CGFloat TZScreenScale;
         UIGraphicsEndImageContext();
         return newImage;
         
-        /* 好像不怎么管用：https://mp.weixin.qq.com/s/CiqMlEIp1Ir2EJSDGgMooQ
+        /* https://mp.weixin.qq.com/s/CiqMlEIp1Ir2EJSDGgMooQ
          CGFloat maxPixelSize = MAX(size.width, size.height);
          CGImageSourceRef sourceRef = CGImageSourceCreateWithData((__bridge CFDataRef)UIImageJPEGRepresentation(image, 0.9), nil);
          NSDictionary *options = @{(__bridge id)kCGImageSourceCreateThumbnailFromImageAlways:(__bridge id)kCFBooleanTrue,
@@ -440,17 +430,16 @@ CGFloat TZScreenScale;
  */
 - (void)albumsAuthorizationStatus:(void(^)(BOOL power))resultBlock {
     if (NSClassFromString(@"PHAsset")) {
-        //        PHAuthorizationStatus state = [PHPhotoLibrary authorizationStatus];
-        //        if (state == PHAuthorizationStatusAuthorized) {
-        //            resultBlock(YES);
-        //        } else if (state == PHAuthorizationStatusNotDetermined) {
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-            resultBlock(status == PHAuthorizationStatusAuthorized);
+            if (status == PHAuthorizationStatusAuthorized) {
+                resultBlock(YES);
+            } else {
+                [self authorizationAlertWithTitle:@"无法访问相册" message:@"请在iPhone的""设置-隐私-相册""中允许访问相册"];
+                resultBlock(status == NO);
+            }
         }];
-        //        } else {
-        //            resultBlock(NO);
-        //        }
     } else {
+        [self authorizationAlertWithTitle:@"无法访问相册" message:@"请在iPhone的""设置-隐私-相册""中允许访问相册"];
         resultBlock(NO);
     }
 }
@@ -459,10 +448,9 @@ CGFloat TZScreenScale;
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     if (authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied) {
         // 无相机权限 做一个友好的提示
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"无法使用相机" message:@"请在iPhone的""设置-隐私-相机""中允许访问相机" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
-        [alert show];
+        [self authorizationAlertWithTitle:@"无法使用相机" message:@"请在iPhone的""设置-隐私-相机""中允许访问相机"];
     } else if (authStatus == AVAuthorizationStatusNotDetermined) {
-        // fix issue 466, 防止用户首次拍照拒绝授权时相机页黑屏
+        // 发起授权许可
         [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
             if (granted) {
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -472,8 +460,7 @@ CGFloat TZScreenScale;
         }];
         // 拍照之前还需要检查相册权限
     } else if ([PHPhotoLibrary authorizationStatus] == 2) { // 已被拒绝，没有相册权限，将无法保存拍的照片
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"无法访问相册" message:@"请在iPhone的""设置-隐私-相册""中允许访问相册" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
-        [alert show];
+        [self authorizationAlertWithTitle:@"无法访问相册" message:@"请在iPhone的""设置-隐私-相册""中允许访问相册"];
     } else if ([PHPhotoLibrary authorizationStatus] == 0) { // 未请求过相册权限
         
     } else {
@@ -486,7 +473,6 @@ CGFloat TZScreenScale;
  调用相机
  */
 - (void)pushImagePickerController {
-    
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
     if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
         self.imagePickerVc.sourceType = sourceType;
@@ -554,16 +540,15 @@ CGFloat TZScreenScale;
             } completionHandler:^(BOOL success, NSError *error) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (success) {
-                        PHAsset *asset = [[PHAsset fetchAssetsWithLocalIdentifiers:@[localIdentifier] options:nil] firstObject];
+//                        PHAsset *asset = [[PHAsset fetchAssetsWithLocalIdentifiers:@[localIdentifier] options:nil] firstObject];
                         NSLog(@"保存视频成功");
                     } else if (error) {
-                        NSLog(@"保存视频出错:%@",error.localizedDescription);
+//                        NSLog(@"保存视频出错:%@",error.localizedDescription);
                     }
                 });
             }];
         }
     }
-    
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -572,11 +557,17 @@ CGFloat TZScreenScale;
     }
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 1) { // 去设置界面，开启相机访问权限
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
-    }
+- (void)authorizationAlertWithTitle:(NSString *)title message:(NSString *)message {
+    UIApplication *apl = UIApplication.sharedApplication;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [apl openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+    }]];
+    [apl.keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
 }
+
 #pragma mark 拍照 ⤴️
 
 

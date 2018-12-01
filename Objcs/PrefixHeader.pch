@@ -36,6 +36,7 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <YYKit/YYKit.h>
 #import "AppDelegate.h"
+#import "UIImage+HF.h"
 
 
 #endif /* PrefixHeader_pch */

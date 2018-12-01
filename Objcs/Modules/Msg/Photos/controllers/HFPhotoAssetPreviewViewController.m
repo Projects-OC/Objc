@@ -10,12 +10,14 @@
 #import "HFPhotoAssetManager.h"
 #import "HFPhotoAssetViewController.h"
 #import "UIImage+HF.h"
-#import "HFToolBarView.h"
+#import "HFToolBarBorderView.h"
+#import "HFPhotoAssetDrawViewController.h"
 
 @interface HFPhotoAssetPreviewViewController ()
 
-@property (nonatomic,strong) UIImage *photo;//原始图
+@property (nonatomic,strong) UIImage *image;//原始图
 @property (nonatomic,strong) UIImageView *imageView;
+@property (nonatomic,assign) CGSize clipImageSize;
 
 @end
 
@@ -32,18 +34,22 @@
      getPhotoWithAsset:_asset
      completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
          if (!isDegraded) {
-             weakself.photo = photo;
-             [weakself updateImageViewWithImage:photo];
+             weakself.image = photo;
+             weakself.clipImageSize = CGSizeMake([photo imageSize].width, [photo imageSize].height);
+             [weakself updateImageSize];
          }
      }];
     
-    HFToolBarView *_toolBar = [[HFToolBarView alloc] initWithTitles:@[@"编辑照片",@"上屏"]
-                                                         textColors:@[[UIColor greenColor],[UIColor whiteColor]]
-                                                         backColors:@[[UIColor whiteColor],[UIColor greenColor]]
-                                                           isBorder:YES
-                                                           tapBlock:^(NSInteger tag) {
-
-                                                           }];
+    HFToolBarBorderView *_toolBar = [[HFToolBarBorderView alloc]
+                               initWithTitles:@[@"编辑照片",@"上屏"]
+                               textColors:@[[UIColor greenColor],[UIColor whiteColor]]
+                               backColors:@[[UIColor whiteColor],[UIColor greenColor]]
+                               isBorder:YES
+                               tapBlock:^(NSInteger tag) {
+                                   if (tag == 0) {
+                                       [weakself pushCtrl];
+                                   }
+                               }];
     [self.view addSubview:_toolBar];
     [_toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
@@ -55,16 +61,29 @@
 - (UIImageView *)imageView {
     if (!_imageView) {
         _imageView = [UIImageView new];
+        _imageView.backgroundColor = [UIColor blackColor];
         _imageView.center = self.view.center;
     }
     return _imageView;
 }
 
-- (void)updateImageViewWithImage:(UIImage *)image {
-    self.imageView.image = image;
-    CGFloat y = (self.view.frame.size.height - [image imageSize].height)/2;
-    self.imageView.frame = CGRectMake(0, y, [image imageSize].width, [image imageSize].height);
-    self.imageView.center = CGPointMake(kScreenWidth/2, (CGRectGetHeight(self.view.frame)-64)/2);
+- (void)updateImageSize{
+    self.imageView.image = _image;
+    self.imageView.size = _clipImageSize;
+    self.imageView.center = self.view.center;
+}
+
+- (void)pushCtrl {
+    HFPhotoAssetDrawViewController *ctrl = [HFPhotoAssetDrawViewController new];
+    ctrl.editedImage = _image;
+    ctrl.clipImageSize = _clipImageSize;
+    [self.navigationController pushViewController:ctrl animated:YES];
+    HFWeak(self)
+    ctrl.editedImageBlock = ^(UIImage *image,CGSize clipImageSize) {
+        weakself.image = image;
+        weakself.clipImageSize = clipImageSize;
+        [weakself updateImageSize];
+    };
 }
 
 - (void)dealloc {
