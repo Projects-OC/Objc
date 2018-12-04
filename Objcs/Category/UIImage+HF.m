@@ -126,6 +126,19 @@ static CGRect swapWidthAndHeight(CGRect rect) {
     return rect;
 }
 
+- (UIImage *)croppedCropRect:(CGRect)rect  {
+        CGImageRef subImageRef = CGImageCreateWithImageInRect(self.CGImage, rect);
+        
+        UIGraphicsBeginImageContextWithOptions(rect.size ,YES,[UIScreen mainScreen].scale);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextDrawImage(context, rect, subImageRef);
+        UIImage *viewImage = [UIImage imageWithCGImage:subImageRef];
+        UIGraphicsEndImageContext();
+        CGImageRelease(subImageRef);
+        return viewImage;
+}
+
+
 - (UIImage *)imageCropRect:(CGRect)rect superViewRect:(CGRect)superViewRect {
 //    CGImageRef sourceImageRef = [self CGImage];
 //    CGImageRef newImageRef = CGImageCreateWithImageInRect(sourceImageRef,rect);
@@ -137,8 +150,6 @@ static CGRect swapWidthAndHeight(CGRect rect) {
     CGRect cropFrame = rect;
     CGFloat orgX = cropFrame.origin.x * (self.size.width /superViewRect.size.width);
     CGFloat orgY = cropFrame.origin.y * (self.size.height /superViewRect.size.height);
-//    CGFloat orgX = 0;
-//    CGFloat orgY = 0;
     CGFloat width = cropFrame.size.width * (self.size.width / superViewRect.size.width);
     CGFloat height = cropFrame.size.height * (self.size.height / superViewRect.size.height);
     CGRect cropRect = CGRectMake(orgX, orgY, width, height);

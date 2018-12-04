@@ -265,7 +265,10 @@ typedef NS_ENUM(NSInteger,PanGestureDirection) {
                              self.cropRect.origin.y - self.editedImageView.origin.y,
                              self.cropRect.size.width,
                              self.cropRect.size.height);
-    return [_editedImageView.image imageCropRect:rect superViewRect:self.editedImageView.frame];
+    UIImage *img = [_editedImageView.image croppedCropRect:rect];
+    return img;
+    
+//    return [_editedImageView.image imageCropRect:rect superViewRect:self.editedImageView.frame];
 }
 
 @end

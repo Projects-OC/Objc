@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (UIImage*)imageRotateOrientation:(UIImageOrientation)orientation;
 
+- (UIImage *)croppedCropRect:(CGRect)rect ;
+
 /**
  图片裁剪
 
