@@ -9,15 +9,15 @@
 #import "MoreViewController.h"
 #import "OneViewController.h"
 #import "BaseObject.h"
+#import <objc/runtime.h>
 
 @interface MoreViewController ()
 
 @property (nonatomic,copy) NSArray *array;
 @property (nonatomic,strong) NSMutableArray *mutableArray;
-
 @property (nonatomic,copy) NSDictionary *dic;
-
 @property (nonatomic,strong) NSString *string;
+
 
 @end
 
@@ -135,6 +135,16 @@
     //        // 动画结束后移除view
     //        [whiteView removeFromSuperview];
     //    }];
+}
+
+- (void)timer {
+    class_addMethod(<#Class  _Nullable __unsafe_unretained cls#>, <#SEL  _Nonnull name#>, <#IMP  _Nonnull imp#>, <#const char * _Nullable types#>)
+}
+
+- (void)didMoveToParentViewController:(UIViewController *)parent {
+    if (!parent) {
+        //移除定时器
+    }
 }
 
 @end
