@@ -128,12 +128,13 @@ typedef NS_ENUM(NSInteger,PanGestureDirection) {
     CGFloat cropY = self.cropRect.origin.y;
     CGFloat cropW = self.cropRect.size.width;
     CGFloat cropH = self.cropRect.size.height;
+    
     //开始拖动
     if (ges.state == UIGestureRecognizerStateBegan) {
-        if (beginPoint.x >= cropX) {
+        if (cropX <= beginPoint.x <= cropX + 20) {
             //从左向右拖动
             _gesDirection = PanGestureDirectionLeft;
-        } else if (beginPoint.x <= cropX + cropW) {
+        } else if (cropX + cropW - 20 <= beginPoint.x <= cropX + cropW) {
             //从右向左拖动
             _gesDirection = PanGestureDirectionRight;
         } else if (beginPoint.y >= cropY) {
@@ -164,6 +165,9 @@ typedef NS_ENUM(NSInteger,PanGestureDirection) {
         } else if (_gesDirection == PanGestureDirectionBottom) {
             diff = movePoint.y - cropY - cropH;
             cropH += diff;
+        } else {
+            [view setCenter:CGPointMake(view.center.x + translation.x, view.center.y + translation.y)];
+            [ges setTranslation:CGPointZero inView:view.superview];
         }
         self.cropRect = CGRectMake(cropX, cropY, cropW, cropH);
         [self cropViewLayer];
@@ -265,10 +269,10 @@ typedef NS_ENUM(NSInteger,PanGestureDirection) {
                              self.cropRect.origin.y - self.editedImageView.origin.y,
                              self.cropRect.size.width,
                              self.cropRect.size.height);
-    UIImage *img = [_editedImageView.image croppedCropRect:rect];
-    return img;
+//    UIImage *img = [_editedImageView.image croppedCropRect:rect];
+//    return img;
     
-//    return [_editedImageView.image imageCropRect:rect superViewRect:self.editedImageView.frame];
+    return [_editedImageView.image imageCropRect:rect superViewRect:self.editedImageView.frame];
 }
 
 @end
