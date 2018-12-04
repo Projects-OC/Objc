@@ -10,7 +10,7 @@
 #import "HFToolBarView.h"
 #import "LXFDrawBoard.h"
 #import "HFHColorPicker.h"
-//#import "HFPhotoAssetClipViewController.h"
+#import "HFPhotoAssetClipViewController.h"
 #import "YasicClipPage.h"
 
 @interface HFPhotoAssetDrawViewController ()<YasicClipPageDelegate,HFColorPickerDelegate,LXFDrawBoardDelegate>
@@ -27,12 +27,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 - (void)viewDidLoad {
@@ -71,17 +71,17 @@
         [self drawClick];
     } else if (tag == 2) {
         //编辑
-        YasicClipPage *yasicClipPage=[[YasicClipPage alloc] initWithImage:_editedImageView.image];
-        yasicClipPage.delegate=self;
-        [self.navigationController pushViewController:yasicClipPage animated:YES];
+//        YasicClipPage *yasicClipPage=[[YasicClipPage alloc] initWithImage:_editedImageView.image];
+//        yasicClipPage.delegate=self;
+//        [self.navigationController pushViewController:yasicClipPage animated:YES];
         
-//        HFPhotoAssetClipViewController *ctrl = [HFPhotoAssetClipViewController new];
-//        ctrl.editedImage = _editedImageView.image;
-//        [self.navigationController pushViewController:ctrl animated:YES];
-//        HFWeak(self)
-//        ctrl.editedImageBlock = ^(UIImage *image) {
-//            weakself.editedImageView.image = image;
-//        };
+        HFPhotoAssetClipViewController *ctrl = [HFPhotoAssetClipViewController new];
+        ctrl.editedImage = _editedImageView.image;
+        [self.navigationController pushViewController:ctrl animated:YES];
+        HFWeak(self)
+        ctrl.editedImageBlock = ^(UIImage *image) {
+            weakself.editedImageView.image = image;
+        };
     } else {
         //完成
         if (_editedImageBlock) {
@@ -104,7 +104,7 @@
         
         self.drawBoard.brush = [LXFPencilBrush new];
         [self.view insertSubview:self.drawBoard aboveSubview:_editedImageView];
-        [self.drawBoard setFrame:_editedImageView.frame];
+        self.drawBoard.frame=CGRectMake(round(_editedImageView.frame.origin.x), round(_editedImageView.frame.origin.y), round(_editedImageView.frame.size.width), round(_editedImageView.frame.size.height));
         self.drawBoard.style.lineColor = [UIColor redColor]; // 默认是红色
         self.drawBoard.style.lineWidth = 2;
         self.drawBoard.delegate = self;

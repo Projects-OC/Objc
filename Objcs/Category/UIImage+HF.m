@@ -27,7 +27,7 @@
     return size;
 }
 
-- (UIImage*)rotate:(UIImageOrientation)orient {
+- (UIImage*)imageRotate:(UIImageOrientation)orient {
     CGRect bnds = CGRectZero;
     UIImage *copy = nil;
     CGContextRef ctxt = nil;

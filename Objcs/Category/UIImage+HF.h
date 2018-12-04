@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  按给定的方向旋转图片
  */
-- (UIImage*)rotate:(UIImageOrientation)orient;
+- (UIImage*)imageRotate:(UIImageOrientation)orient;
 
 
 @end

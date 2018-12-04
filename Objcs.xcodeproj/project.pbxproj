@@ -138,6 +138,7 @@
 		45ECFFFD21AD79D5007BB8BD /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5121AD79D5007BB8BD /* GCDViewController.m */; };
 		45ECFFFE21AD79D5007BB8BD /* BCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5421AD79D5007BB8BD /* BCell.m */; };
 		45ECFFFF21AD79D5007BB8BD /* PictureBrowserPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5921AD79D5007BB8BD /* PictureBrowserPercentDrivenInteractiveTransition.m */; };
+		64317DCC21B664CF0029C99E /* HFDrawBoardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
 
@@ -397,6 +398,8 @@
 		45ECFFD721AD79D5007BB8BD /* UIView+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HF.h"; sourceTree = "<group>"; };
 		45ECFFD821AD79D5007BB8BD /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Objcs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64317DCA21B664CF0029C99E /* HFDrawBoardColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFDrawBoardColors.h; sourceTree = "<group>"; };
+		64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDrawBoardColors.m; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -551,6 +554,8 @@
 				45ECFEFB21AD79D5007BB8BD /* HFToolBarBorderView.m */,
 				452B0D6621B16EDE000D3276 /* HFToolBarView.h */,
 				452B0D6721B16EDE000D3276 /* HFToolBarView.m */,
+				64317DCA21B664CF0029C99E /* HFDrawBoardColors.h */,
+				64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1186,6 +1191,7 @@
 				452B0D7021B17D75000D3276 /* HFPhotoAssetClipViewController.m in Sources */,
 				45EC003921AD79D6007BB8BD /* MoreViewController.m in Sources */,
 				452B0D6421B16D4A000D3276 /* LXFEraserBrush.m in Sources */,
+				64317DCC21B664CF0029C99E /* HFDrawBoardColors.m in Sources */,
 				45ECFFDE21AD79D5007BB8BD /* LFLivePreview.m in Sources */,
 				45ECFFF421AD79D5007BB8BD /* ActionSheetView.m in Sources */,
 				45EC003A21AD79D6007BB8BD /* BaseObject.m in Sources */,
