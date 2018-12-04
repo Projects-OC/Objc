@@ -20,7 +20,14 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  按给定的方向旋转图片
  */
-- (UIImage*)imageRotate:(UIImageOrientation)orient;
+- (UIImage*)imageRotateOrientation:(UIImageOrientation)orientation;
+
+/**
+ 图片裁剪
+
+ @param rect 裁剪范围
+ */
+- (UIImage *)imageCropRect:(CGRect)rect superViewRect:(CGRect)superViewRect;
 
 
 @end

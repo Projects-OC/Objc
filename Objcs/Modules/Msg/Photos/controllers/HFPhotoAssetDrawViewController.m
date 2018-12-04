@@ -52,7 +52,7 @@
     HFWeak(self)
     HFToolBarView *shadowView = [[HFToolBarView alloc]
                                 initWithFrame:CGRectMake(0, kScreenHeight-50, kScreenWidth, 50)
-                                titles:@[@"取消",@"批注",@"编辑",@"完成"]
+                                titles:@[@"取消",@"批注",@"裁剪",@"完成"]
                                 touchBlock:^(NSInteger tag) {
                                     [weakself toolBarClick:tag];
                                 }];
@@ -70,18 +70,8 @@
         //批注
         [self drawClick];
     } else if (tag == 2) {
-        //编辑
-//        YasicClipPage *yasicClipPage=[[YasicClipPage alloc] initWithImage:_editedImageView.image];
-//        yasicClipPage.delegate=self;
-//        [self.navigationController pushViewController:yasicClipPage animated:YES];
-        
-        HFPhotoAssetClipViewController *ctrl = [HFPhotoAssetClipViewController new];
-        ctrl.editedImage = _editedImageView.image;
-        [self.navigationController pushViewController:ctrl animated:YES];
-        HFWeak(self)
-        ctrl.editedImageBlock = ^(UIImage *image) {
-            weakself.editedImageView.image = image;
-        };
+        //裁剪
+        [self cropImage];
     } else {
         //完成
         if (_editedImageBlock) {
@@ -124,11 +114,39 @@
     }
     //取消批注
     else{
-        [self.drawBoard removeFromSuperview];
-        [self.colorPickerView removeFromSuperview];
-        self.drawBoard=nil;
-        self.colorPickerView=nil;
+        [self resetDrawBoard];
     }
+}
+
+- (void)resetDrawBoard {
+    if (!self.drawBoard) {
+        return;
+    }
+    [self.drawBoard removeFromSuperview];
+    [self.colorPickerView removeFromSuperview];
+    self.drawBoard=nil;
+    self.colorPickerView=nil;
+}
+
+/**
+ 图片裁剪
+ */
+- (void)cropImage {
+    [self resetDrawBoard];
+    
+    HFPhotoAssetClipViewController *ctrl = [HFPhotoAssetClipViewController new];
+    ctrl.editedImage = _editedImageView.image;
+    [self.navigationController pushViewController:ctrl animated:YES];
+    HFWeak(self)
+    ctrl.editedImageBlock = ^(UIImage *image) {
+        [weakself updateImageView:image];
+    };
+}
+
+- (void)updateImageView:(UIImage *)image{
+    self.editedImageView.image = image;
+    _editedImageView.size = image.size;
+    _editedImageView.center = self.view.center;
 }
 
 #pragma mark HFColorPickerDelegate
@@ -142,21 +160,21 @@
     _editedImage = drawBoard.drawImageView.image;
 }
 
-#pragma mark 图片裁剪完 YasicClipPageDelegate
--(void)yasicClipPagedidImageOK:(UIImage *)image clipImageSize:(CGSize)clipImageSize{
-    if(self.drawBoard){
-        [self.drawBoard removeFromSuperview];
-        [self.colorPickerView removeFromSuperview];
-        self.drawBoard=nil;
-        self.colorPickerView=nil;
-    }
-
-    _clipImageSize = CGSizeMake(round(clipImageSize.width), round(clipImageSize.height));
-    _editedImage = image;
-    _editedImageView.image = image;
-    _editedImageView.size = _clipImageSize;
-    _editedImageView.center = self.view.center;
-
-}
+//#pragma mark 图片裁剪完 YasicClipPageDelegate
+//-(void)yasicClipPagedidImageOK:(UIImage *)image clipImageSize:(CGSize)clipImageSize{
+//    if(self.drawBoard){
+//        [self.drawBoard removeFromSuperview];
+//        [self.colorPickerView removeFromSuperview];
+//        self.drawBoard=nil;
+//        self.colorPickerView=nil;
+//    }
+//
+//    _clipImageSize = CGSizeMake(round(clipImageSize.width), round(clipImageSize.height));
+//    _editedImage = image;
+//    _editedImageView.image = image;
+//    _editedImageView.size = _clipImageSize;
+//    _editedImageView.center = self.view.center;
+//
+//}
 
 @end

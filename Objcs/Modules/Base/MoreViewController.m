@@ -137,9 +137,7 @@
     //    }];
 }
 
-- (void)timer {
-    class_addMethod(<#Class  _Nullable __unsafe_unretained cls#>, <#SEL  _Nonnull name#>, <#IMP  _Nonnull imp#>, <#const char * _Nullable types#>)
-}
+
 
 - (void)didMoveToParentViewController:(UIViewController *)parent {
     if (!parent) {

@@ -27,7 +27,7 @@
     return size;
 }
 
-- (UIImage*)imageRotate:(UIImageOrientation)orient {
+- (UIImage*)imageRotateOrientation:(UIImageOrientation)orientation {
     CGRect bnds = CGRectZero;
     UIImage *copy = nil;
     CGContextRef ctxt = nil;
@@ -40,7 +40,7 @@
     
     bnds = rect;
     
-    switch(orient) {
+    switch(orientation) {
         case UIImageOrientationUp:
             return self;
             
@@ -93,7 +93,7 @@
     UIGraphicsBeginImageContext(bnds.size);
     ctxt = UIGraphicsGetCurrentContext();
     
-    switch(orient) {
+    switch(orientation) {
         case UIImageOrientationLeft:
         case UIImageOrientationLeftMirrored:
         case UIImageOrientationRight:
@@ -124,6 +124,36 @@ static CGRect swapWidthAndHeight(CGRect rect) {
     rect.size.height = swap;
     
     return rect;
+}
+
+- (UIImage *)imageCropRect:(CGRect)rect superViewRect:(CGRect)superViewRect {
+//    CGImageRef sourceImageRef = [self CGImage];
+//    CGImageRef newImageRef = CGImageCreateWithImageInRect(sourceImageRef,rect);
+//    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
+//    if(newImageRef)
+//        CFRelease(newImageRef);
+//    return newImage;
+    
+    CGRect cropFrame = rect;
+    CGFloat orgX = cropFrame.origin.x * (self.size.width /superViewRect.size.width);
+    CGFloat orgY = cropFrame.origin.y * (self.size.height /superViewRect.size.height);
+//    CGFloat orgX = 0;
+//    CGFloat orgY = 0;
+    CGFloat width = cropFrame.size.width * (self.size.width / superViewRect.size.width);
+    CGFloat height = cropFrame.size.height * (self.size.height / superViewRect.size.height);
+    CGRect cropRect = CGRectMake(orgX, orgY, width, height);
+    CGImageRef imgRef = CGImageCreateWithImageInRect(self.CGImage, cropRect);
+    
+    CGFloat deviceScale = [UIScreen mainScreen].scale;
+    UIGraphicsBeginImageContextWithOptions(cropFrame.size, 0, deviceScale);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextTranslateCTM(context, 0, cropFrame.size.height);
+    CGContextScaleCTM(context, 1, -1);
+    CGContextDrawImage(context, CGRectMake(0, 0, cropFrame.size.width, cropFrame.size.height), imgRef);
+    UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+    CGImageRelease(imgRef);
+    UIGraphicsEndImageContext();
+    return newImg;
 }
 
 @end
