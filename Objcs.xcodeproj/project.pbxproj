@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450E911E21B7F74800F8F847 /* TKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 450E911D21B7F74700F8F847 /* TKImageView.m */; };
+		450E912421B8146600F8F847 /* HFPhotoAssetCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450E912321B8146600F8F847 /* HFPhotoAssetCropViewController.m */; };
 		452B0D3E21B166DA000D3276 /* HFPhotoAssetDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D3D21B166DA000D3276 /* HFPhotoAssetDrawViewController.m */; };
 		452B0D5A21B16D4A000D3276 /* LXFDoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D4121B16D4A000D3276 /* LXFDoManager.m */; };
 		452B0D5B21B16D4A000D3276 /* LXFDrawBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D4221B16D4A000D3276 /* LXFDrawBoard.m */; };
@@ -144,6 +146,10 @@
 
 /* Begin PBXFileReference section */
 		077457077BCF708D1A93ACF3 /* Pods-Objcs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.release.xcconfig"; sourceTree = "<group>"; };
+		450E911C21B7F74700F8F847 /* TKImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKImageView.h; sourceTree = "<group>"; };
+		450E911D21B7F74700F8F847 /* TKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKImageView.m; sourceTree = "<group>"; };
+		450E912221B8146600F8F847 /* HFPhotoAssetCropViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFPhotoAssetCropViewController.h; sourceTree = "<group>"; };
+		450E912321B8146600F8F847 /* HFPhotoAssetCropViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFPhotoAssetCropViewController.m; sourceTree = "<group>"; };
 		452B0D3C21B166DA000D3276 /* HFPhotoAssetDrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFPhotoAssetDrawViewController.h; sourceTree = "<group>"; };
 		452B0D3D21B166DA000D3276 /* HFPhotoAssetDrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFPhotoAssetDrawViewController.m; sourceTree = "<group>"; };
 		452B0D4121B16D4A000D3276 /* LXFDoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFDoManager.m; sourceTree = "<group>"; };
@@ -415,9 +421,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450E911B21B7F74700F8F847 /* TKImageView */ = {
+			isa = PBXGroup;
+			children = (
+				450E911C21B7F74700F8F847 /* TKImageView.h */,
+				450E911D21B7F74700F8F847 /* TKImageView.m */,
+			);
+			path = TKImageView;
+			sourceTree = "<group>";
+		};
 		452B0D3F21B16D22000D3276 /* Ventor */ = {
 			isa = PBXGroup;
 			children = (
+				450E911B21B7F74700F8F847 /* TKImageView */,
 				452B0D7121B21DE9000D3276 /* Yasic */,
 				452B0D4021B16D4A000D3276 /* LXFDrawBoard */,
 			);
@@ -625,6 +641,8 @@
 				452B0D3D21B166DA000D3276 /* HFPhotoAssetDrawViewController.m */,
 				452B0D6E21B17D75000D3276 /* HFPhotoAssetClipViewController.h */,
 				452B0D6F21B17D75000D3276 /* HFPhotoAssetClipViewController.m */,
+				450E912221B8146600F8F847 /* HFPhotoAssetCropViewController.h */,
+				450E912321B8146600F8F847 /* HFPhotoAssetCropViewController.m */,
 				45ECFF1421AD79D5007BB8BD /* HFPhotoAssetPopoverPrensentController.h */,
 				45ECFF1021AD79D5007BB8BD /* HFPhotoAssetPopoverPrensentController.m */,
 			);
@@ -1153,6 +1171,7 @@
 				45ECFFF221AD79D5007BB8BD /* NavWechatPushAnimator.m in Sources */,
 				45EC003321AD79D6007BB8BD /* AttributeObject.m in Sources */,
 				45EC000321AD79D5007BB8BD /* PictureBrowserPushAnimator.m in Sources */,
+				450E911E21B7F74800F8F847 /* TKImageView.m in Sources */,
 				45ECFFE021AD79D5007BB8BD /* HFPhotoAssetManager.m in Sources */,
 				45EC001E21AD79D5007BB8BD /* MainTableViewController.m in Sources */,
 				45EC002921AD79D6007BB8BD /* NSData+ImageContentType.m in Sources */,
@@ -1202,6 +1221,7 @@
 				45ECFFFE21AD79D5007BB8BD /* BCell.m in Sources */,
 				45ECFFF121AD79D5007BB8BD /* WechatNavAnimationTransitionViewController.m in Sources */,
 				45ECFFE321AD79D5007BB8BD /* HFPhotoAssetViewController.m in Sources */,
+				450E912421B8146600F8F847 /* HFPhotoAssetCropViewController.m in Sources */,
 				45ECFFE721AD79D5007BB8BD /* BezierPathViewController.m in Sources */,
 				45ECFFF321AD79D5007BB8BD /* CoreAnimationViewController.m in Sources */,
 				45ECFFDA21AD79D5007BB8BD /* HFTitleView.m in Sources */,

@@ -93,7 +93,7 @@ typedef enum : NSUInteger {
     self.userInteractionEnabled = YES;
     self.drawStatus = LXFDrawStatusEnd;
     self.drawImageView = [[UIImageView alloc] initWithImage:self.image];
-    self.drawImageView.contentMode = self.contentMode;
+    self.drawImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:self.drawImageView];
     
     self.doManager = [[LXFDoManager alloc] initWithOriginImage:self.drawImageView.image];

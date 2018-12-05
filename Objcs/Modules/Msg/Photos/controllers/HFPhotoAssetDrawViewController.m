@@ -12,6 +12,7 @@
 #import "HFHColorPicker.h"
 #import "HFPhotoAssetClipViewController.h"
 #import "YasicClipPage.h"
+#import "HFPhotoAssetCropViewController.h"
 
 @interface HFPhotoAssetDrawViewController ()<YasicClipPageDelegate,HFColorPickerDelegate,LXFDrawBoardDelegate>
 
@@ -132,13 +133,21 @@
  图片裁剪
  */
 - (void)cropImage {
-    [self resetDrawBoard];
     
-    HFPhotoAssetClipViewController *ctrl = [HFPhotoAssetClipViewController new];
-    ctrl.editedImage = _editedImageView.image;
+//    HFPhotoAssetClipViewController *ctrl = [HFPhotoAssetClipViewController new];
+//    ctrl.editedImage = _editedImageView.image;
+//    [self.navigationController pushViewController:ctrl animated:YES];
+//    HFWeak(self)
+//    ctrl.editedImageBlock = ^(UIImage *image) {
+//        [weakself updateImageView:image];
+//    };
+    
+    HFPhotoAssetCropViewController *ctrl = [HFPhotoAssetCropViewController new];
+    ctrl.editedImage = self.drawBoard ? [self imageWithBoad:self.drawBoard] : [self imageWithBoad:_editedImageView];
     [self.navigationController pushViewController:ctrl animated:YES];
     HFWeak(self)
     ctrl.editedImageBlock = ^(UIImage *image) {
+        [weakself resetDrawBoard];
         [weakself updateImageView:image];
     };
 }
@@ -158,6 +167,17 @@
 - (void)touchesEndedWithLXFDrawBoard:(LXFDrawBoard *)drawBoard {
     _editedImageView.image = drawBoard.drawImageView.image;
     _editedImage = drawBoard.drawImageView.image;
+}
+
+- (UIImage*)imageWithBoad:(UIImageView *)view{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, [UIScreen mainScreen].scale);
+    CGContextRef currnetContext = UIGraphicsGetCurrentContext();
+    [view.layer renderInContext:currnetContext];
+    
+    UIImage* image = UIGraphicsGetImageFromCurrentImageContext();
+    // 使当前的context出堆栈
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 //#pragma mark 图片裁剪完 YasicClipPageDelegate
