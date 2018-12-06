@@ -25,7 +25,7 @@
     
     //图片背景的空白view (设置和控制器的背景颜色一样，给人一种图片被调走的假象)
     UIView *imgBgWhiteView = [[UIView alloc] initWithFrame:self.transitionBeforeImgFrame];
-    imgBgWhiteView.backgroundColor = bgColor;
+    imgBgWhiteView.backgroundColor = [UIColor grayColor];
     [containerView addSubview:imgBgWhiteView];
     
     //有渐变的黑色背景

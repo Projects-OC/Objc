@@ -11,11 +11,10 @@
 #import "HFPhotoAssetViewController.h"
 #import "UIImage+HF.h"
 #import "HFToolBarBorderView.h"
-#import "HFPhotoAssetDrawViewController.h"
+#import "LFPhotoEditingController.h"
 
-@interface HFPhotoAssetPreviewViewController ()
+@interface HFPhotoAssetPreviewViewController ()<LFPhotoEditingControllerDelegate>
 
-@property (nonatomic,strong) UIImage *image;//原始图
 @property (nonatomic,strong) UIImageView *imageView;
 @property (nonatomic,assign) CGSize clipImageSize;
 
@@ -28,74 +27,57 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"查看照片";
     [self.view addSubview:self.imageView];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(pushCtrl)];
 
     HFWeak(self)
     [[HFPhotoAssetManager sharedInstance]
      getPhotoWithAsset:_asset
-     completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
+     completion:^(UIImage *image, NSDictionary *info, BOOL isDegraded) {
          if (!isDegraded) {
-             weakself.image = photo;
-             weakself.clipImageSize = CGSizeMake([photo imageSize].width, [photo imageSize].height);
-             [weakself updateImageSize];
+             [weakself setupViewImage:image];
          }
      }];
-    
-    HFToolBarBorderView *_toolBar = [[HFToolBarBorderView alloc]
-                               initWithTitles:@[@"编辑照片",@"上屏"]
-                               textColors:@[[UIColor greenColor],[UIColor whiteColor]]
-                               backColors:@[[UIColor whiteColor],[UIColor greenColor]]
-                               isBorder:YES
-                               tapBlock:^(NSInteger tag) {
-                                   if (tag == 0) {
-                                       [weakself pushCtrl];
-                                   }
-                               }];
-    [self.view addSubview:_toolBar];
-    [_toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.view);
-        make.height.mas_equalTo(82);
-        make.bottom.mas_equalTo(0);
-    }];
 }
 
-- (UIImageView *)imageView {
-    if (!_imageView) {
-        _imageView = [UIImageView new];
-        _imageView.backgroundColor = [UIColor blackColor];
-        _imageView.center = self.view.center;
-    }
-    return _imageView;
-}
-
-- (void)updateImageSize{
-    self.imageView.image = _image;
-    self.imageView.size = _clipImageSize;
-//    self.imageView.center = self.view.center;
-//    self.imageView.bounds.size = _clipImageSize;
-
-//    self.imageView.bounds = CGRectMake(0, 0, _clipImageSize.width, _clipImageSize.height);
-//    self.imageView.center = self.view.center;
+- (void)setupViewImage:(UIImage *)image {
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    imageView.image = [UIImage imageWithCGImage:image.CGImage scale:[UIScreen mainScreen].scale orientation:UIImageOrientationUp];
+    [self.view addSubview:imageView];
+    [imageView startAnimating];
     
-    CGFloat y = self.view.height/2 - _clipImageSize.height/2;
-    self.imageView.frame = CGRectMake(0, y, _clipImageSize.width, _clipImageSize.height);
-    self.imageView.center = self.view.center;
+    _imageView = imageView;
 }
 
 - (void)pushCtrl {
-    HFPhotoAssetDrawViewController *ctrl = [HFPhotoAssetDrawViewController new];
-    ctrl.editedImage = _image;
-    ctrl.clipImageSize = _clipImageSize;
-    [self.navigationController pushViewController:ctrl animated:YES];
-    HFWeak(self)
-    ctrl.editedImageBlock = ^(UIImage *image,CGSize clipImageSize) {
-        weakself.image = image;
-        weakself.clipImageSize = clipImageSize;
-        [weakself updateImageSize];
-    };
+    LFPhotoEditingController *lfPhotoEditVC = [[LFPhotoEditingController alloc] init];
+    lfPhotoEditVC.operationType = LFPhotoEditOperationType_draw | LFPhotoEditOperationType_crop;
+    lfPhotoEditVC.delegate = self;
+    lfPhotoEditVC.editImage = self.imageView.image;
+    [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController pushViewController:lfPhotoEditVC animated:NO];
 }
 
-- (void)dealloc {
-    
+-  (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.navigationController setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:YES];
+}
+
+#pragma mark - LFPhotoEditingControllerDelegate
+- (void)lf_PhotoEditingController:(LFPhotoEditingController *)photoEditingVC didCancelPhotoEdit:(LFPhotoEdit *)photoEdit
+{
+    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
+- (void)lf_PhotoEditingController:(LFPhotoEditingController *)photoEditingVC didFinishPhotoEdit:(LFPhotoEdit *)photoEdit
+{
+    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController setNavigationBarHidden:NO];
+    if (!photoEdit) {
+        return;
+    }
+    self.imageView.image = photoEdit.editPreviewImage;
 }
 
 @end

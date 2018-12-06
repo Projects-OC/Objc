@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"WeChat";
-    self.view.backgroundColor = bgColor;
+    self.view.backgroundColor = [UIColor grayColor];
     
     UIImage *img = [UIImage imageNamed:@"wechat.jpg"];
     CGSize size;
