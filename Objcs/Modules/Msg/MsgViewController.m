@@ -10,6 +10,8 @@
 #import "HFPhotoAssetViewController.h"
 #import "LFLiveViewController.h"
 #import "FloatingViewBtn.h"
+#import "PlayerViewController.h"
+#import "InkeViewController.h"
 
 @interface MsgViewController ()
 
@@ -35,6 +37,12 @@
                       },
                     @{@"title" : @"Live",
                       @"class" : NSStringFromClass([LFLiveViewController class])
+                      },
+                    @{@"title" : @"Player",
+                      @"class" : NSStringFromClass([PlayerViewController class])
+                      },
+                    @{@"title" : @"Inke",
+                      @"class" : NSStringFromClass([InkeViewController class])
                       },
                     ];
     }

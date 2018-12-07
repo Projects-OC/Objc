@@ -18,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self timer];
+//    [self timer];
     self.window.rootViewController = [[TabBarViewController alloc] init];
     [self.window makeKeyAndVisible];
     

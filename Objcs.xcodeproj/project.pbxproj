@@ -175,6 +175,9 @@
 		641F6BE321BA0757008E8F22 /* OrientationOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BE221BA0757008E8F22 /* OrientationOneViewController.m */; };
 		641F6BE621BA075E008E8F22 /* OrientationTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BE521BA075E008E8F22 /* OrientationTwoViewController.m */; };
 		641F6BED21BA6689008E8F22 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BEC21BA6689008E8F22 /* PlayerViewController.m */; };
+		641F6BEF21BA6886008E8F22 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641F6BEE21BA6886008E8F22 /* IJKMediaFramework.framework */; };
+		641F6BF321BA6BAA008E8F22 /* InkeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BF221BA6BAA008E8F22 /* InkeViewController.m */; };
+		641F6BF621BA780E008E8F22 /* InkeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BF521BA780E008E8F22 /* InkeModel.m */; };
 		64317DCC21B664CF0029C99E /* HFDrawBoardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
@@ -513,6 +516,11 @@
 		641F6BE521BA075E008E8F22 /* OrientationTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrientationTwoViewController.m; sourceTree = "<group>"; };
 		641F6BEB21BA6689008E8F22 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		641F6BEC21BA6689008E8F22 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		641F6BEE21BA6886008E8F22 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		641F6BF121BA6BAA008E8F22 /* InkeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkeViewController.h; sourceTree = "<group>"; };
+		641F6BF221BA6BAA008E8F22 /* InkeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkeViewController.m; sourceTree = "<group>"; };
+		641F6BF421BA780E008E8F22 /* InkeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkeModel.h; sourceTree = "<group>"; };
+		641F6BF521BA780E008E8F22 /* InkeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkeModel.m; sourceTree = "<group>"; };
 		64317DCA21B664CF0029C99E /* HFDrawBoardColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFDrawBoardColors.h; sourceTree = "<group>"; };
 		64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDrawBoardColors.m; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -524,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */,
+				641F6BEF21BA6886008E8F22 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -996,6 +1005,7 @@
 			children = (
 				45ECFF0221AD79D5007BB8BD /* MsgViewController.h */,
 				45ECFF0121AD79D5007BB8BD /* MsgViewController.m */,
+				641F6BF021BA6B7F008E8F22 /* Inke */,
 				641F6BEA21BA6689008E8F22 /* Player */,
 				45EC003F21AD7C2B007BB8BD /* Floating */,
 				45ECFF0321AD79D5007BB8BD /* Live */,
@@ -1402,6 +1412,7 @@
 		625D8FA7CC7A279133CBBF06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				641F6BEE21BA6886008E8F22 /* IJKMediaFramework.framework */,
 				52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */,
 			);
 			name = Frameworks;
@@ -1445,6 +1456,17 @@
 				641F6BEC21BA6689008E8F22 /* PlayerViewController.m */,
 			);
 			path = Player;
+			sourceTree = "<group>";
+		};
+		641F6BF021BA6B7F008E8F22 /* Inke */ = {
+			isa = PBXGroup;
+			children = (
+				641F6BF121BA6BAA008E8F22 /* InkeViewController.h */,
+				641F6BF221BA6BAA008E8F22 /* InkeViewController.m */,
+				641F6BF421BA780E008E8F22 /* InkeModel.h */,
+				641F6BF521BA780E008E8F22 /* InkeModel.m */,
+			);
+			path = Inke;
 			sourceTree = "<group>";
 		};
 		A02A2E7725ED1ECCD9B4C5F8 /* Pods */ = {
@@ -1623,6 +1645,7 @@
 				45BA745921B94BBB00A651E2 /* LFFilterView.m in Sources */,
 				45EC003721AD79D6007BB8BD /* BaseViewController.m in Sources */,
 				45BA744A21B94BBB00A651E2 /* LFSplashLayer.m in Sources */,
+				641F6BF621BA780E008E8F22 /* InkeModel.m in Sources */,
 				45BA744121B94BBB00A651E2 /* LFVideoTrimmerGridLayer.m in Sources */,
 				45ECFFF821AD79D5007BB8BD /* UIButton+Block.m in Sources */,
 				45EC000921AD79D5007BB8BD /* UIViewController+Popup.m in Sources */,
@@ -1658,6 +1681,7 @@
 				45BA744E21B94BBB00A651E2 /* LFGridLayer.m in Sources */,
 				45ECFFF721AD79D5007BB8BD /* RuntimeViewController.m in Sources */,
 				45BA742D21B94BBB00A651E2 /* JRPickColorView.m in Sources */,
+				641F6BF321BA6BAA008E8F22 /* InkeViewController.m in Sources */,
 				45EC002821AD79D6007BB8BD /* SDWebImageDownloaderOperation.m in Sources */,
 				45EC000A21AD79D5007BB8BD /* UIView+Animation.m in Sources */,
 				45EC003021AD79D6007BB8BD /* PushViewControllerB.m in Sources */,
@@ -1852,6 +1876,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3U426PKFVL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1869,6 +1897,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3U426PKFVL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
