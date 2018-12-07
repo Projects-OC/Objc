@@ -24,7 +24,7 @@
     [options setPlayerOptionIntValue:29.97 forKey:@"r"];
     //-vol——设置音量大小，256为标准音量。（要设置成两倍音量时则输入512，依此类推
     [options setPlayerOptionIntValue:512 forKey:@"vol"];
-    IJKFFMoviePlayerController *moviePlayer = [[IJKFFMoviePlayerController alloc]initWithContentURLString:@"" withOptions:options];
+    IJKFFMoviePlayerController *moviePlayer = [[IJKFFMoviePlayerController alloc]initWithContentURLString:@"rtmp://192.168.1.163:1935/rtmplive/demo" withOptions:options];
     moviePlayer.view.frame = self.view.bounds;
     
     //填充fill
