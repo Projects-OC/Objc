@@ -19,6 +19,13 @@
     // Do any additional setup after loading the view.
 }
 
+- (NSMutableArray *)datas{
+    if (!_datas) {
+        _datas = [[NSMutableArray alloc] init];
+    }
+    return _datas;
+}
+
 - (UICollectionViewFlowLayout *)layout {
     if (!_layout) {
         _layout = [[UICollectionViewFlowLayout alloc] init];

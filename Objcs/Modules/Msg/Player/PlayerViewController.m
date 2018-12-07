@@ -8,25 +8,46 @@
 
 #import "PlayerViewController.h"
 #import <IJKMediaFramework/IJKMediaFramework.h>
+#import "InkeModel.h"
 
 @interface PlayerViewController ()
 
-@property(atomic, retain) id<IJKMediaPlayback> player;
-
+@property(nonatomic,strong) id<IJKMediaPlayback> player;
+@property(nonatomic,strong) UIImageView *img;
 @end
 
 @implementation PlayerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self blurImage];
     [self initPlayer];
     [self installMovieNotificationObservers];
 }
+
+- (void)blurImage {
+    self.img = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    self.img.userInteractionEnabled = YES;
+    [self.img setImageWithURL:[NSURL URLWithString:_model.photo] options:YYWebImageOptionProgressiveBlur];
+    [self.view addSubview:self.img];
     
+    //创建毛玻璃效果
+    UIBlurEffect * blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    //创建毛玻璃视图
+    UIVisualEffectView * ve = [[UIVisualEffectView alloc] initWithEffect:blur];
+    ve.frame = self.img.bounds;
+    //毛玻璃视图加入图片view上
+    [self.img addSubview:ve];
+}
+
 - (void)initPlayer {
+    NSString *_url = @"rtmp://192.168.1.163:1935/rtmplive/demo";
+    if (!_model) {
+        _url = _model.flv;
+    }
     IJKFFOptions * options = [IJKFFOptions optionsByDefault];
-    IJKFFMoviePlayerController * player = [[IJKFFMoviePlayerController alloc] initWithContentURLString:@"rtmp://192.168.1.163:1935/rtmplive/demo" withOptions:options];
+    IJKFFMoviePlayerController * player = [[IJKFFMoviePlayerController alloc] initWithContentURLString:_url withOptions:options];
+    player.scalingMode = IJKMPMovieScalingModeAspectFill;
     self.player = player;
     self.player.view.frame = self.view.bounds;
     self.player.shouldAutoplay = YES;
@@ -74,6 +95,8 @@
     } else {
         NSLog(@"loadStateDidChange: ???: %d\n", (int)loadState);
     }
+    self.img.hidden = YES;
+    [self.img removeFromSuperview];
 }
     
 - (void)moviePlayBackDidFinish:(NSNotification*)notification {
@@ -147,8 +170,14 @@
     }
 }
 
-- (void)popclick {
-    [self.player shutdown];
+- (void)didMoveToParentViewController:(UIViewController *)parent {
+    if (!parent) {
+        [self popSEL];
+    }
+}
+
+- (void)popSEL {
+    [_player shutdown];
 }
     
 /*
@@ -175,7 +204,10 @@
 */
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:IJKMPMoviePlayerLoadStateDidChangeNotification object:_player];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:IJKMPMoviePlayerPlaybackDidFinishNotification object:_player];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:IJKMPMediaPlaybackIsPreparedToPlayDidChangeNotification object:_player];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:IJKMPMoviePlayerPlaybackStateDidChangeNotification object:_player];
 }
     
 @end

@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450818A221BABFB7000F5C01 /* InkeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 450818A121BABFB7000F5C01 /* InkeModel.m */; };
+		450A5C5321BAB80400A75C7A /* InkePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A5C5221BAB80400A75C7A /* InkePlayViewController.m */; };
 		452B0D6821B16EDE000D3276 /* HFToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D6721B16EDE000D3276 /* HFToolBarView.m */; };
 		453EE1D321AD826200125AC8 /* SemiCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 453EE1D221AD826200125AC8 /* SemiCircleView.m */; };
 		454BE80E21AEC80B004A0376 /* FloatingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 454BE80D21AEC80B004A0376 /* FloatingAnimator.m */; };
 		454BE81421AED014004A0376 /* FloatingAnimatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 454BE81321AED014004A0376 /* FloatingAnimatorView.m */; };
+		4597B71021BA988E00922F3D /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4597B70F21BA988E00922F3D /* IJKMediaFramework.framework */; };
 		45BA742921B94BBB00A651E2 /* LFBaseEditingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA739B21B94BBB00A651E2 /* LFBaseEditingController.m */; };
 		45BA742A21B94BBB00A651E2 /* JRFilterBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA73A021B94BBB00A651E2 /* JRFilterBarCell.m */; };
 		45BA742B21B94BBB00A651E2 /* JRFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA73A421B94BBB00A651E2 /* JRFilterModel.m */; };
@@ -64,6 +67,7 @@
 		45BA745B21B94BBB00A651E2 /* LFSplashView_new.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA742121B94BBB00A651E2 /* LFSplashView_new.m */; };
 		45BA745C21B94BBB00A651E2 /* LFDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA742621B94BBB00A651E2 /* LFDrawView.m */; };
 		45BA745D21B94BBB00A651E2 /* LFSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA742821B94BBB00A651E2 /* LFSplashView.m */; };
+		45D9F87821BAA19E008F5BB0 /* InkeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D9F87721BAA19E008F5BB0 /* InkeCollectionViewCell.m */; };
 		45EC000021AD79D5007BB8BD /* PictureBrowserPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5A21AD79D5007BB8BD /* PictureBrowserPopAnimator.m */; };
 		45EC000121AD79D5007BB8BD /* PictureBrowserInteractiveAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5D21AD79D5007BB8BD /* PictureBrowserInteractiveAnimatedTransition.m */; };
 		45EC000221AD79D5007BB8BD /* PictureBrowserTransitionParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5E21AD79D5007BB8BD /* PictureBrowserTransitionParameter.m */; };
@@ -177,13 +181,16 @@
 		641F6BED21BA6689008E8F22 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BEC21BA6689008E8F22 /* PlayerViewController.m */; };
 		641F6BEF21BA6886008E8F22 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641F6BEE21BA6886008E8F22 /* IJKMediaFramework.framework */; };
 		641F6BF321BA6BAA008E8F22 /* InkeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BF221BA6BAA008E8F22 /* InkeViewController.m */; };
-		641F6BF621BA780E008E8F22 /* InkeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BF521BA780E008E8F22 /* InkeModel.m */; };
 		64317DCC21B664CF0029C99E /* HFDrawBoardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		077457077BCF708D1A93ACF3 /* Pods-Objcs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.release.xcconfig"; sourceTree = "<group>"; };
+		450818A021BABFB7000F5C01 /* InkeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkeModel.h; sourceTree = "<group>"; };
+		450818A121BABFB7000F5C01 /* InkeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkeModel.m; sourceTree = "<group>"; };
+		450A5C5121BAB80400A75C7A /* InkePlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkePlayViewController.h; sourceTree = "<group>"; };
+		450A5C5221BAB80400A75C7A /* InkePlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkePlayViewController.m; sourceTree = "<group>"; };
 		452B0D6621B16EDE000D3276 /* HFToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFToolBarView.h; sourceTree = "<group>"; };
 		452B0D6721B16EDE000D3276 /* HFToolBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFToolBarView.m; sourceTree = "<group>"; };
 		453EE1D121AD826200125AC8 /* SemiCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemiCircleView.h; sourceTree = "<group>"; };
@@ -192,6 +199,7 @@
 		454BE80D21AEC80B004A0376 /* FloatingAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingAnimator.m; sourceTree = "<group>"; };
 		454BE81221AED014004A0376 /* FloatingAnimatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingAnimatorView.h; sourceTree = "<group>"; };
 		454BE81321AED014004A0376 /* FloatingAnimatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingAnimatorView.m; sourceTree = "<group>"; };
+		4597B70F21BA988E00922F3D /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		45BA739B21B94BBB00A651E2 /* LFBaseEditingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFBaseEditingController.m; sourceTree = "<group>"; };
 		45BA739E21B94BBB00A651E2 /* JRFilterBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRFilterBar.h; sourceTree = "<group>"; };
 		45BA73A021B94BBB00A651E2 /* JRFilterBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRFilterBarCell.m; sourceTree = "<group>"; };
@@ -303,6 +311,8 @@
 		45BA742621B94BBB00A651E2 /* LFDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFDrawView.m; sourceTree = "<group>"; };
 		45BA742721B94BBB00A651E2 /* LFSplashView_new.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFSplashView_new.h; sourceTree = "<group>"; };
 		45BA742821B94BBB00A651E2 /* LFSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFSplashView.m; sourceTree = "<group>"; };
+		45D9F87621BAA19E008F5BB0 /* InkeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkeCollectionViewCell.h; sourceTree = "<group>"; };
+		45D9F87721BAA19E008F5BB0 /* InkeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkeCollectionViewCell.m; sourceTree = "<group>"; };
 		45EC004021AD7C5F007BB8BD /* FloatingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingViewController.h; sourceTree = "<group>"; };
 		45EC004121AD7C5F007BB8BD /* FloatingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingViewController.m; sourceTree = "<group>"; };
 		45EC004321AD7D57007BB8BD /* FloatingViewBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingViewBtn.h; sourceTree = "<group>"; };
@@ -519,8 +529,6 @@
 		641F6BEE21BA6886008E8F22 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		641F6BF121BA6BAA008E8F22 /* InkeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkeViewController.h; sourceTree = "<group>"; };
 		641F6BF221BA6BAA008E8F22 /* InkeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkeViewController.m; sourceTree = "<group>"; };
-		641F6BF421BA780E008E8F22 /* InkeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkeModel.h; sourceTree = "<group>"; };
-		641F6BF521BA780E008E8F22 /* InkeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkeModel.m; sourceTree = "<group>"; };
 		64317DCA21B664CF0029C99E /* HFDrawBoardColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFDrawBoardColors.h; sourceTree = "<group>"; };
 		64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDrawBoardColors.m; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -531,6 +539,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4597B71021BA988E00922F3D /* IJKMediaFramework.framework in Frameworks */,
 				B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */,
 				641F6BEF21BA6886008E8F22 /* IJKMediaFramework.framework in Frameworks */,
 			);
@@ -539,6 +548,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450A5C5421BABBF400A75C7A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				641F6BF121BA6BAA008E8F22 /* InkeViewController.h */,
+				641F6BF221BA6BAA008E8F22 /* InkeViewController.m */,
+				450A5C5121BAB80400A75C7A /* InkePlayViewController.h */,
+				450A5C5221BAB80400A75C7A /* InkePlayViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		450A5C5521BABC0400A75C7A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45D9F87621BAA19E008F5BB0 /* InkeCollectionViewCell.h */,
+				45D9F87721BAA19E008F5BB0 /* InkeCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		450A5C5621BABC0F00A75C7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				450818A021BABFB7000F5C01 /* InkeModel.h */,
+				450818A121BABFB7000F5C01 /* InkeModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		452B0D3F21B16D22000D3276 /* Ventor */ = {
 			isa = PBXGroup;
 			children = (
@@ -951,6 +989,7 @@
 		45ECFEDF21AD7903007BB8BD /* Objcs */ = {
 			isa = PBXGroup;
 			children = (
+				4597B70F21BA988E00922F3D /* IJKMediaFramework.framework */,
 				45ECFEE021AD7903007BB8BD /* AppDelegate.h */,
 				45ECFEE121AD7903007BB8BD /* AppDelegate.m */,
 				641F6BDA21BA044A008E8F22 /* AppDelegate+MF.h */,
@@ -1461,10 +1500,9 @@
 		641F6BF021BA6B7F008E8F22 /* Inke */ = {
 			isa = PBXGroup;
 			children = (
-				641F6BF121BA6BAA008E8F22 /* InkeViewController.h */,
-				641F6BF221BA6BAA008E8F22 /* InkeViewController.m */,
-				641F6BF421BA780E008E8F22 /* InkeModel.h */,
-				641F6BF521BA780E008E8F22 /* InkeModel.m */,
+				450A5C5421BABBF400A75C7A /* Controllers */,
+				450A5C5521BABC0400A75C7A /* Views */,
+				450A5C5621BABC0F00A75C7A /* Models */,
 			);
 			path = Inke;
 			sourceTree = "<group>";
@@ -1595,6 +1633,7 @@
 				45EC002E21AD79D6007BB8BD /* RACViewController.m in Sources */,
 				45BA742F21B94BBB00A651E2 /* LFImageUtil.m in Sources */,
 				45EC001A21AD79D5007BB8BD /* TaobaoSecondViewController.m in Sources */,
+				45D9F87821BAA19E008F5BB0 /* InkeCollectionViewCell.m in Sources */,
 				45BA745A21B94BBB00A651E2 /* LFStickerView.m in Sources */,
 				45BA745521B94BBB00A651E2 /* LFStickerBar.m in Sources */,
 				45ECFFFD21AD79D5007BB8BD /* GCDViewController.m in Sources */,
@@ -1607,6 +1646,7 @@
 				45EC001821AD79D5007BB8BD /* TaobaoAnimationTrasition.m in Sources */,
 				45ECFFDC21AD79D5007BB8BD /* TabBarViewController.m in Sources */,
 				45BA743C21B94BBB00A651E2 /* LFVideoEditingView.m in Sources */,
+				450A5C5321BAB80400A75C7A /* InkePlayViewController.m in Sources */,
 				45BA744C21B94BBB00A651E2 /* LFResizeControl.m in Sources */,
 				45BA743721B94BBB00A651E2 /* LFScrollView.m in Sources */,
 				45ECFFEA21AD79D5007BB8BD /* MasonryLayoutModel.m in Sources */,
@@ -1645,7 +1685,6 @@
 				45BA745921B94BBB00A651E2 /* LFFilterView.m in Sources */,
 				45EC003721AD79D6007BB8BD /* BaseViewController.m in Sources */,
 				45BA744A21B94BBB00A651E2 /* LFSplashLayer.m in Sources */,
-				641F6BF621BA780E008E8F22 /* InkeModel.m in Sources */,
 				45BA744121B94BBB00A651E2 /* LFVideoTrimmerGridLayer.m in Sources */,
 				45ECFFF821AD79D5007BB8BD /* UIButton+Block.m in Sources */,
 				45EC000921AD79D5007BB8BD /* UIViewController+Popup.m in Sources */,
@@ -1720,6 +1759,7 @@
 				45EC000421AD79D5007BB8BD /* PictureBrowserCell.m in Sources */,
 				45EC003B21AD79D6007BB8BD /* HFBaseTableViewController.m in Sources */,
 				45ECFEE221AD7903007BB8BD /* AppDelegate.m in Sources */,
+				450818A221BABFB7000F5C01 /* InkeModel.m in Sources */,
 				45ECFFEC21AD79D5007BB8BD /* TransitionsViewController.m in Sources */,
 				45EC003121AD79D6007BB8BD /* PushViewControllerA.m in Sources */,
 				45BA743821B94BBB00A651E2 /* LFVideoPlayer.m in Sources */,
@@ -1879,6 +1919,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Objcs",
 				);
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;
@@ -1900,6 +1941,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Objcs",
 				);
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;

@@ -9,13 +9,14 @@
 #import "NavigationControllerDelegate.h"
 #import "OrientationOneViewController.h"
 #import "OrientationTwoViewController.h"
+#import "PlayerViewController.h"
 
 @implementation NavigationControllerDelegate
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     //隐藏导航栏
-//    BOOL hidden = [viewController isKindOfClass:OrientationTwoViewController.class];
-//    [navigationController setNavigationBarHidden:hidden animated:animated];
+    BOOL hidden = [viewController isKindOfClass:PlayerViewController.class];
+    [navigationController setNavigationBarHidden:hidden animated:animated];
     
     NSString *ori = @"orientation";
     if ([viewController isKindOfClass:OrientationOneViewController.class]) {

@@ -6,11 +6,11 @@
 //  Copyright © 2018年 mf. All rights reserved.
 //
 
-#import "HFBaseTableViewController.h"
+#import "HFBaseCollectionViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface InkeViewController : HFBaseTableViewController
+@interface InkeViewController : HFBaseCollectionViewController
 
 @end
 

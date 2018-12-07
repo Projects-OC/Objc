@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HFBaseCollectionViewController : BaseViewController
 
+@property (nonatomic,strong) NSMutableArray *datas;
+
 @property (nonatomic,strong) UICollectionView *collectionView;
 
 @property (nonatomic,strong) UICollectionViewFlowLayout *layout;

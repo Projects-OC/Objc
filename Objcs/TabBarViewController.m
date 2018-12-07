@@ -32,6 +32,7 @@
     mainNav.delegate = self.del;
     
     NavigatonViewController *msgNav = [[NavigatonViewController alloc] initWithRootViewController:[[MsgViewController alloc] init]];
+    msgNav.delegate = self.del;
     
     UITabBarItem *mainTabBar = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@""] selectedImage:[UIImage imageNamed:@""]];
     mainNav.title = @"首页";
