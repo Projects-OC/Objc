@@ -25,6 +25,8 @@
 
 #define HFWeak(obj)     __weak typeof(obj) weak##obj = obj;
 
+#define MyApp ((AppDelegate*)[UIApplication sharedApplication].delegate)
+
 //// 颜色
 #define color(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 

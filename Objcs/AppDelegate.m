@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TabBarViewController.h"
-
+#import "AppDelegate+MF.h"
 
 @interface AppDelegate ()
 
@@ -18,18 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forBarMetrics:UIBarMetricsDefault];
+    
+    NSTimer *_timer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 
-    //禁止程序运行时自动锁屏
-//    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
-    
-    //    NSTimer *_timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
-    //    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
-    
     self.window.rootViewController = [[TabBarViewController alloc] init];
-    
     [self.window makeKeyAndVisible];
+    
+    [AppDelegate appStatistics];
 
     return YES;
 }
@@ -54,46 +50,31 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     
-    //    UIApplication* app
-    //    = [UIApplication sharedApplication];
-    //    __block UIBackgroundTaskIdentifier
-    //    bgTask;
-    //    bgTask=
-    //    [app beginBackgroundTaskWithExpirationHandler:^{
-    //        dispatch_async(dispatch_get_main_queue(),^{
-    //            if(bgTask
-    //               != UIBackgroundTaskInvalid)
-    //            {
-    //                bgTask=
-    //                UIBackgroundTaskInvalid;
-    //            }
-    //        });
-    //    }];
-    //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0),^{
-    //        dispatch_async(dispatch_get_main_queue(),^{
-    //            if(bgTask
-    //               != UIBackgroundTaskInvalid)
-    //            {
-    //                bgTask=
-    //                UIBackgroundTaskInvalid;
-    //            }
-    //        });
-    //    });
-}
-
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        UIApplication* app
+        = [UIApplication sharedApplication];
+        __block UIBackgroundTaskIdentifier
+        bgTask;
+        bgTask=
+        [app beginBackgroundTaskWithExpirationHandler:^{
+            dispatch_async(dispatch_get_main_queue(),^{
+                if(bgTask
+                   != UIBackgroundTaskInvalid)
+                {
+                    bgTask=
+                    UIBackgroundTaskInvalid;
+                }
+            });
+        }];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0),^{
+            dispatch_async(dispatch_get_main_queue(),^{
+                if(bgTask
+                   != UIBackgroundTaskInvalid)
+                {
+                    bgTask=
+                    UIBackgroundTaskInvalid;
+                }
+            });
+        });
 }
 
 

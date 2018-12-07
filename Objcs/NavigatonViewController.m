@@ -8,11 +8,16 @@
 
 #import "NavigatonViewController.h"
 
-@interface NavigatonViewController ()<UINavigationControllerDelegate,UIGestureRecognizerDelegate>
+@interface NavigatonViewController ()<UIGestureRecognizerDelegate>
 
 @end
 
 @implementation NavigatonViewController
+    
++ (void)initialize {
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]]
+                                       forBarMetrics:UIBarMetricsDefault];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

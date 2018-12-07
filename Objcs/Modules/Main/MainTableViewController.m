@@ -20,11 +20,13 @@
 #import "UIViewController+Popup.h"
 #import "MasonryLayoutTableViewController.h"
 #import <MFWebKit/MFWebKitViewController.h>
+#import "GCDViewController.h"
 #import "OneViewController.h"
 #import "DecimalNumberViewController.h"
 #import "MoreViewController.h"
 #import "PushViewControllerA.h"
 #import "KVOViewController.h"
+#import "OrientationOneViewController.h"
 
 @interface MainTableViewController ()
 
@@ -49,8 +51,11 @@
 
 - (NSArray *)titles {
     if (!_titles) {
-        _titles = @[@{@"title" : @"GCD",
-                      @"class" : NSStringFromClass([UIViewController class])
+        _titles = @[@{@"title" : @"Orientation",
+                      @"class" : NSStringFromClass([OrientationOneViewController class])
+                      },
+                    @{@"title" : @"GCD",
+                      @"class" : NSStringFromClass([GCDViewController class])
                       },
                     @{@"title" : @"Runtime",
                       @"class" : NSStringFromClass([RuntimeViewController class])
@@ -102,7 +107,7 @@
 - (UIImageView *)headerImage {
     if (!_headerImage) {
         _headerImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
-        _headerImage.image = [UIImage imageNamed:@"Expression03.jpeg"];
+//        _headerImage.image = [UIImage imageNamed:@"Expression03.jpeg"];
         _headerImage.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _headerImage;

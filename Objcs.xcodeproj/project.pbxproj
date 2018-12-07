@@ -171,6 +171,10 @@
 		45ECFFFD21AD79D5007BB8BD /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5121AD79D5007BB8BD /* GCDViewController.m */; };
 		45ECFFFE21AD79D5007BB8BD /* BCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5421AD79D5007BB8BD /* BCell.m */; };
 		45ECFFFF21AD79D5007BB8BD /* PictureBrowserPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFF5921AD79D5007BB8BD /* PictureBrowserPercentDrivenInteractiveTransition.m */; };
+		641F6BDC21BA044A008E8F22 /* AppDelegate+MF.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BDB21BA044A008E8F22 /* AppDelegate+MF.m */; };
+		641F6BDF21BA06BF008E8F22 /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BDE21BA06BF008E8F22 /* NavigationControllerDelegate.m */; };
+		641F6BE321BA0757008E8F22 /* OrientationOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BE221BA0757008E8F22 /* OrientationOneViewController.m */; };
+		641F6BE621BA075E008E8F22 /* OrientationTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BE521BA075E008E8F22 /* OrientationTwoViewController.m */; };
 		64317DCC21B664CF0029C99E /* HFDrawBoardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
@@ -501,6 +505,14 @@
 		45ECFFD721AD79D5007BB8BD /* UIView+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HF.h"; sourceTree = "<group>"; };
 		45ECFFD821AD79D5007BB8BD /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Objcs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		641F6BDA21BA044A008E8F22 /* AppDelegate+MF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+MF.h"; sourceTree = "<group>"; };
+		641F6BDB21BA044A008E8F22 /* AppDelegate+MF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+MF.m"; sourceTree = "<group>"; };
+		641F6BDD21BA06BF008E8F22 /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
+		641F6BDE21BA06BF008E8F22 /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
+		641F6BE121BA0757008E8F22 /* OrientationOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrientationOneViewController.h; sourceTree = "<group>"; };
+		641F6BE221BA0757008E8F22 /* OrientationOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrientationOneViewController.m; sourceTree = "<group>"; };
+		641F6BE421BA075E008E8F22 /* OrientationTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrientationTwoViewController.h; sourceTree = "<group>"; };
+		641F6BE521BA075E008E8F22 /* OrientationTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrientationTwoViewController.m; sourceTree = "<group>"; };
 		64317DCA21B664CF0029C99E /* HFDrawBoardColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFDrawBoardColors.h; sourceTree = "<group>"; };
 		64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDrawBoardColors.m; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -932,14 +944,18 @@
 			children = (
 				45ECFEE021AD7903007BB8BD /* AppDelegate.h */,
 				45ECFEE121AD7903007BB8BD /* AppDelegate.m */,
+				641F6BDA21BA044A008E8F22 /* AppDelegate+MF.h */,
+				641F6BDB21BA044A008E8F22 /* AppDelegate+MF.m */,
 				45ECFEF821AD79D4007BB8BD /* NavigatonViewController.h */,
 				45ECFEF621AD79D4007BB8BD /* NavigatonViewController.m */,
+				641F6BDD21BA06BF008E8F22 /* NavigationControllerDelegate.h */,
+				641F6BDE21BA06BF008E8F22 /* NavigationControllerDelegate.m */,
 				45ECFFD121AD79D5007BB8BD /* TabBarViewController.h */,
 				45ECFEFE21AD79D5007BB8BD /* TabBarViewController.m */,
-				452B0D3F21B16D22000D3276 /* Ventor */,
 				45ECFFD221AD79D5007BB8BD /* Category */,
 				45ECFEFF21AD79D5007BB8BD /* Modules */,
 				45ECFEF921AD79D5007BB8BD /* Utils */,
+				452B0D3F21B16D22000D3276 /* Ventor */,
 				45ECFEF721AD79D4007BB8BD /* PrefixHeader.pch */,
 				45ECFEE621AD7903007BB8BD /* Main.storyboard */,
 				45ECFEE921AD7903007BB8BD /* Assets.xcassets */,
@@ -1042,14 +1058,13 @@
 		45ECFF1A21AD79D5007BB8BD /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				45ECFF1B21AD79D5007BB8BD /* Bezier */,
-				45ECFF1E21AD79D5007BB8BD /* UIViewController+Popup.h */,
-				45ECFF6D21AD79D5007BB8BD /* UIViewController+Popup.m */,
-				45ECFF7621AD79D5007BB8BD /* TableViewCell.h */,
-				45ECFF1F21AD79D5007BB8BD /* TableViewCell.m */,
-				45ECFF2021AD79D5007BB8BD /* MasonryLayout */,
 				45ECFF2721AD79D5007BB8BD /* MainTableViewController.h */,
 				45ECFF9021AD79D5007BB8BD /* MainTableViewController.m */,
+				45ECFF7621AD79D5007BB8BD /* TableViewCell.h */,
+				45ECFF1F21AD79D5007BB8BD /* TableViewCell.m */,
+				641F6BE021BA0731008E8F22 /* Orientation */,
+				45ECFF1B21AD79D5007BB8BD /* Bezier */,
+				45ECFF2021AD79D5007BB8BD /* MasonryLayout */,
 				45ECFF2821AD79D5007BB8BD /* Transition3 */,
 				45ECFF2D21AD79D5007BB8BD /* Transition2 */,
 				45ECFF3821AD79D5007BB8BD /* Core Animation */,
@@ -1383,6 +1398,8 @@
 				45ECFFD321AD79D5007BB8BD /* UIImage+HF.m */,
 				45ECFFD821AD79D5007BB8BD /* UIScrollView+EmptyDataSet.h */,
 				45ECFFD521AD79D5007BB8BD /* UIScrollView+EmptyDataSet.m */,
+				45ECFF1E21AD79D5007BB8BD /* UIViewController+Popup.h */,
+				45ECFF6D21AD79D5007BB8BD /* UIViewController+Popup.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1393,6 +1410,17 @@
 				52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		641F6BE021BA0731008E8F22 /* Orientation */ = {
+			isa = PBXGroup;
+			children = (
+				641F6BE121BA0757008E8F22 /* OrientationOneViewController.h */,
+				641F6BE221BA0757008E8F22 /* OrientationOneViewController.m */,
+				641F6BE421BA075E008E8F22 /* OrientationTwoViewController.h */,
+				641F6BE521BA075E008E8F22 /* OrientationTwoViewController.m */,
+			);
+			path = Orientation;
 			sourceTree = "<group>";
 		};
 		A02A2E7725ED1ECCD9B4C5F8 /* Pods */ = {
@@ -1536,6 +1564,7 @@
 				45BA744C21B94BBB00A651E2 /* LFResizeControl.m in Sources */,
 				45BA743721B94BBB00A651E2 /* LFScrollView.m in Sources */,
 				45ECFFEA21AD79D5007BB8BD /* MasonryLayoutModel.m in Sources */,
+				641F6BDC21BA044A008E8F22 /* AppDelegate+MF.m in Sources */,
 				45ECFFF921AD79D5007BB8BD /* RuntimeViewController+Addtion.m in Sources */,
 				45EC002321AD79D5007BB8BD /* UIImage+GIF.m in Sources */,
 				45BA743421B94BBB00A651E2 /* UIView+LFMEFrame.m in Sources */,
@@ -1582,6 +1611,7 @@
 				45ECFFEB21AD79D5007BB8BD /* MasonryLayoutTableViewCell.m in Sources */,
 				45ECFFF521AD79D5007BB8BD /* ClockView.m in Sources */,
 				45ECFFDD21AD79D5007BB8BD /* MsgViewController.m in Sources */,
+				641F6BDF21BA06BF008E8F22 /* NavigationControllerDelegate.m in Sources */,
 				45BA744421B94BBB00A651E2 /* LFMEGIFImageSerialization.m in Sources */,
 				45BA744321B94BBB00A651E2 /* LFVideoTrimmerView.m in Sources */,
 				452B0D6821B16EDE000D3276 /* HFToolBarView.m in Sources */,
@@ -1607,6 +1637,7 @@
 				45EC002821AD79D6007BB8BD /* SDWebImageDownloaderOperation.m in Sources */,
 				45EC000A21AD79D5007BB8BD /* UIView+Animation.m in Sources */,
 				45EC003021AD79D6007BB8BD /* PushViewControllerB.m in Sources */,
+				641F6BE621BA075E008E8F22 /* OrientationTwoViewController.m in Sources */,
 				45EC002121AD79D5007BB8BD /* UIImageView+HighlightedWebCache.m in Sources */,
 				45ECFFD921AD79D5007BB8BD /* NavigatonViewController.m in Sources */,
 				45BA745B21B94BBB00A651E2 /* LFSplashView_new.m in Sources */,
@@ -1657,6 +1688,7 @@
 				45EC002021AD79D5007BB8BD /* SDWebImageDecoder.m in Sources */,
 				45ECFFE621AD79D5007BB8BD /* HFPhotoAssetCollectionViewCell.m in Sources */,
 				45ECFFE921AD79D5007BB8BD /* MasonryLayoutTableViewController.m in Sources */,
+				641F6BE321BA0757008E8F22 /* OrientationOneViewController.m in Sources */,
 				45EC000721AD79D5007BB8BD /* PictureBrowserSouceModel.m in Sources */,
 				45BA743521B94BBB00A651E2 /* NSBundle+LFMediaEditing.m in Sources */,
 			);
