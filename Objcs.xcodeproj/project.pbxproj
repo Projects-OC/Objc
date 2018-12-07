@@ -120,7 +120,6 @@
 		45EC003521AD79D6007BB8BD /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFFC121AD79D5007BB8BD /* OneViewController.m */; };
 		45EC003621AD79D6007BB8BD /* HFBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFFC221AD79D5007BB8BD /* HFBaseTableView.m */; };
 		45EC003721AD79D6007BB8BD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFFC321AD79D5007BB8BD /* BaseViewController.m */; };
-		45EC003821AD79D6007BB8BD /* HFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFFC521AD79D5007BB8BD /* HFBaseViewController.m */; };
 		45EC003921AD79D6007BB8BD /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFFC621AD79D5007BB8BD /* MoreViewController.m */; };
 		45EC003A21AD79D6007BB8BD /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFFCB21AD79D5007BB8BD /* BaseObject.m */; };
 		45EC003B21AD79D6007BB8BD /* HFBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ECFFCD21AD79D5007BB8BD /* HFBaseTableViewController.m */; };
@@ -175,6 +174,7 @@
 		641F6BDF21BA06BF008E8F22 /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BDE21BA06BF008E8F22 /* NavigationControllerDelegate.m */; };
 		641F6BE321BA0757008E8F22 /* OrientationOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BE221BA0757008E8F22 /* OrientationOneViewController.m */; };
 		641F6BE621BA075E008E8F22 /* OrientationTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BE521BA075E008E8F22 /* OrientationTwoViewController.m */; };
+		641F6BED21BA6689008E8F22 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BEC21BA6689008E8F22 /* PlayerViewController.m */; };
 		64317DCC21B664CF0029C99E /* HFDrawBoardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
@@ -485,14 +485,12 @@
 		45ECFFC221AD79D5007BB8BD /* HFBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBaseTableView.m; sourceTree = "<group>"; };
 		45ECFFC321AD79D5007BB8BD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		45ECFFC421AD79D5007BB8BD /* HFBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBaseTableViewController.h; sourceTree = "<group>"; };
-		45ECFFC521AD79D5007BB8BD /* HFBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBaseViewController.m; sourceTree = "<group>"; };
 		45ECFFC621AD79D5007BB8BD /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		45ECFFC721AD79D5007BB8BD /* KVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
 		45ECFFC821AD79D5007BB8BD /* AttributeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeObject.h; sourceTree = "<group>"; };
 		45ECFFC921AD79D5007BB8BD /* HFBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBaseCollectionViewController.h; sourceTree = "<group>"; };
 		45ECFFCA21AD79D5007BB8BD /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		45ECFFCB21AD79D5007BB8BD /* BaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
-		45ECFFCC21AD79D5007BB8BD /* HFBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBaseViewController.h; sourceTree = "<group>"; };
 		45ECFFCD21AD79D5007BB8BD /* HFBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBaseTableViewController.m; sourceTree = "<group>"; };
 		45ECFFCE21AD79D5007BB8BD /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		45ECFFCF21AD79D5007BB8BD /* HFBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBaseTableView.h; sourceTree = "<group>"; };
@@ -513,6 +511,8 @@
 		641F6BE221BA0757008E8F22 /* OrientationOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrientationOneViewController.m; sourceTree = "<group>"; };
 		641F6BE421BA075E008E8F22 /* OrientationTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrientationTwoViewController.h; sourceTree = "<group>"; };
 		641F6BE521BA075E008E8F22 /* OrientationTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrientationTwoViewController.m; sourceTree = "<group>"; };
+		641F6BEB21BA6689008E8F22 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		641F6BEC21BA6689008E8F22 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		64317DCA21B664CF0029C99E /* HFDrawBoardColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFDrawBoardColors.h; sourceTree = "<group>"; };
 		64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDrawBoardColors.m; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -996,6 +996,7 @@
 			children = (
 				45ECFF0221AD79D5007BB8BD /* MsgViewController.h */,
 				45ECFF0121AD79D5007BB8BD /* MsgViewController.m */,
+				641F6BEA21BA6689008E8F22 /* Player */,
 				45EC003F21AD7C2B007BB8BD /* Floating */,
 				45ECFF0321AD79D5007BB8BD /* Live */,
 				45ECFF0821AD79D5007BB8BD /* Photos */,
@@ -1007,9 +1008,9 @@
 			isa = PBXGroup;
 			children = (
 				45ECFF0421AD79D5007BB8BD /* LFLiveViewController.h */,
-				45ECFF0521AD79D5007BB8BD /* LFLivePreview.m */,
 				45ECFF0621AD79D5007BB8BD /* LFLiveViewController.m */,
 				45ECFF0721AD79D5007BB8BD /* LFLivePreview.h */,
+				45ECFF0521AD79D5007BB8BD /* LFLivePreview.m */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -1062,6 +1063,8 @@
 				45ECFF9021AD79D5007BB8BD /* MainTableViewController.m */,
 				45ECFF7621AD79D5007BB8BD /* TableViewCell.h */,
 				45ECFF1F21AD79D5007BB8BD /* TableViewCell.m */,
+				641F6BE821BA437E008E8F22 /* More */,
+				641F6BE721BA431A008E8F22 /* KVO */,
 				641F6BE021BA0731008E8F22 /* Orientation */,
 				45ECFF1B21AD79D5007BB8BD /* Bezier */,
 				45ECFF2021AD79D5007BB8BD /* MasonryLayout */,
@@ -1365,26 +1368,18 @@
 		45ECFFBC21AD79D5007BB8BD /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				45ECFFC921AD79D5007BB8BD /* HFBaseCollectionViewController.h */,
 				45ECFFBD21AD79D5007BB8BD /* HFBaseCollectionViewController.m */,
+				45ECFFC821AD79D5007BB8BD /* AttributeObject.h */,
 				45ECFFBE21AD79D5007BB8BD /* AttributeObject.m */,
-				45ECFFBF21AD79D5007BB8BD /* KVOViewController.m */,
 				45ECFFC021AD79D5007BB8BD /* BaseObject.h */,
-				45ECFFC121AD79D5007BB8BD /* OneViewController.m */,
-				45ECFFC221AD79D5007BB8BD /* HFBaseTableView.m */,
+				45ECFFCB21AD79D5007BB8BD /* BaseObject.m */,
+				45ECFFCE21AD79D5007BB8BD /* BaseViewController.h */,
 				45ECFFC321AD79D5007BB8BD /* BaseViewController.m */,
 				45ECFFC421AD79D5007BB8BD /* HFBaseTableViewController.h */,
-				45ECFFC521AD79D5007BB8BD /* HFBaseViewController.m */,
-				45ECFFC621AD79D5007BB8BD /* MoreViewController.m */,
-				45ECFFC721AD79D5007BB8BD /* KVOViewController.h */,
-				45ECFFC821AD79D5007BB8BD /* AttributeObject.h */,
-				45ECFFC921AD79D5007BB8BD /* HFBaseCollectionViewController.h */,
-				45ECFFCA21AD79D5007BB8BD /* OneViewController.h */,
-				45ECFFCB21AD79D5007BB8BD /* BaseObject.m */,
-				45ECFFCC21AD79D5007BB8BD /* HFBaseViewController.h */,
 				45ECFFCD21AD79D5007BB8BD /* HFBaseTableViewController.m */,
-				45ECFFCE21AD79D5007BB8BD /* BaseViewController.h */,
 				45ECFFCF21AD79D5007BB8BD /* HFBaseTableView.h */,
-				45ECFFD021AD79D5007BB8BD /* MoreViewController.h */,
+				45ECFFC221AD79D5007BB8BD /* HFBaseTableView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1421,6 +1416,35 @@
 				641F6BE521BA075E008E8F22 /* OrientationTwoViewController.m */,
 			);
 			path = Orientation;
+			sourceTree = "<group>";
+		};
+		641F6BE721BA431A008E8F22 /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				45ECFFC721AD79D5007BB8BD /* KVOViewController.h */,
+				45ECFFBF21AD79D5007BB8BD /* KVOViewController.m */,
+			);
+			path = KVO;
+			sourceTree = "<group>";
+		};
+		641F6BE821BA437E008E8F22 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				45ECFFCA21AD79D5007BB8BD /* OneViewController.h */,
+				45ECFFC121AD79D5007BB8BD /* OneViewController.m */,
+				45ECFFD021AD79D5007BB8BD /* MoreViewController.h */,
+				45ECFFC621AD79D5007BB8BD /* MoreViewController.m */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		641F6BEA21BA6689008E8F22 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				641F6BEB21BA6689008E8F22 /* PlayerViewController.h */,
+				641F6BEC21BA6689008E8F22 /* PlayerViewController.m */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		A02A2E7725ED1ECCD9B4C5F8 /* Pods */ = {
@@ -1656,6 +1680,7 @@
 				45ECFFFE21AD79D5007BB8BD /* BCell.m in Sources */,
 				45ECFFF121AD79D5007BB8BD /* WechatNavAnimationTransitionViewController.m in Sources */,
 				45ECFFE321AD79D5007BB8BD /* HFPhotoAssetViewController.m in Sources */,
+				641F6BED21BA6689008E8F22 /* PlayerViewController.m in Sources */,
 				45BA745721B94BBB00A651E2 /* LFZoomingView.m in Sources */,
 				45BA744D21B94BBB00A651E2 /* LFGridView.m in Sources */,
 				45BA743F21B94BBB00A651E2 /* LFVideoPlayerLayerView.m in Sources */,
@@ -1681,7 +1706,6 @@
 				45BA744821B94BBB00A651E2 /* LFEditingView.m in Sources */,
 				45EC002C21AD79D6007BB8BD /* UIButton+WebCache.m in Sources */,
 				45BA745021B94BBB00A651E2 /* LFStickerLabel.m in Sources */,
-				45EC003821AD79D6007BB8BD /* HFBaseViewController.m in Sources */,
 				45BA742921B94BBB00A651E2 /* LFBaseEditingController.m in Sources */,
 				45ECFFFA21AD79D5007BB8BD /* NSObject+Category.m in Sources */,
 				45ECFFE221AD79D5007BB8BD /* HFPhotoAssetPopoverPrensentController.m in Sources */,
@@ -1826,7 +1850,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7DWBZ36H4U;
+				DEVELOPMENT_TEAM = 3U426PKFVL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;
@@ -1843,7 +1867,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7DWBZ36H4U;
+				DEVELOPMENT_TEAM = 3U426PKFVL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;

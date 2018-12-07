@@ -73,7 +73,7 @@
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView{
     NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:18],
-                                 NSForegroundColorAttributeName:[UIColor blackColor]};
+                                 NSForegroundColorAttributeName:[UIColor redColor]};
     return [[NSAttributedString alloc] initWithString:self.emptyTitle attributes:attributes];
 }
 

@@ -6,11 +6,11 @@
 //  Copyright © 2018年 HengFeng. All rights reserved.
 //
 
-#import "HFBaseViewController.h"
+#import "BaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HFBaseCollectionViewController : HFBaseViewController
+@interface HFBaseCollectionViewController : BaseViewController
 
 @property (nonatomic,strong) UICollectionView *collectionView;
 

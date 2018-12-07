@@ -6,12 +6,12 @@
 //  Copyright © 2018年 HengFeng. All rights reserved.
 //
 
-#import "HFBaseViewController.h"
+#import "BaseViewController.h"
 #import "HFBaseTableView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HFBaseTableViewController : HFBaseViewController<UITableViewDataSource,UITableViewDelegate>
+@interface HFBaseTableViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) NSMutableArray *datas;
 

@@ -18,10 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    NSTimer *_timer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
-
+    [self timer];
     self.window.rootViewController = [[TabBarViewController alloc] init];
     [self.window makeKeyAndVisible];
     
@@ -31,7 +28,10 @@
 }
 
 
-
+- (void)timer {
+    NSTimer *_timer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+}
 
 //
 - (void)timerTick:(NSTimer *)timer{

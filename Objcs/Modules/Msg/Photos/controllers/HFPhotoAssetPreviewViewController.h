@@ -6,12 +6,12 @@
 //  Copyright © 2018年 header. All rights reserved.
 //
 
-#import "HFBaseViewController.h"
+#import "BaseViewController.h"
 #import <Photos/Photos.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HFPhotoAssetPreviewViewController : HFBaseViewController
+@interface HFPhotoAssetPreviewViewController : BaseViewController
 
 @property (nonatomic,strong) PHAsset *asset;
 
