@@ -36,5 +36,10 @@
 #import "AppDelegate.h"
 #import "UIImage+HF.h"
 
+//空数据处理
+#ifdef DEBUG
+#define NULLSAFE_ENABLED 0
+#endif
+
 
 #endif /* PrefixHeader_pch */

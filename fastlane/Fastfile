@@ -1,0 +1,100 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+	output_name = "Objcs"
+
+  	desc "打包并上传Ap-pStore"
+  	lane :app_store do
+		   #导出ipa包
+		    gym(
+			      	clean: true,
+			      	scheme: "Objcs",
+			      	export_method: "app-store",	#打包方式：app-store, package, ad-hoc, enterprise, development,
+			      	output_name: "#{output_ame}",	#输出的ipa名称
+			      	#output_directory: "#{ipaPath}/release_app_store",	#ipa输出目录
+			      	output_directory: "./fastlane/AppStore", # ipa输出目录
+					archive_path:"./fastlane/AppStore", #archive文件导出地址 
+			      	export_xcargs: "-allowProvisioningUpdates",
+			      	configuration: "Release",
+		    )
+		    #上传至app-store
+		    deliver(
+			      	force: true,              #是否跳过HTML验证报告，默认false
+			     	skip_metadata: true,      #是否跳过上传metadata，默认false
+			      	skip_screenshots: true    #是否跳过上传屏幕截图，默认false
+		   )
+		    system "open ../fastlane/AppStore"
+ 	end
+
+ 	desc "打包上传蒲公英"
+  	lane :app_pgyer do
+		  	build_app(
+		  			output_name: "#{output_name}",	#输出的ipa名称
+		  			export_method: "development",
+		  			output_directory: "./fastlane/Pgyer", # ipa输出目录
+					archive_path:"./fastlane/Pgyer", #archive文件导出地址 
+					configuration:"Debug",
+		  	)
+		  	pgyer(
+		  			api_key: "ea329c02d85d330a0926e8560bdec997", 
+		  			user_key: "06d8a18bb683ad7057056453ab20efb0",
+		  			update_description: "更新日志"
+		  	)
+		  	system "open ../fastlane/Pgyer"
+	end
+
+	desc "打包上传fir"
+	lane :app_fir do
+			build_app(
+					output_name: "#{output_name}",	#输出的ipa名称
+		  			export_method: "development",
+		  			output_directory: "./fastlane/Fir", # ipa输出目录
+					archive_path:"./fastlane/Fir", #archive文件导出地址 
+					configuration:"Debug",
+		  	)
+			firim(
+					firim_api_token:'xxx'
+			)
+			system "open ../fastlane/Fir"
+	end
+
+end
+
+
+#安装环境sudo gem install fastlane -NV
+#安装fastlane init
+
+
+#plugins插件搜索、安装、使用
+#fastlane search_plugins xxx
+
+#添加
+#fastlane add_plugin xxx
+#安装
+#fastlane install_plugins
+
+#添加pgyer
+#fastlane add_plugin pgyer
+#添加fir
+#fastlane add_plugin fir
+#gem install fir-cli
+
+#执行打包上传
+#fastlane xxx
+#或者
+#bundle exec fastlane xxx

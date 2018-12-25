@@ -26,6 +26,7 @@
 #import "PushViewControllerA.h"
 #import "KVOViewController.h"
 #import "OrientationOneViewController.h"
+#import "MoreViewController.h"
 
 @interface MainTableViewController ()
 
@@ -97,6 +98,9 @@
                       },
                     @{@"title" : @"KVO",
                       @"class" : NSStringFromClass([KVOViewController class])
+                      },
+                    @{@"title" : @"More",
+                      @"class" : NSStringFromClass([MoreViewController class])
                       },
                     ];
     }

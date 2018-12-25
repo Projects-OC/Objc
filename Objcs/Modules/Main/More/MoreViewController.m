@@ -28,6 +28,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"title1";
     
+    [self stringByApplyingTransform];
+    
     [self terminationTitles:@"1",@"2",@"3", nil];
     
     
@@ -110,6 +112,27 @@
     CGFloat max =[[array valueForKeyPath:@"@max.floatValue"] floatValue];
     CGFloat min =[[array valueForKeyPath:@"@min.floatValue"] floatValue];
     NSLog(@"%f\n%f\n%f\n%f",sum,avg,max,min);
+}
+
+/**
+ 汉语转拼音
+ */
+- (void)stringByApplyingTransform {
+    NSString *content = @"增加，增长，长高，长大，长度,重新，重庆，重量，四，十";
+    NSLog(@"%@",[content stringByApplyingTransform:NSStringTransformToLatin reverse:NO]);
+    NSLog(@"%@",[[content stringByApplyingTransform:NSStringTransformToLatin reverse:NO] stringByApplyingTransform:NSStringTransformStripCombiningMarks reverse:NO]);
+}
+
+/**
+ 判断string是否是纯数字
+ */
+- (void)scanner {
+    NSString *string = @"1";
+    NSScanner *scan = [NSScanner scannerWithString:string];
+    int val;
+    if ([scan scanInt:&val] && [scan isAtEnd]) {
+        //如果string都是数字
+    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

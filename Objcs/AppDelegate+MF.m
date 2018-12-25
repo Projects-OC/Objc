@@ -13,9 +13,9 @@ static NSString *const BUGLYKEY = @"";
 
 @implementation AppDelegate (MF)
     
-+ (void)appStatistics {
-    [MyApp bugly];
-    [MyApp umeng];
+- (void)appStatistics {
+    [self bugly];
+    [self umeng];
 }
     
 - (void)bugly {

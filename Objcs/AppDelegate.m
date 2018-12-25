@@ -22,7 +22,7 @@
     self.window.rootViewController = [[TabBarViewController alloc] init];
     [self.window makeKeyAndVisible];
     
-    [AppDelegate appStatistics];
+    [self appStatistics];
 
     return YES;
 }

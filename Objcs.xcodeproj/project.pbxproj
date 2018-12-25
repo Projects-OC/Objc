@@ -13,7 +13,6 @@
 		453EE1D321AD826200125AC8 /* SemiCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 453EE1D221AD826200125AC8 /* SemiCircleView.m */; };
 		454BE80E21AEC80B004A0376 /* FloatingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 454BE80D21AEC80B004A0376 /* FloatingAnimator.m */; };
 		454BE81421AED014004A0376 /* FloatingAnimatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 454BE81321AED014004A0376 /* FloatingAnimatorView.m */; };
-		4597B71021BA988E00922F3D /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4597B70F21BA988E00922F3D /* IJKMediaFramework.framework */; };
 		45BA742921B94BBB00A651E2 /* LFBaseEditingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA739B21B94BBB00A651E2 /* LFBaseEditingController.m */; };
 		45BA742A21B94BBB00A651E2 /* JRFilterBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA73A021B94BBB00A651E2 /* JRFilterBarCell.m */; };
 		45BA742B21B94BBB00A651E2 /* JRFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA73A421B94BBB00A651E2 /* JRFilterModel.m */; };
@@ -182,6 +181,8 @@
 		641F6BEF21BA6886008E8F22 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641F6BEE21BA6886008E8F22 /* IJKMediaFramework.framework */; };
 		641F6BF321BA6BAA008E8F22 /* InkeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BF221BA6BAA008E8F22 /* InkeViewController.m */; };
 		64317DCC21B664CF0029C99E /* HFDrawBoardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */; };
+		645C176421BE37C9000292A6 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645C176321BE37C9000292A6 /* IJKMediaFramework.framework */; };
+		645C176621BE65BC000292A6 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C176521BE65BB000292A6 /* NullSafe.m */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
 
@@ -199,7 +200,6 @@
 		454BE80D21AEC80B004A0376 /* FloatingAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingAnimator.m; sourceTree = "<group>"; };
 		454BE81221AED014004A0376 /* FloatingAnimatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingAnimatorView.h; sourceTree = "<group>"; };
 		454BE81321AED014004A0376 /* FloatingAnimatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingAnimatorView.m; sourceTree = "<group>"; };
-		4597B70F21BA988E00922F3D /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		45BA739B21B94BBB00A651E2 /* LFBaseEditingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFBaseEditingController.m; sourceTree = "<group>"; };
 		45BA739E21B94BBB00A651E2 /* JRFilterBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRFilterBar.h; sourceTree = "<group>"; };
 		45BA73A021B94BBB00A651E2 /* JRFilterBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRFilterBarCell.m; sourceTree = "<group>"; };
@@ -531,6 +531,8 @@
 		641F6BF221BA6BAA008E8F22 /* InkeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkeViewController.m; sourceTree = "<group>"; };
 		64317DCA21B664CF0029C99E /* HFDrawBoardColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFDrawBoardColors.h; sourceTree = "<group>"; };
 		64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDrawBoardColors.m; sourceTree = "<group>"; };
+		645C176321BE37C9000292A6 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		645C176521BE65BB000292A6 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -539,9 +541,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4597B71021BA988E00922F3D /* IJKMediaFramework.framework in Frameworks */,
 				B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */,
 				641F6BEF21BA6886008E8F22 /* IJKMediaFramework.framework in Frameworks */,
+				645C176421BE37C9000292A6 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,10 +590,10 @@
 		45BA739A21B94BBB00A651E2 /* PhotoEditors   */ = {
 			isa = PBXGroup;
 			children = (
-				45BA739B21B94BBB00A651E2 /* LFBaseEditingController.m */,
 				45BA739C21B94BBB00A651E2 /* vendors */,
 				45BA73AF21B94BBB00A651E2 /* common */,
 				45BA73C621B94BBB00A651E2 /* LFBaseEditingController.h */,
+				45BA739B21B94BBB00A651E2 /* LFBaseEditingController.m */,
 				45BA73C721B94BBB00A651E2 /* LFVideoEditingController */,
 				45BA73E621B94BBB00A651E2 /* LFPhotoEditingController */,
 			);
@@ -989,7 +991,7 @@
 		45ECFEDF21AD7903007BB8BD /* Objcs */ = {
 			isa = PBXGroup;
 			children = (
-				4597B70F21BA988E00922F3D /* IJKMediaFramework.framework */,
+				645C176321BE37C9000292A6 /* IJKMediaFramework.framework */,
 				45ECFEE021AD7903007BB8BD /* AppDelegate.h */,
 				45ECFEE121AD7903007BB8BD /* AppDelegate.m */,
 				641F6BDA21BA044A008E8F22 /* AppDelegate+MF.h */,
@@ -1010,6 +1012,7 @@
 				45ECFEEB21AD7903007BB8BD /* LaunchScreen.storyboard */,
 				45ECFEEE21AD7903007BB8BD /* Info.plist */,
 				45ECFEEF21AD7903007BB8BD /* main.m */,
+				645C176521BE65BB000292A6 /* NullSafe.m */,
 			);
 			path = Objcs;
 			sourceTree = "<group>";
@@ -1161,9 +1164,9 @@
 		45ECFF2821AD79D5007BB8BD /* Transition3 */ = {
 			isa = PBXGroup;
 			children = (
-				45ECFF2921AD79D5007BB8BD /* CrossDissolveAnimatedTransition.h */,
 				45ECFF2A21AD79D5007BB8BD /* TransitionsViewController.h */,
 				45ECFF2B21AD79D5007BB8BD /* TransitionsViewController.m */,
+				45ECFF2921AD79D5007BB8BD /* CrossDissolveAnimatedTransition.h */,
 				45ECFF2C21AD79D5007BB8BD /* CrossDissolveAnimatedTransition.m */,
 			);
 			path = Transition3;
@@ -1303,9 +1306,9 @@
 			isa = PBXGroup;
 			children = (
 				45ECFF7221AD79D5007BB8BD /* PopoverViewController.h */,
-				45ECFF7321AD79D5007BB8BD /* PopoverPresentationController.m */,
 				45ECFF7421AD79D5007BB8BD /* PopoverViewController.m */,
 				45ECFF7521AD79D5007BB8BD /* PopoverPresentationController.h */,
+				45ECFF7321AD79D5007BB8BD /* PopoverPresentationController.m */,
 			);
 			path = Popover;
 			sourceTree = "<group>";
@@ -1770,6 +1773,7 @@
 				45BA744821B94BBB00A651E2 /* LFEditingView.m in Sources */,
 				45EC002C21AD79D6007BB8BD /* UIButton+WebCache.m in Sources */,
 				45BA745021B94BBB00A651E2 /* LFStickerLabel.m in Sources */,
+				645C176621BE65BC000292A6 /* NullSafe.m in Sources */,
 				45BA742921B94BBB00A651E2 /* LFBaseEditingController.m in Sources */,
 				45ECFFFA21AD79D5007BB8BD /* NSObject+Category.m in Sources */,
 				45ECFFE221AD79D5007BB8BD /* HFPhotoAssetPopoverPrensentController.m in Sources */,
@@ -1923,6 +1927,7 @@
 				);
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mf.Objcs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1945,6 +1950,7 @@
 				);
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mf.Objcs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
