@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		450818A221BABFB7000F5C01 /* InkeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 450818A121BABFB7000F5C01 /* InkeModel.m */; };
 		450A5C5321BAB80400A75C7A /* InkePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A5C5221BAB80400A75C7A /* InkePlayViewController.m */; };
+		450C659921F0BD7E00F6640D /* HFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 450C659821F0BD7E00F6640D /* HFUtility.m */; };
+		450C659C21F0BE0C00F6640D /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 450C659B21F0BE0C00F6640D /* NSString+Size.m */; };
 		452B0D6821B16EDE000D3276 /* HFToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B0D6721B16EDE000D3276 /* HFToolBarView.m */; };
 		453EE1D321AD826200125AC8 /* SemiCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 453EE1D221AD826200125AC8 /* SemiCircleView.m */; };
 		454BE80E21AEC80B004A0376 /* FloatingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 454BE80D21AEC80B004A0376 /* FloatingAnimator.m */; };
@@ -191,6 +193,10 @@
 		450818A121BABFB7000F5C01 /* InkeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkeModel.m; sourceTree = "<group>"; };
 		450A5C5121BAB80400A75C7A /* InkePlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkePlayViewController.h; sourceTree = "<group>"; };
 		450A5C5221BAB80400A75C7A /* InkePlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkePlayViewController.m; sourceTree = "<group>"; };
+		450C659721F0BD7E00F6640D /* HFUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFUtility.h; sourceTree = "<group>"; };
+		450C659821F0BD7E00F6640D /* HFUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFUtility.m; sourceTree = "<group>"; };
+		450C659A21F0BE0C00F6640D /* NSString+Size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		450C659B21F0BE0C00F6640D /* NSString+Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		452B0D6621B16EDE000D3276 /* HFToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFToolBarView.h; sourceTree = "<group>"; };
 		452B0D6721B16EDE000D3276 /* HFToolBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFToolBarView.m; sourceTree = "<group>"; };
 		453EE1D121AD826200125AC8 /* SemiCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemiCircleView.h; sourceTree = "<group>"; };
@@ -588,10 +594,10 @@
 		45BA739A21B94BBB00A651E2 /* PhotoEditors   */ = {
 			isa = PBXGroup;
 			children = (
+				45BA73C621B94BBB00A651E2 /* LFBaseEditingController.h */,
 				45BA739B21B94BBB00A651E2 /* LFBaseEditingController.m */,
 				45BA739C21B94BBB00A651E2 /* vendors */,
 				45BA73AF21B94BBB00A651E2 /* common */,
-				45BA73C621B94BBB00A651E2 /* LFBaseEditingController.h */,
 				45BA73C721B94BBB00A651E2 /* LFVideoEditingController */,
 				45BA73E621B94BBB00A651E2 /* LFPhotoEditingController */,
 			);
@@ -1025,6 +1031,8 @@
 				452B0D6721B16EDE000D3276 /* HFToolBarView.m */,
 				64317DCA21B664CF0029C99E /* HFDrawBoardColors.h */,
 				64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */,
+				450C659721F0BD7E00F6640D /* HFUtility.h */,
+				450C659821F0BD7E00F6640D /* HFUtility.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1444,6 +1452,8 @@
 				45ECFFD521AD79D5007BB8BD /* UIScrollView+EmptyDataSet.m */,
 				45ECFF1E21AD79D5007BB8BD /* UIViewController+Popup.h */,
 				45ECFF6D21AD79D5007BB8BD /* UIViewController+Popup.m */,
+				450C659A21F0BE0C00F6640D /* NSString+Size.h */,
+				450C659B21F0BE0C00F6640D /* NSString+Size.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1725,6 +1735,7 @@
 				45EC000A21AD79D5007BB8BD /* UIView+Animation.m in Sources */,
 				45EC003021AD79D6007BB8BD /* PushViewControllerB.m in Sources */,
 				641F6BE621BA075E008E8F22 /* OrientationTwoViewController.m in Sources */,
+				450C659C21F0BE0C00F6640D /* NSString+Size.m in Sources */,
 				45EC002121AD79D5007BB8BD /* UIImageView+HighlightedWebCache.m in Sources */,
 				45ECFFD921AD79D5007BB8BD /* NavigatonViewController.m in Sources */,
 				45BA745B21B94BBB00A651E2 /* LFSplashView_new.m in Sources */,
@@ -1738,6 +1749,7 @@
 				45EC003A21AD79D6007BB8BD /* BaseObject.m in Sources */,
 				45ECFFE821AD79D5007BB8BD /* TableViewCell.m in Sources */,
 				45EC000121AD79D5007BB8BD /* PictureBrowserInteractiveAnimatedTransition.m in Sources */,
+				450C659921F0BD7E00F6640D /* HFUtility.m in Sources */,
 				45ECFFFC21AD79D5007BB8BD /* UIPresentationControllers.m in Sources */,
 				45EC001D21AD79D5007BB8BD /* TaobaoTableViewCell.m in Sources */,
 				45ECFFFE21AD79D5007BB8BD /* BCell.m in Sources */,

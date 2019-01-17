@@ -9,5 +9,6 @@ pod 'UITableView+FDTemplateLayoutCell'
 pod 'MFWebKit'
 pod 'YYKit'
 pod 'LFLiveKit'
+pod 'ZLPhotoBrowser'
 
 end
