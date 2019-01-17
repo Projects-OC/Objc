@@ -84,7 +84,7 @@
     [self.collectionView registerClass:[HFPhotoAssetCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([HFPhotoAssetCollectionViewCell class])];
     [self.view addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, LCSafeBottomMargin + 70 ,0));
+        make.edges.equalTo(self.view);
     }];
 }
 

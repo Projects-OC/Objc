@@ -32,7 +32,11 @@
         [btn setTitle:@"返回" forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(popclick) forControlEvents:UIControlEventTouchUpInside];
-        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+        UIBarButtonItem *cusItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+        //iOS11之前有效
+        UIBarButtonItem *fixItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        fixItem.width = -15;
+        viewController.navigationItem.leftBarButtonItems = @[fixItem,cusItem];
     }
     [super pushViewController:viewController animated:animated];
 }

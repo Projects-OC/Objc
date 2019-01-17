@@ -10,12 +10,13 @@
 #import "OrientationOneViewController.h"
 #import "OrientationTwoViewController.h"
 #import "PlayerViewController.h"
+#import "LFPhotoEditingController.h"
 
 @implementation NavigationControllerDelegate
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     //隐藏导航栏
-    BOOL hidden = [viewController isKindOfClass:PlayerViewController.class];
+    BOOL hidden = [viewController isKindOfClass:PlayerViewController.class] || [viewController isKindOfClass:LFPhotoEditingController.class];
     [navigationController setNavigationBarHidden:hidden animated:animated];
     
     NSString *ori = @"orientation";

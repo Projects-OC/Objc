@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AppDelegate (MF)
 
-+ (void)appStatistics;
+- (void)appStatistics;
 
 @end
 
