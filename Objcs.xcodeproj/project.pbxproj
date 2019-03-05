@@ -184,6 +184,12 @@
 		641F6BEF21BA6886008E8F22 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641F6BEE21BA6886008E8F22 /* IJKMediaFramework.framework */; };
 		641F6BF321BA6BAA008E8F22 /* InkeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BF221BA6BAA008E8F22 /* InkeViewController.m */; };
 		64317DCC21B664CF0029C99E /* HFDrawBoardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */; };
+		64C0E319222E479200B9E0A4 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E318222E479200B9E0A4 /* NSArray+Safe.m */; };
+		64C0E31C222E479B00B9E0A4 /* NSMutableArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E31B222E479B00B9E0A4 /* NSMutableArray+Safe.m */; };
+		64C0E31F222E47A300B9E0A4 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E31E222E47A300B9E0A4 /* NSDictionary+Safe.m */; };
+		64C0E322222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E321222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m */; };
+		64C0E325222E483A00B9E0A4 /* NSObject+ExchangeImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E324222E483A00B9E0A4 /* NSObject+ExchangeImp.m */; };
+		64C0E328222E48E900B9E0A4 /* NSObject+ReplaceMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E327222E48E900B9E0A4 /* NSObject+ReplaceMethod.m */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
 
@@ -537,6 +543,18 @@
 		641F6BF221BA6BAA008E8F22 /* InkeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkeViewController.m; sourceTree = "<group>"; };
 		64317DCA21B664CF0029C99E /* HFDrawBoardColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFDrawBoardColors.h; sourceTree = "<group>"; };
 		64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDrawBoardColors.m; sourceTree = "<group>"; };
+		64C0E317222E479200B9E0A4 /* NSArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
+		64C0E318222E479200B9E0A4 /* NSArray+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
+		64C0E31A222E479B00B9E0A4 /* NSMutableArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Safe.h"; sourceTree = "<group>"; };
+		64C0E31B222E479B00B9E0A4 /* NSMutableArray+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Safe.m"; sourceTree = "<group>"; };
+		64C0E31D222E47A300B9E0A4 /* NSDictionary+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
+		64C0E31E222E47A300B9E0A4 /* NSDictionary+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
+		64C0E320222E47AC00B9E0A4 /* NSMutableDictionary+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Safe.h"; sourceTree = "<group>"; };
+		64C0E321222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Safe.m"; sourceTree = "<group>"; };
+		64C0E323222E483A00B9E0A4 /* NSObject+ExchangeImp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ExchangeImp.h"; sourceTree = "<group>"; };
+		64C0E324222E483A00B9E0A4 /* NSObject+ExchangeImp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ExchangeImp.m"; sourceTree = "<group>"; };
+		64C0E326222E48E900B9E0A4 /* NSObject+ReplaceMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ReplaceMethod.h"; sourceTree = "<group>"; };
+		64C0E327222E48E900B9E0A4 /* NSObject+ReplaceMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ReplaceMethod.m"; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1006,7 +1024,8 @@
 				641F6BDE21BA06BF008E8F22 /* NavigationControllerDelegate.m */,
 				45ECFFD121AD79D5007BB8BD /* TabBarViewController.h */,
 				45ECFEFE21AD79D5007BB8BD /* TabBarViewController.m */,
-				45ECFFD221AD79D5007BB8BD /* Category */,
+				64C0E316222E473100B9E0A4 /* CategorySafe */,
+				45ECFFD221AD79D5007BB8BD /* CategoryOther */,
 				45ECFEFF21AD79D5007BB8BD /* Modules */,
 				45ECFEF921AD79D5007BB8BD /* Utils */,
 				452B0D3F21B16D22000D3276 /* Ventor */,
@@ -1441,7 +1460,7 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		45ECFFD221AD79D5007BB8BD /* Category */ = {
+		45ECFFD221AD79D5007BB8BD /* CategoryOther */ = {
 			isa = PBXGroup;
 			children = (
 				45ECFFD721AD79D5007BB8BD /* UIView+HF.h */,
@@ -1455,7 +1474,7 @@
 				450C659A21F0BE0C00F6640D /* NSString+Size.h */,
 				450C659B21F0BE0C00F6640D /* NSString+Size.m */,
 			);
-			path = Category;
+			path = CategoryOther;
 			sourceTree = "<group>";
 		};
 		625D8FA7CC7A279133CBBF06 /* Frameworks */ = {
@@ -1515,6 +1534,25 @@
 				450A5C5621BABC0F00A75C7A /* Models */,
 			);
 			path = Inke;
+			sourceTree = "<group>";
+		};
+		64C0E316222E473100B9E0A4 /* CategorySafe */ = {
+			isa = PBXGroup;
+			children = (
+				64C0E317222E479200B9E0A4 /* NSArray+Safe.h */,
+				64C0E318222E479200B9E0A4 /* NSArray+Safe.m */,
+				64C0E31A222E479B00B9E0A4 /* NSMutableArray+Safe.h */,
+				64C0E31B222E479B00B9E0A4 /* NSMutableArray+Safe.m */,
+				64C0E31D222E47A300B9E0A4 /* NSDictionary+Safe.h */,
+				64C0E31E222E47A300B9E0A4 /* NSDictionary+Safe.m */,
+				64C0E320222E47AC00B9E0A4 /* NSMutableDictionary+Safe.h */,
+				64C0E321222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m */,
+				64C0E323222E483A00B9E0A4 /* NSObject+ExchangeImp.h */,
+				64C0E324222E483A00B9E0A4 /* NSObject+ExchangeImp.m */,
+				64C0E326222E48E900B9E0A4 /* NSObject+ReplaceMethod.h */,
+				64C0E327222E48E900B9E0A4 /* NSObject+ReplaceMethod.m */,
+			);
+			path = CategorySafe;
 			sourceTree = "<group>";
 		};
 		A02A2E7725ED1ECCD9B4C5F8 /* Pods */ = {
@@ -1632,6 +1670,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45ECFFDB21AD79D5007BB8BD /* HFToolBarBorderView.m in Sources */,
+				64C0E319222E479200B9E0A4 /* NSArray+Safe.m in Sources */,
 				45EC002621AD79D5007BB8BD /* SDWebImagePrefetcher.m in Sources */,
 				45BA743E21B94BBB00A651E2 /* LFAudioTrackBar.m in Sources */,
 				45EC000621AD79D5007BB8BD /* PictureBrowserViewController.m in Sources */,
@@ -1644,6 +1683,7 @@
 				45BA742F21B94BBB00A651E2 /* LFImageUtil.m in Sources */,
 				45EC001A21AD79D5007BB8BD /* TaobaoSecondViewController.m in Sources */,
 				45D9F87821BAA19E008F5BB0 /* InkeCollectionViewCell.m in Sources */,
+				64C0E31C222E479B00B9E0A4 /* NSMutableArray+Safe.m in Sources */,
 				45BA745A21B94BBB00A651E2 /* LFStickerView.m in Sources */,
 				45BA745521B94BBB00A651E2 /* LFStickerBar.m in Sources */,
 				45ECFFFD21AD79D5007BB8BD /* GCDViewController.m in Sources */,
@@ -1698,6 +1738,7 @@
 				45BA744121B94BBB00A651E2 /* LFVideoTrimmerGridLayer.m in Sources */,
 				45ECFFF821AD79D5007BB8BD /* UIButton+Block.m in Sources */,
 				45EC000921AD79D5007BB8BD /* UIViewController+Popup.m in Sources */,
+				64C0E328222E48E900B9E0A4 /* NSObject+ReplaceMethod.m in Sources */,
 				45BA744621B94BBB00A651E2 /* LFPhotoEdit.m in Sources */,
 				45ECFFED21AD79D5007BB8BD /* CrossDissolveAnimatedTransition.m in Sources */,
 				45EC000B21AD79D5007BB8BD /* PopoverPresentationController.m in Sources */,
@@ -1708,6 +1749,7 @@
 				45ECFFF521AD79D5007BB8BD /* ClockView.m in Sources */,
 				45ECFFDD21AD79D5007BB8BD /* MsgViewController.m in Sources */,
 				641F6BDF21BA06BF008E8F22 /* NavigationControllerDelegate.m in Sources */,
+				64C0E325222E483A00B9E0A4 /* NSObject+ExchangeImp.m in Sources */,
 				45BA744421B94BBB00A651E2 /* LFMEGIFImageSerialization.m in Sources */,
 				45BA744321B94BBB00A651E2 /* LFVideoTrimmerView.m in Sources */,
 				452B0D6821B16EDE000D3276 /* HFToolBarView.m in Sources */,
@@ -1745,6 +1787,7 @@
 				45BA743921B94BBB00A651E2 /* LFVideoExportSession.m in Sources */,
 				64317DCC21B664CF0029C99E /* HFDrawBoardColors.m in Sources */,
 				45ECFFDE21AD79D5007BB8BD /* LFLivePreview.m in Sources */,
+				64C0E31F222E47A300B9E0A4 /* NSDictionary+Safe.m in Sources */,
 				45ECFFF421AD79D5007BB8BD /* ActionSheetView.m in Sources */,
 				45EC003A21AD79D6007BB8BD /* BaseObject.m in Sources */,
 				45ECFFE821AD79D5007BB8BD /* TableViewCell.m in Sources */,
@@ -1788,6 +1831,7 @@
 				45EC002021AD79D5007BB8BD /* SDWebImageDecoder.m in Sources */,
 				45ECFFE621AD79D5007BB8BD /* HFPhotoAssetCollectionViewCell.m in Sources */,
 				45ECFFE921AD79D5007BB8BD /* MasonryLayoutTableViewController.m in Sources */,
+				64C0E322222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m in Sources */,
 				641F6BE321BA0757008E8F22 /* OrientationOneViewController.m in Sources */,
 				45EC000721AD79D5007BB8BD /* PictureBrowserSouceModel.m in Sources */,
 				45BA743521B94BBB00A651E2 /* NSBundle+LFMediaEditing.m in Sources */,

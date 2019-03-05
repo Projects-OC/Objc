@@ -8,8 +8,9 @@
 
 #import "KVOViewController.h"
 #import "BaseObject.h"
+#import "NavigatonViewController.h"
 
-@interface KVOViewController ()
+@interface KVOViewController ()<NavigationProtocol>
 
 @property (nonatomic,strong) NSMutableArray *objs;
 
@@ -21,8 +22,13 @@
     NSLog(@"popSEL");
 }
 
+- (void)popProtocol {
+    NSLog(@"popProtocol");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self addObserver:self forKeyPath:[self stringFromSelector] options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         BaseObject *o = [BaseObject new];
