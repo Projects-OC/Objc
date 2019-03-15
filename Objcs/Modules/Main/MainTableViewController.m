@@ -27,6 +27,7 @@
 #import "KVOViewController.h"
 #import "OrientationOneViewController.h"
 #import "MoreViewController.h"
+#import "SafeTestViewController.h"
 
 @interface MainTableViewController ()
 
@@ -51,7 +52,10 @@
 
 - (NSArray *)titles {
     if (!_titles) {
-        _titles = @[@{@"title" : @"Orientation",
+        _titles = @[@{@"title" : @"SafeTest",
+                      @"class" : NSStringFromClass([SafeTestViewController class])
+                      },
+                    @{@"title" : @"Orientation",
                       @"class" : NSStringFromClass([OrientationOneViewController class])
                       },
                     @{@"title" : @"GCD",

@@ -9,10 +9,14 @@
 #import "TabBarViewController.h"
 #import "MainTableViewController.h"
 #import "MsgViewController.h"
+#import "AppleViewController.h"
+
 #import "NavigatonViewController.h"
 #import "NavigationControllerDelegate.h"
 #import "OrientationOneViewController.h"
 #import "OrientationTwoViewController.h"
+
+#import "TabBar.h"
 
 @interface TabBarViewController ()
 
@@ -26,25 +30,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    TabBar *tabbar = [[TabBar alloc] init];
+    [self setValue:tabbar forKey:@"tabBar"];
+    tabbar.appleHandle = ^{
+        self.selectedIndex = 1;
+    };
+    
     self.del = [NavigationControllerDelegate new];
-   
-    NavigatonViewController *mainNav = [[NavigatonViewController alloc] initWithRootViewController:[[MainTableViewController alloc] init]];
-    mainNav.delegate = self.del;
     
-    NavigatonViewController *msgNav = [[NavigatonViewController alloc] initWithRootViewController:[[MsgViewController alloc] init]];
-    msgNav.delegate = self.del;
-    
-    UITabBarItem *mainTabBar = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@""] selectedImage:[UIImage imageNamed:@""]];
-    mainNav.title = @"首页";
-    mainNav.tabBarItem = mainTabBar;
-    
-    UITabBarItem *msgTabBar = [[UITabBarItem alloc] initWithTitle:@"其他" image:[UIImage imageNamed:@""] selectedImage:[UIImage imageNamed:@""]];
-    msgNav.title = @"其他";
-    msgNav.tabBarItem = msgTabBar;
-    
-    self.viewControllers = @[mainNav,msgNav];
-    self.selectedIndex = 1;
+    [self addChildCtrl:MainTableViewController.new title:@"首页"];
+    [self addChildCtrl:AppleViewController.new title:@"Apple"];
+    [self addChildCtrl:MsgViewController.new title:@"其他"];
 }
+
+- (void)addChildCtrl:(UIViewController *)ctrl title:(NSString *)title {
+    NavigatonViewController *nav = [[NavigatonViewController alloc] initWithRootViewController:ctrl];
+    nav.delegate = self.del;
+    
+    UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:[UIImage imageNamed:@""] selectedImage:[UIImage imageNamed:@""]];
+    nav.title = title;
+    nav.tabBarItem = tabBarItem;
+    
+    [self addChildViewController:nav];
+}
+
 - (BOOL)shouldAutorotate{
     return YES;
 }

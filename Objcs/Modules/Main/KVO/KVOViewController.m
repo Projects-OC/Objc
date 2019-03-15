@@ -10,7 +10,7 @@
 #import "BaseObject.h"
 #import "NavigatonViewController.h"
 
-@interface KVOViewController ()<NavigationProtocol>
+@interface KVOViewController ()
 
 @property (nonatomic,strong) NSMutableArray *objs;
 

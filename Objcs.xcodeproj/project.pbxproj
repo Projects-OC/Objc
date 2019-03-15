@@ -183,13 +183,15 @@
 		641F6BED21BA6689008E8F22 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BEC21BA6689008E8F22 /* PlayerViewController.m */; };
 		641F6BEF21BA6886008E8F22 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641F6BEE21BA6886008E8F22 /* IJKMediaFramework.framework */; };
 		641F6BF321BA6BAA008E8F22 /* InkeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BF221BA6BAA008E8F22 /* InkeViewController.m */; };
+		64308CBD223A59C500FC8BBC /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 64308CBC223A59C500FC8BBC /* TabBar.m */; };
+		64308CC1223A5CAD00FC8BBC /* AppleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64308CC0223A5CAD00FC8BBC /* AppleViewController.m */; };
 		64317DCC21B664CF0029C99E /* HFDrawBoardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */; };
+		6440E1222238DECE00A352A5 /* SafeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6440E1212238DECE00A352A5 /* SafeTestViewController.m */; };
 		64C0E319222E479200B9E0A4 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E318222E479200B9E0A4 /* NSArray+Safe.m */; };
 		64C0E31C222E479B00B9E0A4 /* NSMutableArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E31B222E479B00B9E0A4 /* NSMutableArray+Safe.m */; };
 		64C0E31F222E47A300B9E0A4 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E31E222E47A300B9E0A4 /* NSDictionary+Safe.m */; };
 		64C0E322222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E321222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m */; };
-		64C0E325222E483A00B9E0A4 /* NSObject+ExchangeImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E324222E483A00B9E0A4 /* NSObject+ExchangeImp.m */; };
-		64C0E328222E48E900B9E0A4 /* NSObject+ReplaceMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E327222E48E900B9E0A4 /* NSObject+ReplaceMethod.m */; };
+		64C0E325222E483A00B9E0A4 /* NSObject+MethodExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E324222E483A00B9E0A4 /* NSObject+MethodExchange.m */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
 
@@ -541,8 +543,14 @@
 		641F6BEE21BA6886008E8F22 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		641F6BF121BA6BAA008E8F22 /* InkeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkeViewController.h; sourceTree = "<group>"; };
 		641F6BF221BA6BAA008E8F22 /* InkeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkeViewController.m; sourceTree = "<group>"; };
+		64308CBB223A59C500FC8BBC /* TabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBar.h; sourceTree = "<group>"; };
+		64308CBC223A59C500FC8BBC /* TabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBar.m; sourceTree = "<group>"; };
+		64308CBF223A5CAD00FC8BBC /* AppleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleViewController.h; sourceTree = "<group>"; };
+		64308CC0223A5CAD00FC8BBC /* AppleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleViewController.m; sourceTree = "<group>"; };
 		64317DCA21B664CF0029C99E /* HFDrawBoardColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFDrawBoardColors.h; sourceTree = "<group>"; };
 		64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDrawBoardColors.m; sourceTree = "<group>"; };
+		6440E1202238DECE00A352A5 /* SafeTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeTestViewController.h; sourceTree = "<group>"; };
+		6440E1212238DECE00A352A5 /* SafeTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeTestViewController.m; sourceTree = "<group>"; };
 		64C0E317222E479200B9E0A4 /* NSArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
 		64C0E318222E479200B9E0A4 /* NSArray+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
 		64C0E31A222E479B00B9E0A4 /* NSMutableArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Safe.h"; sourceTree = "<group>"; };
@@ -551,10 +559,8 @@
 		64C0E31E222E47A300B9E0A4 /* NSDictionary+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
 		64C0E320222E47AC00B9E0A4 /* NSMutableDictionary+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Safe.h"; sourceTree = "<group>"; };
 		64C0E321222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Safe.m"; sourceTree = "<group>"; };
-		64C0E323222E483A00B9E0A4 /* NSObject+ExchangeImp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ExchangeImp.h"; sourceTree = "<group>"; };
-		64C0E324222E483A00B9E0A4 /* NSObject+ExchangeImp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ExchangeImp.m"; sourceTree = "<group>"; };
-		64C0E326222E48E900B9E0A4 /* NSObject+ReplaceMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ReplaceMethod.h"; sourceTree = "<group>"; };
-		64C0E327222E48E900B9E0A4 /* NSObject+ReplaceMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ReplaceMethod.m"; sourceTree = "<group>"; };
+		64C0E323222E483A00B9E0A4 /* NSObject+MethodExchange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodExchange.h"; sourceTree = "<group>"; };
+		64C0E324222E483A00B9E0A4 /* NSObject+MethodExchange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MethodExchange.m"; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1024,6 +1030,8 @@
 				641F6BDE21BA06BF008E8F22 /* NavigationControllerDelegate.m */,
 				45ECFFD121AD79D5007BB8BD /* TabBarViewController.h */,
 				45ECFEFE21AD79D5007BB8BD /* TabBarViewController.m */,
+				64308CBB223A59C500FC8BBC /* TabBar.h */,
+				64308CBC223A59C500FC8BBC /* TabBar.m */,
 				64C0E316222E473100B9E0A4 /* CategorySafe */,
 				45ECFFD221AD79D5007BB8BD /* CategoryOther */,
 				45ECFEFF21AD79D5007BB8BD /* Modules */,
@@ -1059,6 +1067,7 @@
 		45ECFEFF21AD79D5007BB8BD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				64308CBE223A5C9F00FC8BBC /* Home */,
 				45ECFF0021AD79D5007BB8BD /* Msg */,
 				45ECFF1A21AD79D5007BB8BD /* Main */,
 				45ECFFBC21AD79D5007BB8BD /* Base */,
@@ -1139,6 +1148,7 @@
 				45ECFF9021AD79D5007BB8BD /* MainTableViewController.m */,
 				45ECFF7621AD79D5007BB8BD /* TableViewCell.h */,
 				45ECFF1F21AD79D5007BB8BD /* TableViewCell.m */,
+				6440E11F2238DEB100A352A5 /* SafeTest */,
 				641F6BE821BA437E008E8F22 /* More */,
 				641F6BE721BA431A008E8F22 /* KVO */,
 				641F6BE021BA0731008E8F22 /* Orientation */,
@@ -1536,6 +1546,24 @@
 			path = Inke;
 			sourceTree = "<group>";
 		};
+		64308CBE223A5C9F00FC8BBC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				64308CBF223A5CAD00FC8BBC /* AppleViewController.h */,
+				64308CC0223A5CAD00FC8BBC /* AppleViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6440E11F2238DEB100A352A5 /* SafeTest */ = {
+			isa = PBXGroup;
+			children = (
+				6440E1202238DECE00A352A5 /* SafeTestViewController.h */,
+				6440E1212238DECE00A352A5 /* SafeTestViewController.m */,
+			);
+			path = SafeTest;
+			sourceTree = "<group>";
+		};
 		64C0E316222E473100B9E0A4 /* CategorySafe */ = {
 			isa = PBXGroup;
 			children = (
@@ -1547,10 +1575,8 @@
 				64C0E31E222E47A300B9E0A4 /* NSDictionary+Safe.m */,
 				64C0E320222E47AC00B9E0A4 /* NSMutableDictionary+Safe.h */,
 				64C0E321222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m */,
-				64C0E323222E483A00B9E0A4 /* NSObject+ExchangeImp.h */,
-				64C0E324222E483A00B9E0A4 /* NSObject+ExchangeImp.m */,
-				64C0E326222E48E900B9E0A4 /* NSObject+ReplaceMethod.h */,
-				64C0E327222E48E900B9E0A4 /* NSObject+ReplaceMethod.m */,
+				64C0E323222E483A00B9E0A4 /* NSObject+MethodExchange.h */,
+				64C0E324222E483A00B9E0A4 /* NSObject+MethodExchange.m */,
 			);
 			path = CategorySafe;
 			sourceTree = "<group>";
@@ -1716,6 +1742,7 @@
 				45EC002521AD79D5007BB8BD /* SDWebImageCompat.m in Sources */,
 				45BA743A21B94BBB00A651E2 /* LFVideoEditingController.m in Sources */,
 				45EC002D21AD79D6007BB8BD /* DecimalNumberViewController.m in Sources */,
+				64308CC1223A5CAD00FC8BBC /* AppleViewController.m in Sources */,
 				45ECFEF021AD7903007BB8BD /* main.m in Sources */,
 				45BA742B21B94BBB00A651E2 /* JRFilterModel.m in Sources */,
 				45EC004221AD7C5F007BB8BD /* FloatingViewController.m in Sources */,
@@ -1738,9 +1765,9 @@
 				45BA744121B94BBB00A651E2 /* LFVideoTrimmerGridLayer.m in Sources */,
 				45ECFFF821AD79D5007BB8BD /* UIButton+Block.m in Sources */,
 				45EC000921AD79D5007BB8BD /* UIViewController+Popup.m in Sources */,
-				64C0E328222E48E900B9E0A4 /* NSObject+ReplaceMethod.m in Sources */,
 				45BA744621B94BBB00A651E2 /* LFPhotoEdit.m in Sources */,
 				45ECFFED21AD79D5007BB8BD /* CrossDissolveAnimatedTransition.m in Sources */,
+				6440E1222238DECE00A352A5 /* SafeTestViewController.m in Sources */,
 				45EC000B21AD79D5007BB8BD /* PopoverPresentationController.m in Sources */,
 				45BA745221B94BBB00A651E2 /* LFColorSlider.m in Sources */,
 				45ECFFF021AD79D5007BB8BD /* WechatNavAnimationTransitionSecondViewController.m in Sources */,
@@ -1749,7 +1776,7 @@
 				45ECFFF521AD79D5007BB8BD /* ClockView.m in Sources */,
 				45ECFFDD21AD79D5007BB8BD /* MsgViewController.m in Sources */,
 				641F6BDF21BA06BF008E8F22 /* NavigationControllerDelegate.m in Sources */,
-				64C0E325222E483A00B9E0A4 /* NSObject+ExchangeImp.m in Sources */,
+				64C0E325222E483A00B9E0A4 /* NSObject+MethodExchange.m in Sources */,
 				45BA744421B94BBB00A651E2 /* LFMEGIFImageSerialization.m in Sources */,
 				45BA744321B94BBB00A651E2 /* LFVideoTrimmerView.m in Sources */,
 				452B0D6821B16EDE000D3276 /* HFToolBarView.m in Sources */,
@@ -1759,6 +1786,7 @@
 				45BA743621B94BBB00A651E2 /* UIImage+LFMECommon.m in Sources */,
 				45EC000221AD79D5007BB8BD /* PictureBrowserTransitionParameter.m in Sources */,
 				45BA744B21B94BBB00A651E2 /* LFGridMaskLayer.m in Sources */,
+				64308CBD223A59C500FC8BBC /* TabBar.m in Sources */,
 				45EC002721AD79D6007BB8BD /* SDImageCache.m in Sources */,
 				45BA744021B94BBB00A651E2 /* LFVideoClippingView.m in Sources */,
 				45ECFFE421AD79D5007BB8BD /* HFPhotoAssetPreviewViewController.m in Sources */,
