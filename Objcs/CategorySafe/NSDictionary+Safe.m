@@ -29,7 +29,44 @@
         [NSObject method_exchangeWithMethodClass:NSClassFromString(@"__NSPlaceholderDictionary")
                                           sysSEL:NSSelectorFromString(@"initWithObjects:forKeys:count:")
                                          safeSEL:@selector(safe_initWithObjects:forKeys:count:)];
+
+//        [NSObject method_exchangeWithMethodClass:NSClassFromString(@"__NSPlaceholderDictionary")
+//                                          sysSEL:NSSelectorFromString(@"initWithObjectsAndKeys:")
+//                                         safeSEL:@selector(safe_initWithObjectsAndKeys:)];
+        
+        [NSObject method_exchangeWithMethodClass:NSClassFromString(@"__NSDictionaryI")
+                                          sysSEL:NSSelectorFromString(@"dictionaryWithObjectsAndKeys:")
+                                         safeSEL:@selector(safe_dictionaryWithObjectsAndKeys:)];
+
     });
+}
+
+
+- (instancetype)safe_dictionaryWithObjectsAndKeys:(id)firstObject, ... {
+    @try {
+        id eachObject;
+        va_list argumentList;
+        va_start(argumentList, firstObject);
+        while((eachObject = va_arg(argumentList, id))){
+            NSLog(@"eachObject = %@",eachObject);
+        }
+        va_end(argumentList);
+        return [self safe_dictionaryWithObjectsAndKeys:firstObject];
+    } @catch (NSException *exception) {
+        NSLog(@"%@",exception);
+        return nil;
+    } @finally {
+    }
+}
+
+- (instancetype)safe_initWithObjectsAndKeys:(id)firstObject, ...  {
+    @try {
+        return [self safe_initWithObjectsAndKeys:firstObject];
+    } @catch (NSException *exception) {
+        NSLog(@"%@",exception);
+        return nil;
+    } @finally {
+    }
 }
 
 - (instancetype)safe_initWithObjects:(id *)objects forKeys:(id *)keys count:(NSUInteger)count {
@@ -47,5 +84,7 @@
 //    }
 //    return [self safe_initWithObjects:objects forKeys:keys count:cnt];
 }
+
+
 
 @end

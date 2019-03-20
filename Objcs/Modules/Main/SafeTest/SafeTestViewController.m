@@ -33,10 +33,10 @@
         
         
         NSMutableArray *mplaceholder = [NSMutableArray alloc];
-        NSArray *marr1 = [mplaceholder init];
-        NSArray *marr2 = [mplaceholder initWithObjects:@0, nil];
-        NSArray *marr3 = [mplaceholder initWithObjects:@0, @1, nil];
-        NSArray *marr4 = [mplaceholder initWithObjects:@0, @1, @2, nil];
+        NSMutableArray *marr1 = [mplaceholder init];
+        NSMutableArray *marr2 = [mplaceholder initWithObjects:@0, nil];
+        NSMutableArray *marr3 = [mplaceholder initWithObjects:@0, @1, nil];
+        NSMutableArray *marr4 = [mplaceholder initWithObjects:@0, @1, @2, nil];
         
         NSLog(@"mplaceholder: %s", object_getClassName(mplaceholder));    // mplaceholder: __NSPlaceholderArray
         NSLog(@"marr1: %s", object_getClassName(marr1));                  // marr1: __NSArrayM
@@ -52,12 +52,16 @@
         NSDictionary *dic2 = [placeholder initWithObjectsAndKeys:@"key1",@"value1",nil];
         NSDictionary *dic3 = [placeholder initWithObjectsAndKeys:@"key1",@"value1",@"key2",@"value2",nil];
         NSDictionary *dic4 = [placeholder initWithObjectsAndKeys:@"key1",@"value1",@"key2",@"value2",@"key3",@"value3",nil];
+        NSDictionary *dic5 = [NSDictionary dictionaryWithObjectsAndKeys:@"key1",@"value1", nil];
+        NSDictionary *dic6 = @{@"key1":@"value1"};
 
         NSLog(@"placeholder: %s", object_getClassName(placeholder));    // placeholder: __NSPlaceholderDictionary
         NSLog(@"dic1: %s", object_getClassName(dic1));                  // dic1: __NSDictionary0
         NSLog(@"dic2: %s", object_getClassName(dic2));                  // dic2: __NSSingleEntryDictionaryI
         NSLog(@"dic3: %s", object_getClassName(dic3));                  // dic3: __NSDictionaryI
         NSLog(@"dic4: %s", object_getClassName(dic4));                  // dic4: __NSDictionaryI
+        NSLog(@"dic5: %s", object_getClassName(dic5));                  // dic4: __NSDictionaryI
+        NSLog(@"dic6: %s", object_getClassName(dic6));                  // dic4: __NSSingleEntryDictionaryI
 
         
         NSMutableDictionary *mplaceholder = [NSMutableDictionary alloc];
@@ -107,22 +111,23 @@
     
     
     //NSDictionary
-    NSDictionary *e = @{@"key1":@"value1",@"key2":@"value2",@"key3":nilstr};
+    NSDictionary *e = @{@"key1":@"value1",@"key3":nilstr};
     NSLog(@"%@",e[@"key1"]);
     NSLog(@"%@",e[@"key100"]);
     NSLog(@"%@",[e objectForKey:@"key2"]);
     NSLog(@"%@",[e objectForKey:@"key200"]);
-
+    e = [NSDictionary dictionaryWithObjectsAndKeys:@"key1",@"value1",@"key3",nilstr, nil];
+    e = [[NSDictionary alloc] initWithObjectsAndKeys:@"key1",@"value1",@"key3",nilstr, nil];
     
     //NSMutableDictionary
-    NSMutableDictionary *f = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"key1",@"value1",@"key2",@"value2",@"key3",nilstr, nil];
-    NSLog(@"%@",f[@"key1"]);
-    NSLog(@"%@",f[@"key100"]);
-    NSLog(@"%@",[f objectForKey:@"key2"]);
-    NSLog(@"%@",[f objectForKey:@"key200"]);
-
-    [f setObject:nilstr forKey:@"key3"];
-    [f setValue:nilstr forKey:@"key4"];
+//    NSMutableDictionary *f = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"key0",nilstr,@"key1",@"value1",@"key2",@"value2", nil];
+//    NSLog(@"%@",f[@"key1"]);
+//    NSLog(@"%@",f[@"key100"]);
+//    NSLog(@"%@",[f objectForKey:@"key2"]);
+//    NSLog(@"%@",[f objectForKey:@"key200"]);
+//
+//    [f setObject:nilstr forKey:@"key3"];
+//    [f setValue:nilstr forKey:@"key4"];
 }
 
 

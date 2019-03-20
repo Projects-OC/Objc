@@ -29,27 +29,27 @@
         //初始化
         [NSObject method_exchangeWithMethodClass:NSClassFromString(@"__NSPlaceholderDictionary")
                                           sysSEL:NSSelectorFromString(@"initWithObjects:forKeys:count:")
-                                         safeSEL:@selector(safe_initWithObjects:forKeys:count:)];
+                                         safeSEL:@selector(safeM_initWithObjects:forKeys:count:)];
 
         //存数据
         [NSObject method_exchangeWithMethodClass:NSClassFromString(@"__NSDictionaryM")
                                           sysSEL:NSSelectorFromString(@"setObject:forKey:")
-                                         safeSEL:@selector(safe_setObject:key:)];
+                                         safeSEL:@selector(safeM_setObject:key:)];
     });
 }
 
-- (void)safe_setObject:(id)object key:(NSString *)key {
+- (void)safeM_setObject:(id)object key:(NSString *)key {
     @try {
-        [self safe_setObject:object key:key];
+        [self safeM_setObject:object key:key];
     } @catch (NSException *exception) {
         NSLog(@"%@",exception);
     } @finally {
     }
 }
 
-- (instancetype)safe_initWithObjects:(id *)objects forKeys:(id *)keys count:(NSUInteger)cnt {
+- (instancetype)safeM_initWithObjects:(id *)objects forKeys:(id *)keys count:(NSUInteger)cnt {
     @try {
-        return [self safe_initWithObjects:objects forKeys:keys count:cnt];
+        return [self safeM_initWithObjects:objects forKeys:keys count:cnt];
     } @catch (NSException *exception) {
         NSLog(@"%@",exception);
         return nil;

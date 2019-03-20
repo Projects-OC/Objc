@@ -1601,6 +1601,7 @@
 				45ECFED921AD7903007BB8BD /* Sources */,
 				45ECFEDA21AD7903007BB8BD /* Frameworks */,
 				45ECFEDB21AD7903007BB8BD /* Resources */,
+				243788649A6E17993C99EC9E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1670,6 +1671,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		243788649A6E17993C99EC9E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Objcs/Pods-Objcs-resources.sh",
+				"${PODS_ROOT}/JSPatch/JSPatch/JSPatch.js",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSPatch.js",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Objcs/Pods-Objcs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		867436CE472A6A82EF5BB9A7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2007,6 +2030,7 @@
 				);
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mf.Objcs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2029,6 +2053,7 @@
 				);
 				GCC_PREFIX_HEADER = Objcs/PrefixHeader.pch;
 				INFOPLIST_FILE = Objcs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mf.Objcs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
