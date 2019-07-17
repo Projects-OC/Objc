@@ -7,7 +7,6 @@
 //
 
 #import "MFWebKitViewController.h"
-#import <WebKit/WebKit.h>
 
 #define mfWidth ([UIScreen mainScreen].bounds.size.width)
 #define mfHeight ([UIScreen mainScreen].bounds.size.height)
@@ -16,7 +15,6 @@
 
 @interface MFWebKitViewController ()<WKNavigationDelegate,WKUIDelegate>
 
-@property (nonatomic,strong) WKWebView *webView;
 @property (nonatomic,strong) WKWebViewConfiguration *webConfig;
 @property (nonatomic,strong) UIView *progressView;
 

@@ -33,7 +33,7 @@
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(popclick) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *cusItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
-        //iOS11之前有效
+        //iOS11之前有效c
         UIBarButtonItem *fixItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
         fixItem.width = -15;
         viewController.navigationItem.leftBarButtonItems = @[fixItem,cusItem];

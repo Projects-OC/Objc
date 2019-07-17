@@ -61,3 +61,21 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+Objcs/IJKMediaFramework.framework/IJKMediaFramework
+Objcs/IJKMediaFramework.framework/Info.plist
+Objcs/IJKMediaFramework.framework/_CodeSignature/CodeDirectory
+Objcs/IJKMediaFramework.framework/_CodeSignature/CodeRequirements
+Objcs/IJKMediaFramework.framework/_CodeSignature/CodeResources
+Objcs/IJKMediaFramework.framework/_CodeSignature/CodeSignature
+Objcs/IJKMediaFramework.framework/Headers/IJKAVMoviePlayerController.h
+Objcs/IJKMediaFramework.framework/Headers/IJKFFMonitor.h
+Objcs/IJKMediaFramework.framework/Headers/IJKFFMoviePlayerController.h
+Objcs/IJKMediaFramework.framework/Headers/IJKFFOptions.h
+Objcs/IJKMediaFramework.framework/Headers/IJKKVOController.h
+Objcs/IJKMediaFramework.framework/Headers/IJKMediaFramework.h
+Objcs/IJKMediaFramework.framework/Headers/IJKMediaModule.h
+Objcs/IJKMediaFramework.framework/Headers/IJKMediaPlayback.h
+Objcs/IJKMediaFramework.framework/Headers/IJKMediaPlayer.h
+Objcs/IJKMediaFramework.framework/Headers/IJKMPMoviePlayerController.h
+Objcs/IJKMediaFramework.framework/Headers/IJKNotificationManager.h
+Objcs/IJKMediaFramework.framework/Modules/module.modulemap

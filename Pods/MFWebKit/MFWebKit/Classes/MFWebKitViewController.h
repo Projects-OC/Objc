@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 @interface MFWebKitViewController : UIViewController
+
+@property (nonatomic,strong) WKWebView *webView;
 
 @property (nonatomic,copy) NSURL *url;
 

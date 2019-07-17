@@ -192,6 +192,7 @@
 		64C0E31F222E47A300B9E0A4 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E31E222E47A300B9E0A4 /* NSDictionary+Safe.m */; };
 		64C0E322222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E321222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m */; };
 		64C0E325222E483A00B9E0A4 /* NSObject+MethodExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E324222E483A00B9E0A4 /* NSObject+MethodExchange.m */; };
+		64D0A80622DEBCD800B7364A /* MFWebKitViewController+Native.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D0A80522DEBCD800B7364A /* MFWebKitViewController+Native.m */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
 
@@ -561,6 +562,8 @@
 		64C0E321222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Safe.m"; sourceTree = "<group>"; };
 		64C0E323222E483A00B9E0A4 /* NSObject+MethodExchange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodExchange.h"; sourceTree = "<group>"; };
 		64C0E324222E483A00B9E0A4 /* NSObject+MethodExchange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MethodExchange.m"; sourceTree = "<group>"; };
+		64D0A80422DEBCD800B7364A /* MFWebKitViewController+Native.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFWebKitViewController+Native.h"; sourceTree = "<group>"; };
+		64D0A80522DEBCD800B7364A /* MFWebKitViewController+Native.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MFWebKitViewController+Native.m"; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -876,14 +879,14 @@
 			isa = PBXGroup;
 			children = (
 				45BA73F421B94BBB00A651E2 /* LFZoomingView.h */,
+				45BA741821B94BBB00A651E2 /* LFZoomingView.m */,
+				45BA741D21B94BBB00A651E2 /* LFClippingView.h */,
 				45BA73F521B94BBB00A651E2 /* LFClippingView.m */,
+				45BA741921B94BBB00A651E2 /* LFEditingView.h */,
 				45BA73F621B94BBB00A651E2 /* LFEditingView.m */,
 				45BA73F721B94BBB00A651E2 /* other */,
 				45BA740B21B94BBB00A651E2 /* toolBar */,
-				45BA741821B94BBB00A651E2 /* LFZoomingView.m */,
-				45BA741921B94BBB00A651E2 /* LFEditingView.h */,
 				45BA741A21B94BBB00A651E2 /* model */,
-				45BA741D21B94BBB00A651E2 /* LFClippingView.h */,
 				45BA741E21B94BBB00A651E2 /* subView */,
 			);
 			path = view;
@@ -1148,6 +1151,7 @@
 				45ECFF9021AD79D5007BB8BD /* MainTableViewController.m */,
 				45ECFF7621AD79D5007BB8BD /* TableViewCell.h */,
 				45ECFF1F21AD79D5007BB8BD /* TableViewCell.m */,
+				64D0A80322DEBCBF00B7364A /* JSMessageHandler */,
 				6440E11F2238DEB100A352A5 /* SafeTest */,
 				641F6BE821BA437E008E8F22 /* More */,
 				641F6BE721BA431A008E8F22 /* KVO */,
@@ -1581,6 +1585,15 @@
 			path = CategorySafe;
 			sourceTree = "<group>";
 		};
+		64D0A80322DEBCBF00B7364A /* JSMessageHandler */ = {
+			isa = PBXGroup;
+			children = (
+				64D0A80422DEBCD800B7364A /* MFWebKitViewController+Native.h */,
+				64D0A80522DEBCD800B7364A /* MFWebKitViewController+Native.m */,
+			);
+			path = JSMessageHandler;
+			sourceTree = "<group>";
+		};
 		A02A2E7725ED1ECCD9B4C5F8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1849,6 +1862,7 @@
 				45ECFFFE21AD79D5007BB8BD /* BCell.m in Sources */,
 				45ECFFF121AD79D5007BB8BD /* WechatNavAnimationTransitionViewController.m in Sources */,
 				45ECFFE321AD79D5007BB8BD /* HFPhotoAssetViewController.m in Sources */,
+				64D0A80622DEBCD800B7364A /* MFWebKitViewController+Native.m in Sources */,
 				641F6BED21BA6689008E8F22 /* PlayerViewController.m in Sources */,
 				45BA745721B94BBB00A651E2 /* LFZoomingView.m in Sources */,
 				45BA744D21B94BBB00A651E2 /* LFGridView.m in Sources */,
