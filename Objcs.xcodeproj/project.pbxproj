@@ -193,6 +193,7 @@
 		64C0E322222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E321222E47AC00B9E0A4 /* NSMutableDictionary+Safe.m */; };
 		64C0E325222E483A00B9E0A4 /* NSObject+MethodExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E324222E483A00B9E0A4 /* NSObject+MethodExchange.m */; };
 		64D0A80622DEBCD800B7364A /* MFWebKitViewController+Native.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D0A80522DEBCD800B7364A /* MFWebKitViewController+Native.m */; };
+		64F0515A22E5524700B557D5 /* AppDelegate+Exception.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F0515922E5524700B557D5 /* AppDelegate+Exception.m */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
 
@@ -564,6 +565,8 @@
 		64C0E324222E483A00B9E0A4 /* NSObject+MethodExchange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MethodExchange.m"; sourceTree = "<group>"; };
 		64D0A80422DEBCD800B7364A /* MFWebKitViewController+Native.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFWebKitViewController+Native.h"; sourceTree = "<group>"; };
 		64D0A80522DEBCD800B7364A /* MFWebKitViewController+Native.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MFWebKitViewController+Native.m"; sourceTree = "<group>"; };
+		64F0515822E5524700B557D5 /* AppDelegate+Exception.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Exception.h"; sourceTree = "<group>"; };
+		64F0515922E5524700B557D5 /* AppDelegate+Exception.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Exception.m"; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1027,6 +1030,8 @@
 				45ECFEE121AD7903007BB8BD /* AppDelegate.m */,
 				641F6BDA21BA044A008E8F22 /* AppDelegate+MF.h */,
 				641F6BDB21BA044A008E8F22 /* AppDelegate+MF.m */,
+				64F0515822E5524700B557D5 /* AppDelegate+Exception.h */,
+				64F0515922E5524700B557D5 /* AppDelegate+Exception.m */,
 				45ECFEF821AD79D4007BB8BD /* NavigatonViewController.h */,
 				45ECFEF621AD79D4007BB8BD /* NavigatonViewController.m */,
 				641F6BDD21BA06BF008E8F22 /* NavigationControllerDelegate.h */,
@@ -1615,6 +1620,7 @@
 				45ECFEDA21AD7903007BB8BD /* Frameworks */,
 				45ECFEDB21AD7903007BB8BD /* Resources */,
 				243788649A6E17993C99EC9E /* [CP] Copy Pods Resources */,
+				64F0515B22E59B6C00B557D5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1706,6 +1712,23 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Objcs/Pods-Objcs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		64F0515B22E59B6C00B557D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nxcrun agvtool next-version -all\n\n";
+		};
 		867436CE472A6A82EF5BB9A7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1749,6 +1772,7 @@
 				45BA745A21B94BBB00A651E2 /* LFStickerView.m in Sources */,
 				45BA745521B94BBB00A651E2 /* LFStickerBar.m in Sources */,
 				45ECFFFD21AD79D5007BB8BD /* GCDViewController.m in Sources */,
+				64F0515A22E5524700B557D5 /* AppDelegate+Exception.m in Sources */,
 				45BA745421B94BBB00A651E2 /* LFEditToolbar.m in Sources */,
 				45BA742C21B94BBB00A651E2 /* JRFilterBar.m in Sources */,
 				45EC002421AD79D5007BB8BD /* UIImage+MultiFormat.m in Sources */,
@@ -2035,6 +2059,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 3U426PKFVL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2049,6 +2074,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mf.Objcs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -2058,6 +2084,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 3U426PKFVL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2072,6 +2099,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mf.Objcs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

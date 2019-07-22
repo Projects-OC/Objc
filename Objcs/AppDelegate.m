@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "TabBarViewController.h"
 #import "AppDelegate+MF.h"
+#import "AppDelegate+Exception.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,15 @@
     self.window.rootViewController = [[TabBarViewController alloc] init];
     [self.window makeKeyAndVisible];
     
+    NSDictionary *dict = @{
+    @"1" : @"A",
+    @"2" : @"A",
+    @"3" : @"A",
+    };
+    id array = [dict allKeysForObject:@"A"] ;
+    NSLog(@"%@",array);
+    
+    [self registerExceptionHandler];
     [self appStatistics];
 
     return YES;
