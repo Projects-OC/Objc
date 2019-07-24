@@ -1,3 +1,8 @@
+![sim]https://github.com/Projects-OC/Objc/screenshots/Simulator.png
+
+
+
+
 # 1、Build自增
 
 Build Settings 配置项中，设置 Current Project Version 为选定的值（新工程一般设为 1）
