@@ -187,6 +187,8 @@
 		64308CC1223A5CAD00FC8BBC /* AppleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64308CC0223A5CAD00FC8BBC /* AppleViewController.m */; };
 		64317DCC21B664CF0029C99E /* HFDrawBoardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */; };
 		6440E1222238DECE00A352A5 /* SafeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6440E1212238DECE00A352A5 /* SafeTestViewController.m */; };
+		648B0F5422E6DB5C007A73F7 /* InputKeyboardTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 648B0F5322E6DB5C007A73F7 /* InputKeyboardTextView.m */; };
+		648B0F5722E6DB7C007A73F7 /* InputKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 648B0F5622E6DB7C007A73F7 /* InputKeyboardView.m */; };
 		64C0E319222E479200B9E0A4 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E318222E479200B9E0A4 /* NSArray+Safe.m */; };
 		64C0E31C222E479B00B9E0A4 /* NSMutableArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E31B222E479B00B9E0A4 /* NSMutableArray+Safe.m */; };
 		64C0E31F222E47A300B9E0A4 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C0E31E222E47A300B9E0A4 /* NSDictionary+Safe.m */; };
@@ -553,6 +555,10 @@
 		64317DCB21B664CF0029C99E /* HFDrawBoardColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDrawBoardColors.m; sourceTree = "<group>"; };
 		6440E1202238DECE00A352A5 /* SafeTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeTestViewController.h; sourceTree = "<group>"; };
 		6440E1212238DECE00A352A5 /* SafeTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeTestViewController.m; sourceTree = "<group>"; };
+		648B0F5222E6DB5C007A73F7 /* InputKeyboardTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputKeyboardTextView.h; sourceTree = "<group>"; };
+		648B0F5322E6DB5C007A73F7 /* InputKeyboardTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputKeyboardTextView.m; sourceTree = "<group>"; };
+		648B0F5522E6DB7C007A73F7 /* InputKeyboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputKeyboardView.h; sourceTree = "<group>"; };
+		648B0F5622E6DB7C007A73F7 /* InputKeyboardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputKeyboardView.m; sourceTree = "<group>"; };
 		64C0E317222E479200B9E0A4 /* NSArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
 		64C0E318222E479200B9E0A4 /* NSArray+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
 		64C0E31A222E479B00B9E0A4 /* NSMutableArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Safe.h"; sourceTree = "<group>"; };
@@ -1088,6 +1094,7 @@
 			children = (
 				45ECFF0221AD79D5007BB8BD /* MsgViewController.h */,
 				45ECFF0121AD79D5007BB8BD /* MsgViewController.m */,
+				648B0F5122E6BE17007A73F7 /* InputKeyboard */,
 				641F6BF021BA6B7F008E8F22 /* Inke */,
 				641F6BEA21BA6689008E8F22 /* Player */,
 				45EC003F21AD7C2B007BB8BD /* Floating */,
@@ -1284,8 +1291,8 @@
 		45ECFF5021AD79D5007BB8BD /* GCD */ = {
 			isa = PBXGroup;
 			children = (
-				45ECFF5121AD79D5007BB8BD /* GCDViewController.m */,
 				45ECFF5221AD79D5007BB8BD /* GCDViewController.h */,
+				45ECFF5121AD79D5007BB8BD /* GCDViewController.m */,
 			);
 			path = GCD;
 			sourceTree = "<group>";
@@ -1573,6 +1580,17 @@
 			path = SafeTest;
 			sourceTree = "<group>";
 		};
+		648B0F5122E6BE17007A73F7 /* InputKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				648B0F5222E6DB5C007A73F7 /* InputKeyboardTextView.h */,
+				648B0F5322E6DB5C007A73F7 /* InputKeyboardTextView.m */,
+				648B0F5522E6DB7C007A73F7 /* InputKeyboardView.h */,
+				648B0F5622E6DB7C007A73F7 /* InputKeyboardView.m */,
+			);
+			path = InputKeyboard;
+			sourceTree = "<group>";
+		};
 		64C0E316222E473100B9E0A4 /* CategorySafe */ = {
 			isa = PBXGroup;
 			children = (
@@ -1776,6 +1794,7 @@
 				45BA745421B94BBB00A651E2 /* LFEditToolbar.m in Sources */,
 				45BA742C21B94BBB00A651E2 /* JRFilterBar.m in Sources */,
 				45EC002421AD79D5007BB8BD /* UIImage+MultiFormat.m in Sources */,
+				648B0F5722E6DB7C007A73F7 /* InputKeyboardView.m in Sources */,
 				45ECFFF621AD79D5007BB8BD /* Object.m in Sources */,
 				45ECFFDF21AD79D5007BB8BD /* LFLiveViewController.m in Sources */,
 				45EC002A21AD79D6007BB8BD /* UIImageView+WebCache.m in Sources */,
@@ -1893,6 +1912,7 @@
 				45BA743F21B94BBB00A651E2 /* LFVideoPlayerLayerView.m in Sources */,
 				45ECFFE721AD79D5007BB8BD /* BezierPathViewController.m in Sources */,
 				45BA743D21B94BBB00A651E2 /* LFVideoClipToolbar.m in Sources */,
+				648B0F5422E6DB5C007A73F7 /* InputKeyboardTextView.m in Sources */,
 				45ECFFF321AD79D5007BB8BD /* CoreAnimationViewController.m in Sources */,
 				45BA743221B94BBB00A651E2 /* NSString+LFMECoreText.m in Sources */,
 				45ECFFDA21AD79D5007BB8BD /* HFTitleView.m in Sources */,
@@ -2059,7 +2079,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 3U426PKFVL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2084,7 +2104,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 3U426PKFVL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (

@@ -105,6 +105,9 @@
     NSLog(@"%@",objs);
 }
 
+/**
+ 计算：总和、平均、最大、最小
+ */
 - (void)arrayValueForKeyPath {
     NSArray *array = [NSArray arrayWithObjects:@"2.0", @"2.3", @"3.0", @"4.0", @"10", nil];
     CGFloat sum = [[array valueForKeyPath:@"@sum.floatValue"] floatValue];
@@ -118,7 +121,7 @@
  汉语转拼音
  */
 - (void)stringByApplyingTransform {
-    NSString *content = @"增加，增长，长高，长大，长度,重新，重庆，重量，四，十";
+    NSString *content = @"增加，增长，长高，长大，长度,重新，重庆，重量，四，十，正常";
     NSLog(@"%@",[content stringByApplyingTransform:NSStringTransformToLatin reverse:NO]);
     NSLog(@"%@",[[content stringByApplyingTransform:NSStringTransformToLatin reverse:NO] stringByApplyingTransform:NSStringTransformStripCombiningMarks reverse:NO]);
 }

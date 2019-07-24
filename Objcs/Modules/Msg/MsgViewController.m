@@ -12,6 +12,7 @@
 #import "FloatingViewBtn.h"
 #import "PlayerViewController.h"
 #import "InkeViewController.h"
+#import "InputKeyboardView.h"
 
 @interface MsgViewController ()
 
@@ -44,6 +45,9 @@
                     @{@"title" : @"Inke",
                       @"class" : NSStringFromClass([InkeViewController class])
                       },
+                    @{@"title" : @"InputKeyboard",
+                      @"class" : NSStringFromClass([InputKeyboardView class])
+                      },
                     ];
     }
     return _titles;
@@ -69,8 +73,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *classString = self.titles[indexPath.row][@"class"];
     UIViewController *ctrl = [[NSClassFromString(classString) alloc] init];
-    [self.navigationController pushViewController:ctrl animated:YES];
+
+    if ([ctrl isKindOfClass:[InputKeyboardView class]]) {
+        InputKeyboardView *kb = [InputKeyboardView keyboardView];
+        kb.sendBlock = ^(NSString * inputText) {
+            
+        };
+        return;
+    }
     
+    [self.navigationController pushViewController:ctrl animated:YES];
 }
 
 @end

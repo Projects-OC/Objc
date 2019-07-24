@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self dispatch_semaphore_t];
 }
 
 - (void)queue{
@@ -66,29 +67,29 @@
 }
 
 /**
- 串行队列 顺序执行
+ 异步、“并发” 或 “串行（同一个子线程）”
  DISPATCH_QUEUE_SERIAL 串行
  DISPATCH_QUEUE_CONCURRENT  并发
  */
 - (void)dispatch_async{
     dispatch_queue_t queue = dispatch_queue_create("mySerialDispatchQueue", DISPATCH_QUEUE_SERIAL);
     dispatch_async(queue, ^{
-        NSLog(@"一");
+        NSLog(@"一%@",[NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        NSLog(@"二");
+        NSLog(@"二%@",[NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        NSLog(@"三");
+        NSLog(@"三%@",[NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        NSLog(@"四");
+        NSLog(@"四%@",[NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        NSLog(@"五");
+        NSLog(@"五%@",[NSThread currentThread]);
     });
     dispatch_async(queue, ^{
-        NSLog(@"六");
+        NSLog(@"六%@",[NSThread currentThread]);
     });
 }
 
@@ -214,7 +215,7 @@
      */
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
     NSMutableArray *arr = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 10000; i++){
+    for (int i = 0; i < 100; i++){
         dispatch_async(queue, ^{
             /**
              * 等待dispatch semaphore
@@ -233,7 +234,8 @@
              * 因此可安全地进行更新
              */
             [arr addObject:[NSNumber numberWithInt:i]];
-            
+            NSLog(@"%d%@",i,[NSThread currentThread]);
+
             // dispatch_semaphore_signal 方法将dispatch semaphore的计数加1.
             dispatch_semaphore_signal(semaphore);
         });
