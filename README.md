@@ -1,4 +1,4 @@
-![sim]https://github.com/mftechs/Projects-OC/Objc/screenshots/Simulator.png
+![image]https://github.com/mftechs/Projects-OC/Objc/screenshots/Simulator.png
 
 
 
