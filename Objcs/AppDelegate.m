@@ -10,6 +10,26 @@
 #import "TabBarViewController.h"
 #import "AppDelegate+MF.h"
 #import "AppDelegate+Exception.h"
+#import "AppDelegate+notify.h"
+
+/**
+ https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/
+ iPhone
+ 640px*960px，
+ 640px*1136px，
+ 750px*1334px，
+ 828px*1792px，
+ 1242px*2208px，
+ 1125px*2436px，
+ 1242px*2688px。
+ 
+ iPad
+ 768px*1024px
+ 1536px*2048px，
+ 1668px*2224px，
+ 1668px*2388px，
+ 2048px*2732px。
+ */
 
 @interface AppDelegate ()
 
@@ -17,11 +37,12 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    [self timer];
     self.window.rootViewController = [[TabBarViewController alloc] init];
     [self.window makeKeyAndVisible];
+    
+    [self registerNotifyWithApplication:application];
     
     NSDictionary *dict = @{
     @"1" : @"A",

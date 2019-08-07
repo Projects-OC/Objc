@@ -11,10 +11,18 @@
 
 @interface HFPhotoAssetCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic,strong) UIImageView *img;
+@property (nonatomic,strong) UIImageView *imgView;
+@property (nonatomic,strong) UIImageView *selectImg;
+
+/**
+ 是否灰度处理
+ */
+@property (nonatomic,assign) BOOL isGrayImage;
 
 @property (nonatomic,strong) PHAsset * asset;
 
 @property (nonatomic,copy) void (^ doubleTapBlock) (NSInteger index);
+
+-(UIImage *)grayImage:(UIImage*)originImage;
 
 @end

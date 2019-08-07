@@ -13,6 +13,10 @@
 #import "HFPhotoAssetPreviewViewController.h"
 #import <Photos/Photos.h>
 #import "HFTitleView.h"
+#import "HFPhotoAssetToolBarView.h"
+#import "HFPhotoAssetModel.h"
+
+static NSInteger const selectedMax = 4;
 
 @interface HFPhotoAssetViewController ()<UIPopoverPresentationControllerDelegate>
 
@@ -20,6 +24,9 @@
 
 @property (nonatomic,strong) HFPhotoAssetPopoverPrensentController *popover;
 @property (nonatomic,strong) HFPhotoAssetManager *assetManager;
+@property (nonatomic,strong) HFPhotoAssetToolBarView *toolBarView;
+
+@property (nonatomic,strong) NSMutableArray <HFPhotoAssetModel *> *assetModels;
 
 @end
 
@@ -98,6 +105,34 @@
     [self.titleView.titleBtn setTitle:title forState:UIControlStateNormal];
 }
 
+- (UIView *)toolBarView {
+    if (!_toolBarView) {
+        _toolBarView = [HFPhotoAssetToolBarView new];
+        [self.view addSubview:_toolBarView];
+        [_toolBarView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.view);
+            if (@available(iOS 11.0,*)) {
+                make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+            } else {
+                make.bottom.equalTo(self.view);
+            }
+            make.height.mas_equalTo(50);
+        }];
+    }
+    return _toolBarView;
+}
+
+- (NSMutableArray *)assetModels {
+    if (!_assetModels) {
+        _assetModels = [NSMutableArray new];
+        [_assetManager.albumImages enumerateObjectsUsingBlock:^(UIImage * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            HFPhotoAssetModel *model = [HFPhotoAssetModel new];
+            [self.assetModels addObject:model];
+        }];
+    }
+    return _assetModels;
+}
+
 - (HFPhotoAssetManager *)assetManager {
     if (!_assetManager) {
         _assetManager = [[HFPhotoAssetManager alloc] init];
@@ -124,6 +159,37 @@
     return _popover;
 }
 
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    HFPhotoAssetCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([HFPhotoAssetCollectionViewCell class]) forIndexPath:indexPath];
+    [cell.imgView setImage:[UIImage imageNamed:@"rj_placeholderImage"]];
+    cell.contentView.tag = indexPath.row;
+    
+    HFWeak(self)
+    cell.doubleTapBlock = ^(NSInteger index) {
+        [weakself doubleTapClickWithIndex:index];
+    };
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(HFPhotoAssetCollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        cell.imgView.image = [UIImage imageNamed:@"拍照"];
+        cell.imgView.contentMode = UIViewContentModeCenter;
+        cell.layer.borderColor = [UIColor greenColor].CGColor;
+        cell.layer.borderWidth = 0.5;
+    } else {
+        HFPhotoAssetModel *model = self.assetModels[indexPath.row -1];
+        if (self.assetManager.albumImages.count > indexPath.row-1) {
+            [cell.imgView setImage:self.assetManager.albumImages[indexPath.row -1]];
+        } else if (self.assetManager.albumAssets.count > indexPath.row-1) {
+//            imgCell.asset = self.assetManager.albumAssets[indexPath.row -1];
+        }
+        NSLog(@"indexrow:%d,isgray:%d",indexPath.row,model.isGrayImage);
+        cell.isGrayImage = model.isGrayImage;
+    }
+}
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     //拍照
     if (indexPath.row == 0) {
@@ -133,15 +199,36 @@
     
     //选择图片
     else {
-        [self deselectedItemsWithCurIndexPath:indexPath];
+        NSInteger items = self.collectionView.indexPathsForSelectedItems.count;
+        self.toolBarView.selectCount = items;
+        if (items == selectedMax) {
+            [self imageIsGray:YES];
+        }
+//        [self deselectedItemsWithCurIndexPath:indexPath];
     }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.collectionView.indexPathsForSelectedItems.count == 0) {
+    NSInteger items = self.collectionView.indexPathsForSelectedItems.count;
+    if (items == 0) {
+        [self.toolBarView hideSelf];
+        self.toolBarView = nil;
+    } else {
+        if (items == selectedMax -1) {
+            // 恢复灰度图片
+            [self imageIsGray:NO];
+        }
+        self.toolBarView.selectCount = items;
     }
 }
 
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.collectionView.indexPathsForSelectedItems.count > selectedMax -1) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -152,34 +239,24 @@
     return self.assetManager.albumAssets.count + 1;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
-                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    HFPhotoAssetCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([HFPhotoAssetCollectionViewCell class]) forIndexPath:indexPath];
-    [cell.img setImage:[UIImage imageNamed:@"rj_placeholderImage"]];
-    cell.contentView.tag = indexPath.row;
-    
-    HFWeak(self)
-    cell.doubleTapBlock = ^(NSInteger index) {
-        [weakself doubleTapClickWithIndex:index];
-    };
-    return cell;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    HFPhotoAssetCollectionViewCell *imgCell = (HFPhotoAssetCollectionViewCell *)cell;
-    if (indexPath.row == 0) {
-        imgCell.img.image = [UIImage imageNamed:@"拍照"];
-        imgCell.img.contentMode = UIViewContentModeCenter;
-        imgCell.layer.borderColor = [UIColor greenColor].CGColor;
-        imgCell.layer.borderWidth = 0.5;
-    } else {
-        if (self.assetManager.albumImages.count > indexPath.row-1) {
-            [imgCell.img setImage:self.assetManager.albumImages[indexPath.row -1]];
-        } else if (self.assetManager.albumAssets.count > indexPath.row-1) {
-            imgCell.asset = self.assetManager.albumAssets[indexPath.row -1];
+/**
+ 图片灰度
+ */
+- (void)imageIsGray:(BOOL)isGray {
+    [self.assetManager.albumImages enumerateObjectsUsingBlock:^(UIImage * _Nonnull image, NSUInteger idx, BOOL * _Nonnull stop) {
+        // +1拍照站位
+        NSInteger row = idx +1;
+        HFPhotoAssetCollectionViewCell *cell = (HFPhotoAssetCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:row inSection:0]];
+        if (!cell.isSelected) {
+            cell.imgView.image = image;
+            cell.isGrayImage = isGray;
         }
-        imgCell.img.contentMode = UIViewContentModeScaleAspectFill;
-    }
+        HFPhotoAssetModel *model = self.assetModels[row -1];
+        model.isGrayImage = isGray;
+        model.index = row-1;
+        self.assetModels[row -1] = model;
+        NSLog(@"-----%d",model.index);
+    }];
 }
 
 /**
@@ -205,6 +282,12 @@
     HFWeak(self)
     [self.assetManager updateAlbumsWithIndex:index completion:^{
         [weakself.collectionView reloadData];
+    }];
+    
+    [self.assetManager.albumImages enumerateObjectsUsingBlock:^(UIImage * _Nonnull image, NSUInteger idx, BOOL * _Nonnull stop) {
+        HFPhotoAssetModel *model = self.assetModels[idx];
+        model.isGrayImage = NO;
+        self.assetModels[idx] = model;
     }];
 }
 
