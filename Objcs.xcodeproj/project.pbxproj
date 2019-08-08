@@ -15,7 +15,6 @@
 		453EE1D321AD826200125AC8 /* SemiCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 453EE1D221AD826200125AC8 /* SemiCircleView.m */; };
 		454BE80E21AEC80B004A0376 /* FloatingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 454BE80D21AEC80B004A0376 /* FloatingAnimator.m */; };
 		454BE81421AED014004A0376 /* FloatingAnimatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 454BE81321AED014004A0376 /* FloatingAnimatorView.m */; };
-		4597B71021BA988E00922F3D /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4597B70F21BA988E00922F3D /* IJKMediaFramework.framework */; };
 		45BA742921B94BBB00A651E2 /* LFBaseEditingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA739B21B94BBB00A651E2 /* LFBaseEditingController.m */; };
 		45BA742A21B94BBB00A651E2 /* JRFilterBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA73A021B94BBB00A651E2 /* JRFilterBarCell.m */; };
 		45BA742B21B94BBB00A651E2 /* JRFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA73A421B94BBB00A651E2 /* JRFilterModel.m */; };
@@ -181,7 +180,6 @@
 		641F6BE321BA0757008E8F22 /* OrientationOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BE221BA0757008E8F22 /* OrientationOneViewController.m */; };
 		641F6BE621BA075E008E8F22 /* OrientationTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BE521BA075E008E8F22 /* OrientationTwoViewController.m */; };
 		641F6BED21BA6689008E8F22 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BEC21BA6689008E8F22 /* PlayerViewController.m */; };
-		641F6BEF21BA6886008E8F22 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641F6BEE21BA6886008E8F22 /* IJKMediaFramework.framework */; };
 		641F6BF321BA6BAA008E8F22 /* InkeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F6BF221BA6BAA008E8F22 /* InkeViewController.m */; };
 		64308CBD223A59C500FC8BBC /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 64308CBC223A59C500FC8BBC /* TabBar.m */; };
 		64308CC1223A5CAD00FC8BBC /* AppleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64308CC0223A5CAD00FC8BBC /* AppleViewController.m */; };
@@ -206,6 +204,7 @@
 		64CBE5FE22E98E1F003DA866 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 64CBE5F622E98E1F003DA866 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		64D0A80622DEBCD800B7364A /* MFWebKitViewController+Native.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D0A80522DEBCD800B7364A /* MFWebKitViewController+Native.m */; };
 		64F0515A22E5524700B557D5 /* AppDelegate+Exception.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F0515922E5524700B557D5 /* AppDelegate+Exception.m */; };
+		AC406B6E22FC568E00C6DAD1 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC406B6D22FC568E00C6DAD1 /* IJKMediaFramework.framework */; };
 		B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E9B3BE8A154CB7164C51EF /* libPods-Objcs.a */; };
 /* End PBXBuildFile section */
 
@@ -259,7 +258,6 @@
 		454BE80D21AEC80B004A0376 /* FloatingAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingAnimator.m; sourceTree = "<group>"; };
 		454BE81221AED014004A0376 /* FloatingAnimatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingAnimatorView.h; sourceTree = "<group>"; };
 		454BE81321AED014004A0376 /* FloatingAnimatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingAnimatorView.m; sourceTree = "<group>"; };
-		4597B70F21BA988E00922F3D /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		45BA739B21B94BBB00A651E2 /* LFBaseEditingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFBaseEditingController.m; sourceTree = "<group>"; };
 		45BA739E21B94BBB00A651E2 /* JRFilterBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRFilterBar.h; sourceTree = "<group>"; };
 		45BA73A021B94BBB00A651E2 /* JRFilterBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRFilterBarCell.m; sourceTree = "<group>"; };
@@ -633,6 +631,7 @@
 		64F0515822E5524700B557D5 /* AppDelegate+Exception.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Exception.h"; sourceTree = "<group>"; };
 		64F0515922E5524700B557D5 /* AppDelegate+Exception.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Exception.m"; sourceTree = "<group>"; };
 		70577FA5AAE9DCB349D8C57D /* Pods-Objcs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objcs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objcs/Pods-Objcs.debug.xcconfig"; sourceTree = "<group>"; };
+		AC406B6D22FC568E00C6DAD1 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -640,9 +639,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4597B71021BA988E00922F3D /* IJKMediaFramework.framework in Frameworks */,
 				B5079F89F9A03CB5F3C8DD7E /* libPods-Objcs.a in Frameworks */,
-				641F6BEF21BA6886008E8F22 /* IJKMediaFramework.framework in Frameworks */,
+				AC406B6E22FC568E00C6DAD1 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1110,7 +1108,7 @@
 		45ECFEDF21AD7903007BB8BD /* Objcs */ = {
 			isa = PBXGroup;
 			children = (
-				4597B70F21BA988E00922F3D /* IJKMediaFramework.framework */,
+				AC406B6D22FC568E00C6DAD1 /* IJKMediaFramework.framework */,
 				45ECFEE021AD7903007BB8BD /* AppDelegate.h */,
 				45ECFEE121AD7903007BB8BD /* AppDelegate.m */,
 				64CBE5D722E95C66003DA866 /* AppDelegate+notify.h */,
@@ -2289,7 +2287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 72;
 				DEVELOPMENT_TEAM = 3U426PKFVL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2314,7 +2312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 72;
 				DEVELOPMENT_TEAM = 3U426PKFVL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (

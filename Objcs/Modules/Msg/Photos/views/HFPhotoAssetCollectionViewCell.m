@@ -47,12 +47,12 @@
     return self;
 }
 
-- (void)setImgView:(UIImageView *)imgView {
-    _imgView = imgView;
-    if (_isGrayImage) {
-        _imgView.image = [self grayImage:imgView.image];
-    }
-}
+//- (void)setImgView:(UIImageView *)imgView {
+//    _imgView = imgView;
+//    if (_isGrayImage) {
+//        _imgView.image = [self grayImage:imgView.image];
+//    }
+//}
 
 - (void)setIsGrayImage:(BOOL)isGrayImage {
     _isGrayImage = isGrayImage;
