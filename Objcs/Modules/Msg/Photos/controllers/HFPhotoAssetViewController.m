@@ -16,7 +16,7 @@
 #import "HFPhotoAssetToolBarView.h"
 #import "HFPhotoAssetModel.h"
 
-static NSInteger const selectedMax = 4;
+static NSInteger const selectedMax = 1;
 
 @interface HFPhotoAssetViewController ()<UIPopoverPresentationControllerDelegate>
 
@@ -174,6 +174,7 @@ static NSInteger const selectedMax = 4;
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(HFPhotoAssetCollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
+        cell.selectImg.hidden = YES;
         cell.imgView.image = [UIImage imageNamed:@"拍照"];
         cell.imgView.contentMode = UIViewContentModeCenter;
         cell.layer.borderColor = [UIColor greenColor].CGColor;
@@ -185,7 +186,6 @@ static NSInteger const selectedMax = 4;
         } else if (self.assetManager.albumAssets.count > indexPath.row-1) {
 //            imgCell.asset = self.assetManager.albumAssets[indexPath.row -1];
         }
-        NSLog(@"indexrow:%d,isgray:%d",indexPath.row,model.isGrayImage);
         cell.isGrayImage = model.isGrayImage;
     }
 }
@@ -210,14 +210,15 @@ static NSInteger const selectedMax = 4;
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger items = self.collectionView.indexPathsForSelectedItems.count;
+    //mf
+    if (items == selectedMax -1) {
+        // 恢复灰度图片
+        [self imageIsGray:NO];
+    }
     if (items == 0) {
         [self.toolBarView hideSelf];
         self.toolBarView = nil;
     } else {
-        if (items == selectedMax -1) {
-            // 恢复灰度图片
-            [self imageIsGray:NO];
-        }
         self.toolBarView.selectCount = items;
     }
 }
@@ -247,15 +248,16 @@ static NSInteger const selectedMax = 4;
         // +1拍照站位
         NSInteger row = idx +1;
         HFPhotoAssetCollectionViewCell *cell = (HFPhotoAssetCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:row inSection:0]];
+        //mf
+        HFPhotoAssetModel *model = self.assetModels[row -1];
         if (!cell.isSelected) {
             cell.imgView.image = image;
             cell.isGrayImage = isGray;
+            model.isGrayImage = isGray;
+        } else {
+            model.isGrayImage = NO;
         }
-        HFPhotoAssetModel *model = self.assetModels[row -1];
-        model.isGrayImage = isGray;
-        model.index = row-1;
         self.assetModels[row -1] = model;
-        NSLog(@"-----%d",model.index);
     }];
 }
 
