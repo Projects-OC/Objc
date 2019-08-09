@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self dispatch_semaphore_t];
+    [self dispatch_sync];
 }
 
 - (void)queue{
@@ -71,41 +71,47 @@
  DISPATCH_QUEUE_SERIAL 串行
  DISPATCH_QUEUE_CONCURRENT  并发
  */
-- (void)dispatch_async{
-    dispatch_queue_t queue = dispatch_queue_create("mySerialDispatchQueue", DISPATCH_QUEUE_SERIAL);
-    dispatch_async(queue, ^{
-        NSLog(@"一%@",[NSThread currentThread]);
+- (void)dispatch_sync {
+//    dispatch_queue_t queue = dispatch_queue_create("mySerialDispatchQueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t serialQueue = dispatch_queue_create("queue.serial", DISPATCH_QUEUE_SERIAL);
+    for(int i = 0; i < 5; i++){
+        dispatch_sync(serialQueue, ^{
+            NSLog(@"我开始了：%@ , %@",@(i),[NSThread currentThread]);
+            [NSThread sleepForTimeInterval: i % 3];
+        });
+    }
+    
+    /*
+    dispatch_group_t group = dispatch_group_create();
+    for (int i = 0; i<3; i++ ) {
+        dispatch_group_enter(group);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_group_leave(group);
+        });
+    }
+    dispatch_group_notify(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
+        NSLog(@"文件都已上传完成");
     });
-    dispatch_async(queue, ^{
-        NSLog(@"二%@",[NSThread currentThread]);
-    });
-    dispatch_async(queue, ^{
-        NSLog(@"三%@",[NSThread currentThread]);
-    });
-    dispatch_async(queue, ^{
-        NSLog(@"四%@",[NSThread currentThread]);
-    });
-    dispatch_async(queue, ^{
-        NSLog(@"五%@",[NSThread currentThread]);
-    });
-    dispatch_async(queue, ^{
-        NSLog(@"六%@",[NSThread currentThread]);
-    });
+     */
 }
 
 /**
  即调度组 不ABC不顺序执行
  */
-- (void)dispatch_group_async{
+- (void)dispatch_group_async {
     // 创建默认优先级的全局并发队列
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
     // 创建调度组
     dispatch_group_t group = dispatch_group_create();
     dispatch_group_async(group, queue, ^{
-        NSLog(@"A");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"A");
+        });
     });
     dispatch_group_async(group, queue, ^{
-        NSLog(@"B");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"B");
+        });
     });
     dispatch_group_async(group, queue, ^{
         NSLog(@"C");
@@ -115,14 +121,18 @@
     });
 }
 
-- (void)dispatch_group_wait{
+- (void)dispatch_group_wait {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
     dispatch_group_t group = dispatch_group_create();
     dispatch_group_async(group, queue, ^{
-        NSLog(@"下载图片A");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"下载图片A");
+        });
     });
     dispatch_group_async(group, queue, ^{
-        NSLog(@"下载图片B");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"下载图片B");
+        });
     });
     dispatch_group_async(group, queue, ^{
         NSLog(@"下载图片C");
