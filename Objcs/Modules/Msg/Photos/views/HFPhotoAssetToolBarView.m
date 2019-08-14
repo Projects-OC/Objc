@@ -1,14 +1,14 @@
 //
-//  HFPhotoAssetToolBarView.m
+//  HFPhotoAssetToolbarView.m
 //  HF_Client_iPhone_Application
 //
 //  Created by header on 2019/8/6.
 //  Copyright © 2019 HengFeng. All rights reserved.
 //
 
-#import "HFPhotoAssetToolBarView.h"
+#import "HFPhotoAssetToolbarView.h"
 
-@implementation HFPhotoAssetToolBarView
+@implementation HFPhotoAssetToolbarView
 
 - (instancetype)init {
     self = [super init];

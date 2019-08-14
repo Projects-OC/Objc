@@ -13,6 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HFPhotoAssetModel : NSObject
 
 /**
+ 序号id
+ */
+@property (nonatomic,assign) NSInteger id;
+
+/**
  是否灰度处理图片
  */
 @property (nonatomic,assign) BOOL isGrayImage;
@@ -23,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL isMarked;
 
 /**
- 下标
+ 下标 NSIndexPath.row
  */
 @property (nonatomic,assign) NSInteger index;
 

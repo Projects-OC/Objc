@@ -1,5 +1,5 @@
 //
-//  HFPhotoAssetToolBarView.h
+//  HFPhotoAssetToolbarView.h
 //  HF_Client_iPhone_Application
 //
 //  Created by header on 2019/8/6.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HFPhotoAssetToolBarView : UIView
+@interface HFPhotoAssetToolbarView : UIView
 
 @property (nonatomic,strong) UIButton *titleBtn;
 @property (nonatomic,assign) NSInteger selectCount;
